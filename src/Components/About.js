@@ -16,7 +16,7 @@ function About(props) {
       <span>🍷🧁🍷🧁🍷🧁🍷🧁</span>
       <p>
         Thank you for visiting! Please know that you can also find me at Medium
-        and on Github. I am published in Medium's <a href="https://levelup.gitconnected.com/" target="_blank">Level Up Coding</a>, <a href="https://blog.usejournal.com/" target="_blank">Noteworthy</a>, <a href="https://medium.com/an-idea" target="_blank">An Idea</a> and <a href="https://medium.com/nerd-for-tech" target="_blank">Nerd For Tech's</a> publications.
+        and on Github. I am published in Medium's <a href="https://levelup.gitconnected.com/">Level Up Coding</a>, <a href="https://blog.usejournal.com/">Noteworthy</a>, <a href="https://medium.com/an-idea">An Idea</a> and <a href="https://medium.com/nerd-for-tech">Nerd For Tech's</a> publications.
       </p>
     </div>
   )
