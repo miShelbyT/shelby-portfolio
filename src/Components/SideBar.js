@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   drawerLinks: {
-    lineHeight: 5,
+    lineHeight: 5
   },
   drawerOpen: {
     backgroundColor: '#bdbdbd',
@@ -70,17 +70,17 @@ function SideBar({ handleDrawerClose, open }) {
             )}
           </IconButton>
         </div>
-        <div style={{marginTop: 30}}>
-          <Link href="/about">
+        <div style={{ marginTop: 30 }}>
+          <Link href="/about" underline='none'>
             <Typography className={classes.drawerLinks}>About</Typography>
           </Link>
-          <Link href="/projects">
+          <Link href="/projects" underline='none'>
             <Typography className={classes.drawerLinks}>Projects</Typography>
           </Link>
-          <Link href="/Blogs">
+          <Link href="/blogs" underline='none'>
             <Typography className={classes.drawerLinks}>Blogs</Typography>
           </Link>
-          <Link href="/Contact">
+          <Link href="/contact" underline='none'>
             <Typography className={classes.drawerLinks}>Contact</Typography>
           </Link>
         </div>

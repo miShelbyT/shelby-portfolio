@@ -8,9 +8,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import Icon from '@material-ui/core/Icon';
 
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+
+
 
 
 const drawerWidth = 240;
@@ -18,6 +22,11 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexGrow: 1,
+    padding: theme.spacing(3)
+  },
+  icon: {
+    margin: theme.spacing(1)
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -47,14 +56,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
+  }
 }));
 
-function Header(props) {
+function Header() {
 
   const classes = useStyles()
   
@@ -89,12 +94,25 @@ function Header(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="secondary.dark" noWrap>
+          <Typography variant="h6" color="secondary.dark" noWrap className={classes.root}>
             SRT Full Stack Web Development
           </Typography>
+
+          <Link href="https://github.com/miShelbyT">
+          <Icon className={`fab fa-github ${classes.icon}`} color='secondary'/>
+          </Link>
+
+          <Link href="https://www.linkedin.com/in/shelby-talbert" >
+          <Icon className={`fab fa-linkedin ${classes.icon}`} color='secondary'/>
+          </Link>
+
+          <Link href="https://mi-shelbyrose.medium.com/" >
+          <Icon className={`fab fa-medium ${classes.icon}`} color='secondary'/>
+          </Link>
+
         </Toolbar>
       </AppBar>
-      <SideBar handleDrawerClose={handleDrawerClose} open={open}/>
+      <SideBar handleDrawerClose={handleDrawerClose} open={open} />
     </div>
   );
 }

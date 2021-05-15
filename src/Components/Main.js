@@ -9,7 +9,6 @@ import computer from '../images/computer-image.jpg'
 
 function Main(props) {
   
-
   return (
     <div className="main">
       <Header/>

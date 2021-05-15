@@ -3,7 +3,7 @@ import React from 'react';
 function Projects(props) {
   return (
     <div>
-      
+      <h1>Projects Go Here</h1>
     </div>
   );
 }

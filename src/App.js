@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
+        <Route exact path="/" />
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
