@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import About from './About'
 import Projects from './Projects'
+import Blogs from './Blogs'
 import Contact from './Contact'
 
 import computer from '../images/computer-image.jpg'
@@ -37,6 +38,7 @@ function Main(props) {
       </div>
       <About />
       <Projects />
+      <Blogs />
       <Contact />
     </div>
   )
