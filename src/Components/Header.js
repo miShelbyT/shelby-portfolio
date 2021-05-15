@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import SideBar from './SideBar'
 
 import AppBar from '@material-ui/core/AppBar';
@@ -40,29 +40,6 @@ const useStyles = makeStyles((theme) => ({
   hide: {
     display: 'none',
   },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: 'nowrap',
-  },
-  drawerOpen: {
-    width: drawerWidth,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerClose: {
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    overflowX: 'hidden',
-    width: theme.spacing(7) + 1,
-    [theme.breakpoints.up('sm')]: {
-      width: theme.spacing(9) + 1,
-    },
-  },
   toolbar: {
     display: 'flex',
     alignItems: 'center',
@@ -80,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 function Header(props) {
 
   const classes = useStyles()
-  const theme = useTheme();
+  
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -112,12 +89,12 @@ function Header(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" color="secondary.dark" noWrap>
             SRT Full Stack Web Development
           </Typography>
         </Toolbar>
       </AppBar>
-      <SideBar/>
+      <SideBar handleDrawerClose={handleDrawerClose} open={open}/>
     </div>
   );
 }

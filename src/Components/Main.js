@@ -7,10 +7,11 @@ import Contact from './Contact'
 import computer from '../images/computer-image.jpg'
 
 function Main(props) {
+  
+
   return (
     <div className="main">
       <Header/>
-      <h1>SRT - Logo goes here</h1>
       <figure className="computer">
         <img src={computer} alt="computer sitting on desk" />
         <small>

@@ -39,13 +39,15 @@ body::before {
   font-style: italic;
 }
 
-.computer img {
+.main img {
+  margin-top: 18vh;
   height: auto;
   width: 60vw;
 }
 
 .quote {
   width: 100vw;
+  margin-top: 8vh;
   padding: 1.5rem;
   background: rgb(68, 64, 60);
   color: antiquewhite;
