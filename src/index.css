@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(rgba(0, 150, 135, 0.4), 10%, rgba(3, 169, 244, 0.4));
+  background: linear-gradient(rgb(138, 132, 132), rgb(220, 236, 245));
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -51,7 +51,7 @@ body::before {
   width: 100vw;
   margin-top: 8%;
   padding: 15px 10px 15px 73px;
-  background: rgb(68, 64, 60);
+  background: rgb(48, 47, 47);
   color: antiquewhite;
 }
 
@@ -67,9 +67,9 @@ body::before {
 
 .about {
   width: 100vw;
-  padding: 15px 20px 15px 93px;
+  padding: 15px 35px 15px 103px;
   margin-top: 15%;
-  color: rgb(68, 64, 60);
+  color: rgb(48, 47, 47);
   background: antiquewhite;
   overflow-y: hidden;
 }

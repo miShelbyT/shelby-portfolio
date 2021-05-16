@@ -27,13 +27,13 @@ function Main() {
         </small>
       </figure>
       <div className="quote">
-        <h4>
+        <h3>
           <span>
             I am just a child who has never grown up. I still keep asking these
             'how' and 'why' questions. Occasionally, I find an answer.
           </span><br></br>
           Stephen Hawking
-        </h4>
+        </h3>
       </div>
       <About />
       <Projects />

@@ -14,9 +14,9 @@ import Icon from '@material-ui/core/Icon'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
-import shelby from '../images/shelby-logo.png'
-import Image from 'material-ui-image'
-import Avatar from '@material-ui/core/Avatar'
+// import shelby from '../images/shelby-logo.png'
+// import Image from 'material-ui-image'
+// import Avatar from '@material-ui/core/Avatar'
 
 const drawerWidth = 240
 
