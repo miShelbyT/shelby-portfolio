@@ -18,7 +18,7 @@ const theme = createMuiTheme({
     secondary: {
       main: grey[400],
     },
-  },
+  }
 })
 
 function App() {

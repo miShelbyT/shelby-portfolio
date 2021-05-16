@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
-import Link from '@material-ui/core/Link'
+// import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 
 import Divider from '@material-ui/core/Divider'
@@ -11,6 +11,8 @@ import IconButton from '@material-ui/core/IconButton'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
+import Avatar from '@material-ui/core/Avatar'
+
 const drawerWidth = 240
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   drawerLinks: {
-    lineHeight: 5
+    marginLeft: 25,
+    marginTop: 8
   },
   drawerOpen: {
     backgroundColor: '#bdbdbd',
@@ -39,6 +42,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(9) + 1,
     },
+  },
+  teal: {
+    backgroundColor: 'rgba(0, 150, 135, 0.8)',
+  },
+  blue: {
+    backgroundColor: 'rgba(3, 169, 244, 0.8)',
   },
 }))
 
@@ -70,11 +79,27 @@ function SideBar({ handleDrawerClose, open }) {
             )}
           </IconButton>
         </div>
+
         <div style={{ marginTop: 30 }}>
-        <Typography className={classes.drawerLinks}>About</Typography>
-        <Typography className={classes.drawerLinks}>Projects</Typography>
-        <Typography className={classes.drawerLinks}>Blogs</Typography>
-        <Typography className={classes.drawerLinks}>Contact</Typography>
+          <div className={'options'}>
+            <Avatar className={classes.blue} variant='rounded'>A</Avatar>
+            <Typography className={classes.drawerLinks}>About</Typography>
+          </div>
+
+          <div className={'options'}>
+            <Avatar className={classes.teal}>P</Avatar>
+            <Typography className={classes.drawerLinks}>Projects</Typography>
+          </div>
+
+          <div className={'options'}>
+            <Avatar className={classes.blue} variant='rounded'>B</Avatar>
+            <Typography className={classes.drawerLinks}>Blogs</Typography>
+          </div>
+
+          <div className={'options'}>
+            <Avatar className={classes.teal}>C</Avatar>
+            <Typography className={classes.drawerLinks}>Contact</Typography>
+          </div>
 
           {/* <Link href="/about" underline='none'>
             <Typography className={classes.drawerLinks}>About</Typography>

@@ -7,7 +7,7 @@ import Contact from './Contact'
 
 import computer from '../images/computer-image.jpg'
 
-function Main(props) {
+function Main() {
   
   return (
     <div className="main">

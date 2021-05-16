@@ -5,9 +5,7 @@
 }
 
 body {
-  background-image: url('./images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(rgba(0, 150, 135, 0.4), 10%, rgba(3, 169, 244, 0.4));
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +15,6 @@ body {
   height: 100vh;
   overflow: auto;
   margin: 0;
-  
 }
 
 body::before {
@@ -27,6 +24,11 @@ body::before {
   height: 100%;
   background-color: rgba(200,200,200,0.6);
   z-index: -1;
+}
+
+.options {
+  display: flex;
+  margin: 45px 15px;
 }
 
 .main > h3 {

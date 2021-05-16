@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Blogs(props) {
+function Blogs() {
   return (
     <div>
       <h1>blogs!!</h1>
