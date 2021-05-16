@@ -71,7 +71,12 @@ function SideBar({ handleDrawerClose, open }) {
           </IconButton>
         </div>
         <div style={{ marginTop: 30 }}>
-          <Link href="/about" underline='none'>
+        <Typography className={classes.drawerLinks}>About</Typography>
+        <Typography className={classes.drawerLinks}>Projects</Typography>
+        <Typography className={classes.drawerLinks}>Blogs</Typography>
+        <Typography className={classes.drawerLinks}>Contact</Typography>
+
+          {/* <Link href="/about" underline='none'>
             <Typography className={classes.drawerLinks}>About</Typography>
           </Link>
           <Link href="/projects" underline='none'>
@@ -82,7 +87,7 @@ function SideBar({ handleDrawerClose, open }) {
           </Link>
           <Link href="/contact" underline='none'>
             <Typography className={classes.drawerLinks}>Contact</Typography>
-          </Link>
+          </Link> */}
         </div>
         <Divider />
       </Drawer>

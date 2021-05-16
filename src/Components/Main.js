@@ -12,7 +12,7 @@ function Main(props) {
   return (
     <div className="main">
       <Header/>
-      <figure className="computer">
+      <figure>
         <img src={computer} alt="computer sitting on desk" />
         <small>
         <figcaption>

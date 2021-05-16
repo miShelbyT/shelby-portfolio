@@ -10,8 +10,7 @@ function About(props) {
         Eventually I realized I was ready to move on and do... something else.
         It didn't take me long to find my next passion: web development/software
         engineering have since become my nearest and dearest obsession. I
-        graduated from Flatiron School's immersive bootcamp program on January
-        29, 2021. <br></br>
+        graduated from Flatiron School's immersive bootcamp program in January, 2021. <br></br>
       </p>
       <span>🍷🧁🍷🧁🍷🧁🍷🧁</span>
       <p>

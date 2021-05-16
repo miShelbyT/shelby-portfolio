@@ -40,15 +40,15 @@ body::before {
 }
 
 .main img {
-  margin-top: 18vh;
+  margin: 30px 10px -30px 83px;
   height: auto;
-  width: 60vw;
+  width: 70vw;
 }
 
 .quote {
   width: 100vw;
-  margin-top: 8vh;
-  padding: 1.5rem;
+  margin-top: 8%;
+  padding: 15px 10px 15px 73px;
   background: rgb(68, 64, 60);
   color: antiquewhite;
 }
@@ -64,11 +64,19 @@ body::before {
 }
 
 .about {
-  width: 75vw;
-  text-align: justify;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100vw;
+  padding: 15px 20px 15px 93px;
+  margin-top: 15%;
+  color: rgb(68, 64, 60);
+  background: antiquewhite;
+  overflow-y: hidden;
 }
+
+.about p {
+  text-align: justify;
+}
+
+
 
 a {
   text-decoration: none;

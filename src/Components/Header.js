@@ -94,7 +94,7 @@ function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="secondary.dark" noWrap className={classes.root}>
+          <Typography variant="h6" color="secondary" noWrap className={classes.root}>
             SRT Full Stack Web Development
           </Typography>
 
