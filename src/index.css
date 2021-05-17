@@ -5,7 +5,6 @@
 }
 
 body {
-  background: linear-gradient(rgb(138, 132, 132), rgb(220, 236, 245));
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-wrap: wrap;
