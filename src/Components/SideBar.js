@@ -80,13 +80,13 @@ function SideBar({ handleDrawerClose, open }) {
           A
         </Avatar>
       ),
-      path: '#about',
+      path: '/#about',
     },
     {
       id: 2,
       text: 'Projects',
       avatar: <Avatar className={classes.avaTeal}>P</Avatar>,
-      path: '#projects',
+      path: '/#projects',
     },
     {
       id: 3,
@@ -96,13 +96,13 @@ function SideBar({ handleDrawerClose, open }) {
           B
         </Avatar>
       ),
-      path: '#blogs',
+      path: '/#blogs',
     },
     {
       id: 4,
       text: 'Contact',
       avatar: <Avatar className={classes.avaTeal}>C</Avatar>,
-      path: '#contact',
+      path: '/#contact',
     },
   ]
 
