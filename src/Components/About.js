@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 function About() {
   const classes = useStyles()
   return (
-    <div className="classes.root">
+    <div id='about'>
       <h3>About Me:</h3>
       <p>
         My professional life began in the arts. I have had the immense privilege

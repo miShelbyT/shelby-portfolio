@@ -8,16 +8,16 @@ import Blogs from './Components/Blogs'
 import Contact from './Components/Contact'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import purple from '@material-ui/core/colors/purple'
+// import purple from '@material-ui/core/colors/purple'
 import grey from '@material-ui/core/colors/grey'
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: purple[900],
+      main: 'rgb(255, 215, 186)',
     },
     secondary: {
-      main: grey[400],
+      main: grey[900],
     },
   },
 })
@@ -28,11 +28,25 @@ function App() {
       <ThemeProvider theme={theme}>
         <Main>
           <Switch>
+
             <Route exact path="/" />
-            <Route path="/about" component={About} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/blogs" component={Blogs} />
-            <Route path="/contact" component={Contact} />
+
+            <Route path="/about">
+              <About />
+            </Route>
+
+            <Route path="/projects">
+              <Projects />
+            </Route>
+
+            <Route path="/blogs">
+              <Blogs />
+            </Route>
+
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            
           </Switch>
         </Main>
       </ThemeProvider>

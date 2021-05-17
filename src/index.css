@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,63 +17,14 @@ body {
   margin: 0;
 }
 
-body::before {
+/* body::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(200,200,200,0.6);
   z-index: -1;
-}
-
-.main > h3 {
-  text-transform: uppercase;
-  text-align: center;
-  color: rgb(223, 203, 203);
-}
-
-.main p {
-  font-style: italic;
-}
-
-.main img {
-  
-  height: auto;
-  width: 70vw;
-}
-
-.quote {
-  width: 100%;
-  margin-top: 8%;
-  background: rgb(48, 47, 47);
-  color: antiquewhite;
-}
-
-.quote span, h4 {
-  padding: 1rem;
-  font-family: 'Roboto';
-  font-weight: 300;
-}
-
-.quote span {
-  font-style: italic;
-}
-
-.options {
-  display: flex;
-}
-
-
-.about p {
-  text-align: justify;
-  font-family: 'Roboto';
-  font-weight: 400;
-}
-
-.about h3 {
-  margin-top: 0;
-}
-
+} */
 
 
 a {

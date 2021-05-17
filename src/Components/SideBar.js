@@ -18,6 +18,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import Avatar from '@material-ui/core/Avatar'
 
 const drawerWidth = 190
+const headerHeight = 60
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '38px 17px',
   },
   drawerOpen: {
-    backgroundColor: '#bdbdbd',
+    backgroundColor: '#F8EDEB',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   drawerClose: {
-    backgroundColor: '#bdbdbd',
+    backgroundColor: '#F8EDEB',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -47,15 +48,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   avaTeal: {
-    backgroundColor: 'rgba(0, 150, 135, 0.8)',
-    margin: '20px 0',
+    color: '#000',
+    backgroundColor: 'rgb(216, 226, 220)',
+    margin: '15px 0',
   },
   avaBlue: {
-    backgroundColor: 'rgba(3, 169, 244, 0.8)',
-    margin: '20px 0',
+    color: '#000',
+    backgroundColor: 'rgb(255, 215, 186)',
+    margin: '15px 0',
+  },
+  list: {
+    marginTop: `${headerHeight}px`
   },
   active: {
-    backgroundColor: 'rgba(3, 169, 244, 0.8)'
+    backgroundColor: 'rgb(255, 229, 217)'
   }
 }))
 
@@ -67,32 +73,36 @@ function SideBar({ handleDrawerClose, open }) {
 
   const sideBarItems = [
     {
+      id: 1,
       text: 'About',
       avatar: (
         <Avatar className={classes.avaBlue} variant="rounded">
           A
         </Avatar>
       ),
-      path: '/about',
+      path: '#about',
     },
     {
+      id: 2,
       text: 'Projects',
       avatar: <Avatar className={classes.avaTeal}>P</Avatar>,
-      path: '/projects',
+      path: '#projects',
     },
     {
+      id: 3,
       text: 'Blogs',
       avatar: (
         <Avatar className={classes.avaBlue} variant="rounded">
           B
         </Avatar>
       ),
-      path: '/blogs',
+      path: '#blogs',
     },
     {
+      id: 4,
       text: 'Contact',
       avatar: <Avatar className={classes.avaTeal}>C</Avatar>,
-      path: '/contact',
+      path: '#contact',
     },
   ]
 
@@ -120,17 +130,17 @@ function SideBar({ handleDrawerClose, open }) {
             )}
           </IconButton>
         </div>
-        <List>
+        <List className={classes.list}>
         <Divider />
           {sideBarItems.map(sideBarItem => (
             <>
             <ListItem 
-            key={sideBarItem.text}
+            key={sideBarItem.id}
             button
             onClick={()=> history.push(sideBarItem.path)}
             className={location.pathname === sideBarItem.path ? classes.active : null}
             >
-              <ListItemAvatar>
+              <ListItemAvatar >
                 {sideBarItem.avatar}
               </ListItemAvatar>
               <ListItemText primary={sideBarItem.text} />

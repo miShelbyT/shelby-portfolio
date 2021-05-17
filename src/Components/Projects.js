@@ -54,7 +54,7 @@ function Projects() {
     setExpanded(!expanded)
   }
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" id="projects">
       <Grid
         container
         spacing={2}
