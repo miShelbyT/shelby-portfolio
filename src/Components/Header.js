@@ -14,18 +14,17 @@ import Icon from '@material-ui/core/Icon'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
-// import shelby from '../images/shelby-logo.png'
-// import Image from 'material-ui-image'
-// import Avatar from '@material-ui/core/Avatar'
+import shelby from '../images/shelby-logo.png'
 
-const drawerWidth = 240
+const drawerWidth = 195
 
 const useStyles = makeStyles((theme) => ({
   
   root: {
     display: 'flex',
-    // flexGrow: 1,
-    padding: theme.spacing(3),
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: theme.spacing(1),
   },
   icon: {
     margin: theme.spacing(1),
@@ -83,7 +82,7 @@ function Header() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
+        <Toolbar className={classes.root}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -93,10 +92,10 @@ function Header() {
               [classes.hide]: open,
             })}
           >
-            <MenuIcon />
+            <MenuIcon fontSize='large'/>
           </IconButton>
-
-            <Typography variant="h6" color="secondary" noWrap style={{flexGrow: 1}}>
+            <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto'}}/>
+            <Typography variant="h5" color="secondary" noWrap style={{flexGrow: 1}}>
               Full Stack Web Development
             </Typography>
 

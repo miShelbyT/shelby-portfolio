@@ -15,6 +15,7 @@ body {
   height: 100vh;
   overflow: auto;
   margin: 0;
+  overflow-y: hidden;
 }
 
 body::before {

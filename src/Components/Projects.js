@@ -108,9 +108,9 @@ function Projects() {
                 height="315"
                 src="https://www.youtube.com/embed/Fhb1zT1z-WQ"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
 
@@ -154,9 +154,9 @@ function Projects() {
                 height="315"
                 src="https://www.youtube.com/embed/U-3CXBiqes4"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
 
@@ -200,9 +200,9 @@ function Projects() {
                 height="315"
                 src="https://www.youtube.com/embed/uolpe_CaOec"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
 

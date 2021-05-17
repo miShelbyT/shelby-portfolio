@@ -13,7 +13,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
 import Avatar from '@material-ui/core/Avatar'
 
-const drawerWidth = 240
+const drawerWidth = 195
 
 const useStyles = makeStyles((theme) => ({
   root: {
