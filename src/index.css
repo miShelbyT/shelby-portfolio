@@ -27,11 +27,6 @@ body::before {
   z-index: -1;
 }
 
-.options {
-  display: flex;
-  margin: 45px 15px;
-}
-
 .main > h3 {
   text-transform: uppercase;
   text-align: center;
@@ -49,7 +44,7 @@ body::before {
 }
 
 .quote {
-  width: 100vw;
+  width: 100%;
   margin-top: 8%;
   padding: 15px 10px 15px 73px;
   background: rgb(48, 47, 47);
@@ -66,8 +61,12 @@ body::before {
   font-style: italic;
 }
 
+.options {
+  display: flex;
+}
+
 .about {
-  width: 100vw;
+  width: 100%;
   padding: 15px 35px 15px 103px;
   margin-top: 15%;
   color: rgb(48, 47, 47);
