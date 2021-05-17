@@ -94,7 +94,7 @@ function Header() {
           >
             <MenuIcon fontSize='large'/>
           </IconButton>
-            <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto'}}/>
+            <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto', borderRadius: '100%'}}/>
             <Typography variant="h5" color="secondary" noWrap style={{flexGrow: 1}}>
               Full Stack Web Development
             </Typography>
