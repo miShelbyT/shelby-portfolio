@@ -2,6 +2,12 @@ import React from 'react'
 import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
+
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemAvatar from '@material-ui/core/ListItemAvatar'
+import ListItemText from '@material-ui/core/ListItemText'
+
 import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 
@@ -13,14 +19,14 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
 import Avatar from '@material-ui/core/Avatar'
 
-const drawerWidth = 195
+const drawerWidth = 190
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
-  drawerLinks: {
-    margin: '27px 18px'
+  drawerNames: {
+    margin: '38px 17px',
   },
   drawerOpen: {
     backgroundColor: '#bdbdbd',
@@ -42,19 +48,50 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9) + 1,
     },
   },
-  teal: {
+  avaTeal: {
     backgroundColor: 'rgba(0, 150, 135, 0.8)',
-    margin: 20
+    margin: '30px 15px',
   },
-  blue: {
+  avaBlue: {
     backgroundColor: 'rgba(3, 169, 244, 0.8)',
-    margin: 20
+    margin: '30px 15px',
   },
 }))
 
 function SideBar({ handleDrawerClose, open }) {
   const classes = useStyles()
   const theme = useTheme()
+
+  const sideBarItems = [
+    {
+      text: 'About',
+      avatar: (
+        <Avatar className={classes.avaBlue} variant="rounded">
+          A
+        </Avatar>
+      ),
+      path: '/about',
+    },
+    {
+      text: 'Projects',
+      avatar: <Avatar className={classes.avaTeal}>P</Avatar>,
+      path: '/projects',
+    },
+    {
+      text: 'Blogs',
+      avatar: (
+        <Avatar className={classes.avaBlue} variant="rounded">
+          B
+        </Avatar>
+      ),
+      path: '/blogs',
+    },
+    {
+      text: 'Contact',
+      avatar: <Avatar className={classes.avaTeal}>C</Avatar>,
+      path: '/contact',
+    },
+  ]
 
   return (
     <div>
@@ -80,38 +117,18 @@ function SideBar({ handleDrawerClose, open }) {
             )}
           </IconButton>
         </div>
-
-        <div style={{ marginTop: 30 }}>
-          <div className={'options'}>
-            <Avatar className={classes.blue} variant='rounded'>A</Avatar>
-            <Link href="/about" underline='none'>
-            <Typography className={classes.drawerLinks}>About</Typography>
-            </Link>
-          </div>
-
-          <div className={'options'}>
-            <Avatar className={classes.teal}>P</Avatar>
-            <Link href="/projects" underline='none'>
-            <Typography className={classes.drawerLinks}>Projects</Typography>
-            </Link>
-          </div>
-
-          <div className={'options'}>
-            <Avatar className={classes.blue} variant='rounded'>B</Avatar>
-            <Link href="/blogs" underline='none'>
-            <Typography className={classes.drawerLinks}>Blogs</Typography>
-            </Link>
-          </div>
-
-          <div className={'options'}>
-            <Avatar className={classes.teal}>C</Avatar>
-            <Link href="/contact" underline='none'>
-            <Typography className={classes.drawerLinks}>Contact</Typography>
-            </Link>
-          </div>
-
-        </div>
-        <Divider />
+        <List>
+          {sideBarItems.map(sideBarItem => (
+            <ListItem key={sideBarItem.text}>
+              <ListItemAvatar>
+                {sideBarItem.avatar}
+              </ListItemAvatar>
+              <ListItemText primary={sideBarItem.text} />
+              <Divider />
+            </ListItem>
+          ) 
+          )}
+        </List>
       </Drawer>
     </div>
   )

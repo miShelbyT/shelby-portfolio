@@ -12,10 +12,9 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   margin: 0;
-  overflow-y: hidden;
 }
 
 body::before {
@@ -38,7 +37,7 @@ body::before {
 }
 
 .main img {
-  margin: 30px 10px -30px 83px;
+  
   height: auto;
   width: 70vw;
 }
@@ -46,7 +45,6 @@ body::before {
 .quote {
   width: 100%;
   margin-top: 8%;
-  padding: 15px 10px 15px 73px;
   background: rgb(48, 47, 47);
   color: antiquewhite;
 }
@@ -54,7 +52,7 @@ body::before {
 .quote span, h4 {
   padding: 1rem;
   font-family: 'Roboto';
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .quote span {
@@ -65,17 +63,15 @@ body::before {
   display: flex;
 }
 
-.about {
-  width: 100%;
-  padding: 15px 35px 15px 103px;
-  margin-top: 15%;
-  color: rgb(48, 47, 47);
-  background: antiquewhite;
-  overflow-y: hidden;
-}
 
 .about p {
   text-align: justify;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.about h3 {
+  margin-top: 0;
 }
 
 

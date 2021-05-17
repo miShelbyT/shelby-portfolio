@@ -16,7 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 import shelby from '../images/shelby-logo.png'
 
-const drawerWidth = 195
+const drawerWidth = 190
 
 const useStyles = makeStyles((theme) => ({
   
@@ -94,9 +94,11 @@ function Header() {
           >
             <MenuIcon fontSize='large'/>
           </IconButton>
+          <Link href="/">
             <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto', borderRadius: '100%'}}/>
-            <Typography variant="h5" color="secondary" noWrap style={{flexGrow: 1}}>
-              Full Stack Web Development
+          </Link>
+            <Typography variant="h5" color="secondary" noWrap style={{flexGrow: 1, fontStyle: 'italic'}}>
+              SRT Full Stack Web Development
             </Typography>
 
           <Link href="https://github.com/miShelbyT">

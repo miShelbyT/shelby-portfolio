@@ -20,15 +20,15 @@ import cupcakes from '../images/brelbys.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 600,
+    width: 570,
     minHeight: 500,
     marginLeft: '10%',
-    marginTop: 25,
-    padding: 15,
+    marginTop: 20,
+    padding: 12,
     backgroundColor: 'rgb(220, 235, 250)',
   },
   media: {
-    height: 0,
+    width: 550,
     paddingTop: '56.25%', // 16:9
   },
   expand: {
@@ -55,8 +55,14 @@ function Projects() {
   }
   return (
     <Container maxWidth="lg">
-      <Grid container spacing={6}>
-        <Grid item md={12} lg={6}>
+      <Grid
+        container
+        spacing={2}
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item sm={12} lg={6}>
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
@@ -100,11 +106,11 @@ function Projects() {
           </Card>
         </Grid>
 
-        <Grid item md={12} lg={6}>
+        <Grid item sm={12} lg={6}>
           <Card className={classes.root}>
             <div>
               <iframe
-                width="560"
+                width="550"
                 height="315"
                 src="https://www.youtube.com/embed/Fhb1zT1z-WQ"
                 title="YouTube video player"
@@ -146,11 +152,11 @@ function Projects() {
           </Card>
         </Grid>
 
-        <Grid item md={12} lg={6}>
+        <Grid item sm={12} lg={6}>
           <Card className={classes.root}>
             <div>
               <iframe
-                width="560"
+                width="550"
                 height="315"
                 src="https://www.youtube.com/embed/U-3CXBiqes4"
                 title="YouTube video player"
@@ -192,11 +198,11 @@ function Projects() {
           </Card>
         </Grid>
 
-        <Grid item md={12} lg={6}>
+        <Grid item sm={12} lg={6}>
           <Card className={classes.root}>
             <div>
               <iframe
-                width="560"
+                width="550"
                 height="315"
                 src="https://www.youtube.com/embed/uolpe_CaOec"
                 title="YouTube video player"

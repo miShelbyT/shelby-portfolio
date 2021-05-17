@@ -1,17 +1,38 @@
 import React from 'react'
+
+import { makeStyles } from '@material-ui/core'
+
 import Header from './Header'
 import About from './About'
 import Projects from './Projects'
 import Blogs from './Blogs'
 import Contact from './Contact'
 
+import Container from '@material-ui/core/Container'
+
 import computer from '../images/computer-image.jpg'
 
-function Main() {
-  
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+  },
+    page: {
+    background: '#f9f9f9',
+    width: '100%',
+  }
+})
+
+function Main({ children }) {
+  const classes = useStyles()
+
   return (
-    <div className="main">
-      <Header/>
+    <div className={classes.root}>
+      <Header />
+      
+      <div className={classes.page}>{children}</div>
+
+      {/* 
+      <Container style={{marginLeft: 53, paddingLeft: 0}}>
       <figure>
         <img src={computer} alt="computer sitting on desk" />
         <small>
@@ -35,10 +56,13 @@ function Main() {
           Stephen Hawking
         </h3>
       </div>
+      
+      
       <About />
       <Projects />
       <Blogs />
       <Contact />
+      </Container> */}
     </div>
   )
 }
