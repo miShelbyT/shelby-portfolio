@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import clsx from 'clsx'
@@ -15,6 +15,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Grid from '@material-ui/core/Grid'
 import Link from '@material-ui/core/Link'
 import Button from '@material-ui/core/Button'
+
 
 import cupcakes from '../images/brelbys.png'
 
@@ -46,15 +47,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-function Projects() {
+function Projects({ projectsRef }) {
   const classes = useStyles()
   const [expanded, setExpanded] = React.useState(false)
+
+  const nonDemoProjects = [{
+    id: 1,
+    image: cupcakes,
+    title: "Brelby's Wine & Cupcakes",
+    subheader: "A wine and cupcakes app... you're welcome, world!",
+    link: "https://mishelbyt.github.io/brelbys-sass/practice-project/dist/",
+    buttonText: "Brelby's as Deployed Via Github Pages",
+    moreText: "Responsively designed, based on a SASS tutorial from CodeStackr. This app is lovingly adapted from a Flatiron School project created with my wonderful friend Bryn Knowles. Brelby's lives on!"
+  }]
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
   }
+
   return (
-    <Container maxWidth="lg" id="projects">
+    <Container maxWidth="lg" ref={projectsRef}>
       <Grid
         container
         spacing={2}
@@ -62,24 +74,28 @@ function Projects() {
         justify="center"
         alignItems="center"
       >
-        <Grid item sm={12} lg={6}>
+        {nonDemoProjects.map(project => (
+        
+        <Grid item 
+        key={project.id}
+        sm={12} lg={6}>
           <Card className={classes.root}>
             <CardMedia
               className={classes.media}
-              image={cupcakes}
-              title="Brelbys Wine/Cupcakes"
+              image={project.image}
+              title={project.title}
             />
 
             <CardHeader
-              title="Brelby's Wine & Cupcakes"
-              subheader="A wine and cupcakes app... you're welcome, world!"
+              title={project.title}
+              subheader={project.subheader}
             />
             <Link
-              href="https://mishelbyt.github.io/brelbys-sass/practice-project/dist/"
+              href={project.link}
               underline="none"
             >
-              <Button variant="outlined" color="primary">
-                Brelby's as Deployed Via Github Pages
+              <Button variant="outlined" color="secondary">
+                {project.buttonText}
               </Button>
             </Link>
             <CardActions disableSpacing>
@@ -97,14 +113,13 @@ function Projects() {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
               <CardContent>
                 <Typography align="justify">
-                  Responsively designed utilizing SASS, based on a CodeStackr
-                  tutorial. Lovingly adapted from a Flatiron project created
-                  with Bryn Knowles. Brelby's lives on!
+                  {project.moreText}
                 </Typography>
               </CardContent>
             </Collapse>
           </Card>
         </Grid>
+        ))}
 
         <Grid item sm={12} lg={6}>
           <Card className={classes.root}>

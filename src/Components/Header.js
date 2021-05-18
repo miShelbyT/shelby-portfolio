@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function Header() {
+function Header({ aboutRef, projectsRef, contactRef, blogsRef }) {
   const classes = useStyles()
 
   const [open, setOpen] = React.useState(false)
@@ -123,7 +123,7 @@ function Header() {
           </Link>
         </Toolbar>
       </AppBar>
-      <SideBar handleDrawerClose={handleDrawerClose} open={open} />
+      <SideBar handleDrawerClose={handleDrawerClose} open={open} aboutRef={aboutRef} projectsRef={projectsRef} blogsRef={blogsRef} contactRef={contactRef} />
     </div>
   )
 }

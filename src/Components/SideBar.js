@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
 
+
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function SideBar({ handleDrawerClose, open }) {
+function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, blogsRef }) {
   const classes = useStyles()
   const theme = useTheme()
   const history = useHistory()
@@ -80,13 +81,15 @@ function SideBar({ handleDrawerClose, open }) {
           A
         </Avatar>
       ),
-      path: '/#about',
+      path: '/about',
+      ref: aboutRef
     },
     {
       id: 2,
       text: 'Projects',
       avatar: <Avatar className={classes.avaTeal}>P</Avatar>,
-      path: '/#projects',
+      path: '/projects',
+      ref: projectsRef
     },
     {
       id: 3,
@@ -96,15 +99,25 @@ function SideBar({ handleDrawerClose, open }) {
           B
         </Avatar>
       ),
-      path: '/#blogs',
+      path: '/blogs',
+      ref: blogsRef
     },
     {
       id: 4,
       text: 'Contact',
       avatar: <Avatar className={classes.avaTeal}>C</Avatar>,
-      path: '/#contact',
+      path: '/contact',
+      ref: contactRef
     },
   ]
+  
+  // function to create smooth scroll effect, instead of using history.push() and going to a new path
+  const scrollTo = (ref) => {
+    window.scroll({
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <div>
@@ -138,6 +151,7 @@ function SideBar({ handleDrawerClose, open }) {
             key={sideBarItem.id}
             button
             onClick={()=> history.push(sideBarItem.path)}
+            // onClick={scrollTo({contactRef})}
             className={location.pathname === sideBarItem.path ? classes.active : null}
             >
               <ListItemAvatar >

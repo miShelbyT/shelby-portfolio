@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-function Contact() {
+function Contact({ contactRef }) {
+
+  
+
   return (
-    <div id='contact'>
+    <div ref={contactRef}>
       <h1>Contact Me</h1>
     </div>
   );

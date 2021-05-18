@@ -36,11 +36,14 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar
 }))
 
-function Main({ children }) {
+function Main({ children, aboutRef, projectsRef, contactRef, blogsRef }){
   const classes = useStyles()
+
+  
+
   return (
     <div className={classes.root}>
-      <Header />
+      <Header aboutRef={aboutRef} projectsRef={projectsRef} blogsRef={blogsRef} contactRef={contactRef}/>
       <div>
         <figure>
           <img

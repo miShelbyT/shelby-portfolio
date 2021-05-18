@@ -1,5 +1,6 @@
 import './App.css'
 
+import { useRef } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Main from './Components/Main'
 import About from './Components/About'
@@ -23,28 +24,34 @@ const theme = createMuiTheme({
 })
 
 function App() {
+
+  const aboutRef = useRef(null)
+  const blogsRef = useRef(null)
+  const projectsRef = useRef(null)
+  const contactRef = useRef(null)
+
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Main>
+        <Main aboutRef={aboutRef} projectsRef={projectsRef} blogsRef={blogsRef} contactRef={contactRef} >
           <Switch>
 
             <Route exact path="/" />
 
-            <Route path="/#about">
-              <About />
+            <Route path="/about">
+              <About/>
             </Route>
 
-            <Route path="/#projects">
-              <Projects />
+            <Route path="/projects">
+              <Projects/>
             </Route>
 
-            <Route path="/#blogs">
-              <Blogs />
+            <Route path="/blogs">
+              <Blogs/>
             </Route>
 
-            <Route path="/#contact">
-              <Contact />
+            <Route path="/contact">
+              <Contact/>
             </Route>
             
           </Switch>
