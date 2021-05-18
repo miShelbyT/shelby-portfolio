@@ -61,6 +61,27 @@ function Projects({ projectsRef }) {
     moreText: "Responsively designed, based on a SASS tutorial from CodeStackr. This app is lovingly adapted from a Flatiron School project created with my wonderful friend Bryn Knowles. Brelby's lives on!"
   }]
 
+  const demoProjects = [{
+    id: 100,
+    src: "https://www.youtube.com/embed/Fhb1zT1z-WQ",
+    title: "Take Care",
+    subheader: "A journaling app that focuses on self-care/mental health",
+    moreText: "Take Care is a self-care journaling app that allows the user to sign up/log in, create a profile, peruse a list of self-care activities, save, update and delete journal entries pertaining to those activities as well as create original activities. Also uses an external API to generate daily affirmations via a \"roulette\" affirmation button."
+  }, 
+  { id: 101,
+    src: "https://www.youtube.com/embed/U-3CXBiqes4",
+    title: "Third Eye Tarot",
+    subheader: "A tarot card app that invites playfulness and introspection",
+    moreText: "Tarot Card App that encourages curiosity and insight into past, current and future life events. Third Eye Tarot allows the user to sign up/log in, \"consult the cards\" with a question, deal themselves a reading of between 1 and 5 tarot cards, record their comments/reflections on each reading and then save/review, update and delete card readings."
+  },
+  { id: 102,
+    src: "https://www.youtube.com/embed/uolpe_CaOec",
+    title: "Pet Dates",
+    subheader: "A pet scheduling app",
+    moreText: "Because pets need friends too! This pet-date scheduler app is currently being used by dogs, cats, a gecko and a stuffed raccoon."
+  }
+]
+
   const handleExpandClick = () => {
     setExpanded(!expanded)
   }
@@ -121,13 +142,13 @@ function Projects({ projectsRef }) {
         </Grid>
         ))}
 
-        <Grid item sm={12} lg={6}>
+        {demoProjects.map(project => (<Grid item sm={12} lg={6}>
           <Card className={classes.root}>
             <div>
               <iframe
                 width="550"
                 height="315"
-                src="https://www.youtube.com/embed/Fhb1zT1z-WQ"
+                src={project.src}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -136,8 +157,8 @@ function Projects({ projectsRef }) {
             </div>
 
             <CardHeader
-              title="Take Care"
-              subheader="A journaling app that focuses on self-care/mental health"
+              title={project.title}
+              subheader={project.subheader}
             />
 
             <CardActions disableSpacing>
@@ -155,103 +176,14 @@ function Projects({ projectsRef }) {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
               <CardContent>
                 <Typography align="justify">
-                  Take Care is a self-care journaling app that allows the user
-                  to sign up/log in, create a profile, peruse a list of
-                  self-care activities, save, update and delete journal entries
-                  pertaining to those activities as well as create original
-                  activities. Also uses an external API to generate daily
-                  affirmations via a "roulette" affirmation button.
+                {project.moreText}
                 </Typography>
               </CardContent>
             </Collapse>
           </Card>
         </Grid>
+        ))}
 
-        <Grid item sm={12} lg={6}>
-          <Card className={classes.root}>
-            <div>
-              <iframe
-                width="550"
-                height="315"
-                src="https://www.youtube.com/embed/U-3CXBiqes4"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-
-            <CardHeader
-              title="Third Eye Tarot"
-              subheader="A tarot card app that invites playfulness and introspection"
-            />
-
-            <CardActions disableSpacing>
-              <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon />
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography align="justify">
-                  Tarot Card App that encourages curiosity and insight into
-                  past, current and future life events. Third Eye Tarot allows
-                  the user to sign up/log in, "consult the cards" with a
-                  question, deal themselves a reading of between 1 and 5 tarot
-                  cards, record their comments/reflections on each reading and
-                  then save/review, update and delete card readings.
-                </Typography>
-              </CardContent>
-            </Collapse>
-          </Card>
-        </Grid>
-
-        <Grid item sm={12} lg={6}>
-          <Card className={classes.root}>
-            <div>
-              <iframe
-                width="550"
-                height="315"
-                src="https://www.youtube.com/embed/uolpe_CaOec"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-
-            <CardHeader title="Pet Dates" subheader="A pet scheduling app" />
-
-            <CardActions disableSpacing>
-              <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon />
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography align="justify">
-                  Because pets need friends too! This pet-date scheduler app is
-                  currently being used by dogs, cats, a gecko and a stuffed
-                  raccoon.
-                </Typography>
-              </CardContent>
-            </Collapse>
-          </Card>
-        </Grid>
       </Grid>
     </Container>
   )
