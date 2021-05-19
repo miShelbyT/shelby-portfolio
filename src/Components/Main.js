@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '75px 0',
     fontFamily: 'Roboto',
     fontWeight: 300,
+    fontStyle: 'italic',
     color: 'antiquewhite',
   },
   toolbar: theme.mixins.toolbar
@@ -70,8 +71,8 @@ function Main({ children, aboutRef, projectsRef, contactRef, blogsRef }){
       <div className={classes.quote}>
         <h4>
           <span className={classes.quote}>
-            I am just a child who has never grown up. I still keep asking these
-            'how' and 'why' questions. Occasionally, I find an answer.
+            "I am just a child who has never grown up. I still keep asking these
+            'how' and 'why' questions. Occasionally, I find an answer."
           </span>
           <br></br>
           Stephen Hawking
