@@ -5,8 +5,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
+  subheader: {
+    backgroundColor: 'rgb(52, 58, 64)',
+    color: 'rgb(345, 200, 200)'
+  }
 }));
 
 function Blogs({ blogsRef }) {
@@ -46,7 +49,7 @@ function Blogs({ blogsRef }) {
     <div ref={blogsRef} className={classes.root}>
       <GridList cellHeight={310} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div">Published in Medium's{' '}
+          <ListSubheader className={classes.subheader} component="div">Published in Medium's{' '}
         <a href="https://levelup.gitconnected.com/">Level Up Coding</a>,{' '}
         <a href="https://blog.usejournal.com/">Noteworthy</a>,{' '}
         <a href="https://medium.com/an-idea">An Idea</a> and{' '}
@@ -57,13 +60,8 @@ function Blogs({ blogsRef }) {
           <GridListTile key={blog.pubDate}>
             <img src={blog.thumbnail} alt={blog.title} />
             <GridListTileBar
-              title={blog.title}
-              // subtitle={<span>by: {tile.author}</span>}
-              actionIcon={
-                <IconButton aria-label={`read at ${blog.link}`} className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
+              titlePosition="top"
+              title={<a href={blog.link}>{blog.title}</a>}
             />
           </GridListTile>
         ))}
