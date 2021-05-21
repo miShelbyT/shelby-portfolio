@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+
+import { useForm } from 'react-hook-form';
+
 import { makeStyles } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
-import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import SendIcon from '@material-ui/icons/Send'
@@ -46,28 +48,26 @@ const useStyles = makeStyles((theme) => ({
 function Contact() {
   const classes = useStyles()
 
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
-  const [emailError, setEmailError] = useState(false)
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!email.includes('@')) {
-      return setEmailError(true)
-    } else setEmailError(false)
 
     const newContact = {
-      firstName: firstName,
-      lastName: lastName,
+      name: name,
       email: email,
+      subject: subject,
       message: message,
     }
     console.log(newContact)
-    setFirstName('')
-    setLastName('')
+    setName('')
     setEmail('')
+    setSubject('')
     setMessage('')
   }
 
@@ -98,25 +98,28 @@ function Contact() {
       </Typography>
       <form noValidate className={classes.form} onSubmit={handleSubmit}>
         <TextField
+        className='form-control formInput'
           id="filled-basic"
-          label="First Name"
+          label="Name"
           variant="filled"
-          onChange={(e) => setFirstName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
         />
         <TextField
-          id="filled-basic"
-          label="Last Name"
-          variant="filled"
-          onChange={(e) => setLastName(e.target.value)}
-        />
-        <TextField
+        className='form-control formInput'
           id="filled-basic"
           label="Email"
           variant="filled"
           onChange={(e) => setEmail(e.target.value)}
-          error={emailError}
         />
         <TextField
+        className='form-control formInput'
+          id="filled-basic"
+          label="Subject"
+          variant="filled"
+          onChange={(e) => setSubject(e.target.value)}
+        />
+        <TextField
+        className='form-control formInput'
           id="filled-basic"
           label="Message"
           variant="filled"

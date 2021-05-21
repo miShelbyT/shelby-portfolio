@@ -10,7 +10,6 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import ListItemText from '@material-ui/core/ListItemText'
 
-import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
 
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
@@ -48,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9) + 1,
     },
     [theme.breakpoints.down('xs')]: {
-      marginTop: '10%'
+      width: theme.spacing(9) + 1
     }
   },
   avaPurple: {
@@ -129,14 +128,14 @@ function SideBar({ handleDrawerClose, open }) {
         <div className={classes.toolbar}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? (
-              <ChevronRightIcon />
+              <ChevronRightIcon color="primary"/>
             ) : (
-              <ChevronLeftIcon />
+              <ChevronLeftIcon color="primary"/>
             )}
           </IconButton>
         </div>
         <List className={classes.list}>
-        <Divider />
+       
           {sideBarItems.map(sideBarItem => (
             <>
             <ListItem 
@@ -150,7 +149,7 @@ function SideBar({ handleDrawerClose, open }) {
               </ListItemAvatar>
               <ListItemText primary={sideBarItem.text} />
             </ListItem>
-              <Divider />
+           
               </>
           ) 
           )}

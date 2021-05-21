@@ -13,7 +13,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: 10
+    },
   },
   gridList: {
     width: '80%',
@@ -24,7 +27,11 @@ const useStyles = makeStyles((theme) => ({
   },
   subheader: {
     backgroundColor: 'rgb(52, 58, 64)',
-    color: 'rgb(345, 200, 200)'
+    color: 'rgb(345, 200, 200)',
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: 10,
+      lineHeight: 2
+    },
   }
 }));
 

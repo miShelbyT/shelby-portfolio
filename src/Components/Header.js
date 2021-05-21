@@ -24,10 +24,24 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: theme.spacing(1),
+    padding: theme.spacing(1)
+  },
+  name: {
+    flexGrow: 1,
+    fontStyle: 'italic',
+    margin: theme.spacing(1),
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 16
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 12
+    }
   },
   icon: {
     margin: theme.spacing(1),
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 20,
+    }
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -45,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   menuButton: {
-    marginRight: 36,
+    marginRight: 36
   },
   hide: {
     display: 'none',
@@ -74,7 +88,7 @@ function Header() {
   }
 
   return (
-    <div className="header">
+    <div>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -99,7 +113,7 @@ function Header() {
           <Link href="/">
             <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto', borderRadius: '100%'}}/>
           </Link>
-            <Typography variant="h5" color="primary" noWrap style={{flexGrow: 1, fontStyle: 'italic'}}>
+            <Typography variant="h5" color="primary" noWrap className={classes.name}>
               SRT Full Stack Web Development
             </Typography>
 

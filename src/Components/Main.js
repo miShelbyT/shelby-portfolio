@@ -44,9 +44,6 @@ function Main({ children }){
   return (
     <div className={classes.root}>
       <Header/>
-      
-
-      
 
       <div className={`${classes.page} ${classes.toolbar}`}>
         {/* gives us all the child components as wrapped in App.js */}

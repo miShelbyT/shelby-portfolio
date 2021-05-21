@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '8%',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 73
+    // marginLeft: 73
   },
   image: {
     margin: `${headerHeight}px auto -28px`,
@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     margin: '75px 0'
   },
   quote: {
+    marginRight: 50,
+    marginLeft: 50,
     fontFamily: 'Roboto',
     fontWeight: 300,
     color: 'rgb(221, 238, 238)'
@@ -34,6 +36,7 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
+
 
     <div className={classes.quoteDiv}>
         <h4 className={classes.quote}>

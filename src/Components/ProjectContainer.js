@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
-import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 
 import ProjectCard from './ProjectCard'
@@ -12,9 +11,10 @@ import ttt from '../images/ttt.png'
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '10%',
+    // marginLeft: '83px',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'spaceAround',
+    justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('xs')]: {
       marginTop: '20%'

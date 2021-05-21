@@ -17,9 +17,8 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '75%',
-    minHeight: 500,
-    paddingTop: 10,
+    width: 470,
+    minHeight: 470,
     marginLeft: '10%',
     display: 'flex',
     flexWrap: 'wrap',
@@ -29,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#dcf0f2',
     [theme.breakpoints.down('xs')]: {
       width: 235,
-      marginLeft: '2%',
+      minHeight: 395,
+      marginLeft: 0
     },
   },
   media: {
@@ -38,22 +38,19 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '56.25%', // 16:9
     [theme.breakpoints.down('xs')]: {
       width: '95%',
-      height: 'auto',
-      marginLeft: '2%',
+      height: 'auto'
     }
   },
   iframe: {
-    width: "560px",
+    width: "470px",
     height: "315px",
     [theme.breakpoints.down('sm')]: {
       width: "520px",
     height: "315px",
-      // marginLeft: '2%',
     },
     [theme.breakpoints.down('xs')]: {
       width: "220px",
-      height: "225px",
-      // marginLeft: '2%',
+      height: "225px"
     }
 
   },
@@ -72,10 +69,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(6),
     paddingTop: theme.spacing(0),
     [theme.breakpoints.down('xs')]: {
-      paddingRight: theme.spacing(0),
-      paddingLeft: theme.spacing(0),
-      fontSize: 8
-
+      fontSize: 14,
+      margin: theme.spacing(0)
+    }
+  },
+  btn: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 9,
+      width: 150
     }
   }
 }))
@@ -118,7 +119,7 @@ function ProjectCard({ project }) {
               href={project.link}
               underline="none"
             >
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" className={classes.btn}>
                 {project.buttonText}
               </Button>
             </Link>) : null}
@@ -136,8 +137,8 @@ function ProjectCard({ project }) {
               </IconButton>
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
-              <CardContent  className={classes.moreText}>
-                <Typography align="justify">
+              <CardContent>
+                <Typography align="justify" className={classes.moreText}>
                 {project.moreText}
                 </Typography>
               </CardContent>
