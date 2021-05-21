@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
 import Container from '@material-ui/core/Container'
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-function Contact({ contactRef }) {
+function Contact() {
   const classes = useStyles()
 
   const [firstName, setFirstName] = useState('')
@@ -65,7 +65,7 @@ function Contact({ contactRef }) {
   }
 
   return (
-    <Container ref={contactRef}>
+    <Container>
       <div>
         <figure>
           <img src={hello} alt="neon sign hello" className={classes.image} />

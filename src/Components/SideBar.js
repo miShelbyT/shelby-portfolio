@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, blogsRef }) {
+function SideBar({ handleDrawerClose, open }) {
   const classes = useStyles()
   const theme = useTheme()
   const history = useHistory()
@@ -77,8 +77,7 @@ function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, b
       id: 1,
       text: 'Projects',
       avatar: <Avatar className={classes.avaPurple}>P</Avatar>,
-      path: '/projects',
-      ref: projectsRef
+      path: '/projects'
     },
     {
       id: 2,
@@ -88,8 +87,7 @@ function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, b
           B
         </Avatar>
       ),
-      path: '/blogs',
-      ref: blogsRef
+      path: '/blogs'
     },
     {
       id: 3,
@@ -99,25 +97,16 @@ function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, b
           A
         </Avatar>
       ),
-      path: '/about',
-      ref: aboutRef
+      path: '/about'
     },
     {
       id: 4,
       text: 'Contact',
       avatar: <Avatar className={classes.avaPurple}>C</Avatar>,
-      path: '/contact',
-      ref: contactRef
+      path: '/contact'
     },
   ]
   
-  // function to create smooth scroll effect, instead of using history.push() and going to a new path
-  const scrollTo = (ref) => {
-    window.scroll({
-      top: ref.current.offsetTop,
-      behavior: "smooth",
-    });
-  }
 
   return (
     <div>
@@ -151,7 +140,6 @@ function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, b
             key={sideBarItem.id}
             button
             onClick={()=> history.push(sideBarItem.path)}
-            // onClick={scrollTo({contactRef})}
             className={location.pathname === sideBarItem.path ? classes.active : null}
             >
               <ListItemAvatar >

@@ -1,12 +1,13 @@
 import './App.css'
 
-import { useRef } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import {  } from 'react-router-dom';
 import Main from './Components/Main'
 import About from './Components/About'
 import Projects from './Components/ProjectContainer'
 import Blogs from './Components/Blogs'
 import Contact from './Components/Contact'
+import Home from './Components/Home'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
@@ -25,18 +26,16 @@ const theme = createMuiTheme({
 
 function App() {
 
-  const aboutRef = useRef(null)
-  const blogsRef = useRef(null)
-  const projectsRef = useRef(null)
-  const contactRef = useRef(null)
-
+  
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Main aboutRef={aboutRef} projectsRef={projectsRef} blogsRef={blogsRef} contactRef={contactRef} >
+        <Main >
           <Switch>
 
-            <Route exact path="/" />
+          <Route exact path="/" >
+            <Home />
+          </Route>
 
             <Route path="/about">
               <About/>

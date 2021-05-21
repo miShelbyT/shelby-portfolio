@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 import grey from '@material-ui/core/colors/grey'
@@ -25,11 +25,11 @@ const useStyles = makeStyles({
   },
 })
 
-function About({ aboutRef }) {
+function About() {
   const classes = useStyles()
 
   return (
-    <div ref={aboutRef} className={classes.root}>
+    <div className={classes.root}>
       <div>
 
 <figure>

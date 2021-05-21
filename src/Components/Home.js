@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 import { makeStyles } from '@material-ui/core'
-import Header from './Header'
-
 
 const headerHeight = 115
 
@@ -36,24 +34,22 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar
 }))
 
-function Main({ children }){
+function Home(props) {
+
   const classes = useStyles()
-
   
-
   return (
-    <div className={classes.root}>
-      <Header/>
-      
-
-      
-
-      <div className={`${classes.page} ${classes.toolbar}`}>
-        {/* gives us all the child components as wrapped in App.js */}
-        {children}
-        </div>
-    </div>
-  )
+    <div className={classes.quoteDiv}>
+        <h4 className={classes.quote}>
+          <span style={{fontStyle: 'italic'}}>
+            "I am just a child who has never grown up. I still keep asking these
+            'how' and 'why' questions. Occasionally, I find an answer."
+          </span>
+          <br></br>
+          Stephen Hawking
+        </h4>
+      </div>
+  );
 }
 
-export default Main
+export default Home;

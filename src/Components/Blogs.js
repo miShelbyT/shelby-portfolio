@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Blogs({ blogsRef }) {
+function Blogs() {
   const classes = useStyles()
 
   const rss2json =
@@ -46,7 +46,7 @@ function Blogs({ blogsRef }) {
   }, [rss2json])
 
   return (
-    <div ref={blogsRef} className={classes.root}>
+    <div className={classes.root}>
       <GridList cellHeight={310} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <ListSubheader className={classes.subheader} component="div">My Blogs are Published in Medium's{' '}
