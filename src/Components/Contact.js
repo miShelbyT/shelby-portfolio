@@ -10,7 +10,7 @@ import hello from '../images/hello.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '12%'
+    marginTop: '8%'
   },
   formDiv: {
     border: '2px solid grey',
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     margin: '65px auto',
     borderRadius: 4,
+    backgroundColor: '#f9f9f9'
   },
   form: {
     '& > *': {

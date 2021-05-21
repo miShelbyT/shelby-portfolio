@@ -11,15 +11,13 @@ import Home from './Components/Home'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-import grey from '@material-ui/core/colors/grey'
-
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: 'rgb(160, 26, 88)',
     },
     secondary: {
-      main: grey[400],
+      main: 'rgb(173, 181, 189)',
     },
   },
 })

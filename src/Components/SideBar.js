@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '38px 17px',
   },
   drawerOpen: {
-    backgroundColor: '#f9f9f9',
+    backgroundColor: 'rgb(173, 181, 189)',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   drawerClose: {
-    backgroundColor: '#f9f9f9',
+    backgroundColor: 'rgb(173, 181, 189)',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -47,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(9) + 1,
     },
+    [theme.breakpoints.down('xs')]: {
+      width: theme.spacing(9) + 1
+    }
   },
   avaPurple: {
     color: '#fff',

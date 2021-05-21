@@ -78,6 +78,8 @@ function Header() {
       <CssBaseline />
       <AppBar
         position="fixed"
+        elevation={1}
+        color='secondary'
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -92,33 +94,33 @@ function Header() {
               [classes.hide]: open,
             })}
           >
-            <MenuIcon color='secondary' fontSize='large'/>
+            <MenuIcon color='primary' fontSize='large'/>
           </IconButton>
           <Link href="/">
             <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto', borderRadius: '100%'}}/>
           </Link>
-            <Typography variant="h5" color="secondary" noWrap style={{flexGrow: 1, fontStyle: 'italic'}}>
+            <Typography variant="h5" color="primary" noWrap style={{flexGrow: 1, fontStyle: 'italic'}}>
               SRT Full Stack Web Development
             </Typography>
 
           <Link href="https://github.com/miShelbyT">
             <Icon
               className={`fab fa-github ${classes.icon}`}
-              color="secondary"
+              color="primary"
             />
           </Link>
 
           <Link href="https://www.linkedin.com/in/shelby-talbert">
             <Icon
               className={`fab fa-linkedin ${classes.icon}`}
-              color="secondary"
+              color="primary"
             />
           </Link>
 
           <Link href="https://mi-shelbyrose.medium.com/">
             <Icon
               className={`fab fa-medium ${classes.icon}`}
-              color="secondary"
+              color="primary"
             />
           </Link>
         </Toolbar>

@@ -6,25 +6,28 @@ import grey from '@material-ui/core/colors/grey'
 import doWhatYouLove from '../images/do-what-you-love.jpg'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '12%',
+    marginTop: '8%',
     overflowY: 'hidden',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '20%'
+    }
   },
   image: {
     margin: 'auto auto -28px',
     width: '75vw',
   },
   aboutMe: {
-    backgroundColor: 'rgb(92, 77, 125)',
-    color: grey[400],
+    backgroundColor: '#dcf0f2',
+    color: grey[800],
     fontFamily: 'Roboto',
     fontWeight: 300,
     padding: '30px 65px',
     marginTop: 40,
     width: '100%'
   },
-})
+}))
 
 function About() {
   const classes = useStyles()

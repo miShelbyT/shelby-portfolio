@@ -22,11 +22,20 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '10%',
     marginTop: 20,
     padding: 12,
-    backgroundColor: 'rgb(201, 237, 248)',
+    backgroundColor: '#dcf0f2',
+    [theme.breakpoints.down('sm')]: {
+      width: 235,
+      marginLeft: '2%',
+    },
   },
   media: {
     width: 500,
     paddingTop: '56.25%', // 16:9
+    [theme.breakpoints.down('xs')]: {
+      width: 'auto',
+      height: 'auto',
+      marginLeft: '2%',
+    }
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -41,7 +50,12 @@ const useStyles = makeStyles((theme) => ({
   moreText: {
     marginRight: theme.spacing(6),
     marginLeft: theme.spacing(6),
-    paddingTop: theme.spacing(0)
+    paddingTop: theme.spacing(0),
+    [theme.breakpoints.down('xs')]: {
+      marginRight: theme.spacing(0),
+      marginLeft: theme.spacing(0),
+
+    }
   }
 }))
 

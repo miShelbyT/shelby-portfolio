@@ -5,16 +5,10 @@ const headerHeight = 115
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '12%',
+    marginTop: '8%',
     display: 'flex',
     flexDirection: 'column',
     marginLeft: 73
-  },
-  page: {
-    background: '#f9f9f9',
-    width: '100%',
-    // gives us 24 pixels padding - base theme is 8px
-    padding: theme.spacing(3),
   },
   image: {
     margin: `${headerHeight}px auto -28px`,

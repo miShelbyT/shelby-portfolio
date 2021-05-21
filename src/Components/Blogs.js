@@ -9,12 +9,11 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '12%',
+    marginTop: '8%',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
+    overflow: 'hidden'
   },
   gridList: {
     width: '80%',

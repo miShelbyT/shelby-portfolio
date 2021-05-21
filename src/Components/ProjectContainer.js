@@ -11,8 +11,10 @@ import ttt from '../images/ttt.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginLeft: 73,
-    marginTop: '12%'
+    marginTop: '10%',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '20%'
+    }
   }
 }))
 
@@ -65,7 +67,7 @@ const classes = useStyles()
   
 
   return (
-    <Container maxWidth="lg" ref={projectsRef} className={classes.root}>
+    <div ref={projectsRef} className={classes.root}>
       <Grid
         container
         spacing={2}
@@ -78,7 +80,7 @@ const classes = useStyles()
         ))}
 
       </Grid>
-    </Container>
+    </div>
   )
 }
 
