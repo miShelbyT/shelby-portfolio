@@ -10,9 +10,12 @@ import hello from '../images/hello.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: '12%'
+  },
+  formDiv: {
     border: '2px solid grey',
     padding: 50,
-    width: '60%',
+    width: '80%',
     margin: '65px auto',
     borderRadius: 4,
   },
@@ -66,7 +69,7 @@ function Contact() {
 
   return (
     <Container>
-      <div>
+      <div className={classes.root}>
         <figure>
           <img src={hello} alt="neon sign hello" className={classes.image} />
           <small>
@@ -84,7 +87,7 @@ function Contact() {
         </figure>
       </div>
 
-      <div className={classes.root}>
+      <div className={classes.formDiv}>
       <Typography variant="h5" gutterBottom>
         Please Feel Free To Contact Me:
       </Typography>

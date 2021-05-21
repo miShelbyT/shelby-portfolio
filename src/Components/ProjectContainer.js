@@ -11,7 +11,8 @@ import ttt from '../images/ttt.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginLeft: 73
+    marginLeft: 73,
+    marginTop: '12%'
   }
 }))
 

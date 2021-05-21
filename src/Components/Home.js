@@ -5,10 +5,10 @@ const headerHeight = 115
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: '12%',
     display: 'flex',
     flexDirection: 'column',
     marginLeft: 73
-    
   },
   page: {
     background: '#f9f9f9',
@@ -37,8 +37,10 @@ const useStyles = makeStyles((theme) => ({
 function Home(props) {
 
   const classes = useStyles()
-  
+
   return (
+    <div className={classes.root}>
+
     <div className={classes.quoteDiv}>
         <h4 className={classes.quote}>
           <span style={{fontStyle: 'italic'}}>
@@ -49,6 +51,7 @@ function Home(props) {
           Stephen Hawking
         </h4>
       </div>
+    </div>
   );
 }
 

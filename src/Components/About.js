@@ -8,7 +8,7 @@ import doWhatYouLove from '../images/do-what-you-love.jpg'
 
 const useStyles = makeStyles({
   root: {
-    marginTop: '15%',
+    marginTop: '12%',
     overflowY: 'hidden',
   },
   image: {
@@ -21,7 +21,8 @@ const useStyles = makeStyles({
     fontFamily: 'Roboto',
     fontWeight: 300,
     padding: '30px 65px',
-    marginTop: 40
+    marginTop: 40,
+    width: '100%'
   },
 })
 
