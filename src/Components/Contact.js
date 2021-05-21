@@ -10,7 +10,14 @@ import hello from '../images/hello.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '8%'
+    marginTop: '8%',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '20%'
+    }
+  },
+  image: {
+    margin: 'auto auto -28px',
+    width: '75vw',
   },
   formDiv: {
     border: '2px solid grey',
@@ -33,11 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     width: 260,
-  },
-  image: {
-    margin: 'auto auto -28px',
-    width: '75vw',
-  },
+  }
 }))
 
 function Contact() {
@@ -69,8 +72,9 @@ function Contact() {
   }
 
   return (
-    <Container>
-      <div className={classes.root}>
+    <div className={classes.root}>
+
+      <div>
         <figure>
           <img src={hello} alt="neon sign hello" className={classes.image} />
           <small>
@@ -131,7 +135,8 @@ function Contact() {
         </Button>
       </form>
       </div>
-    </Container>
+
+    </div>
   )
 }
 

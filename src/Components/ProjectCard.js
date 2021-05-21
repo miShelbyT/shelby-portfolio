@@ -17,25 +17,45 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 520,
+    width: '75%',
     minHeight: 500,
+    paddingTop: 10,
     marginLeft: '10%',
-    marginTop: 20,
-    padding: 12,
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#dcf0f2',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       width: 235,
       marginLeft: '2%',
     },
   },
   media: {
-    width: 500,
+    borderRadius: 5,
+    width: '95%',
     paddingTop: '56.25%', // 16:9
     [theme.breakpoints.down('xs')]: {
-      width: 'auto',
+      width: '95%',
       height: 'auto',
       marginLeft: '2%',
     }
+  },
+  iframe: {
+    width: "560px",
+    height: "315px",
+    [theme.breakpoints.down('sm')]: {
+      width: "520px",
+    height: "315px",
+      // marginLeft: '2%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: "220px",
+      height: "225px",
+      // marginLeft: '2%',
+    }
+
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -52,8 +72,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(6),
     paddingTop: theme.spacing(0),
     [theme.breakpoints.down('xs')]: {
-      marginRight: theme.spacing(0),
-      marginLeft: theme.spacing(0),
+      paddingRight: theme.spacing(0),
+      paddingLeft: theme.spacing(0),
+      fontSize: 8
 
     }
   }
@@ -76,8 +97,7 @@ function ProjectCard({ project }) {
           <Card className={classes.root}>
             {project.youTubeSrc ? ( <div>
               <iframe
-                width="500"
-                height="315"
+                className={classes.iframe}
                 src={project.youTubeSrc}
                 title="YouTube video player"
                 frameBorder="0"

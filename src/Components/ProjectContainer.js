@@ -12,6 +12,10 @@ import ttt from '../images/ttt.png'
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '10%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'spaceAround',
+    alignItems: 'center',
     [theme.breakpoints.down('xs')]: {
       marginTop: '20%'
     }

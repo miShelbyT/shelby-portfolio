@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     
   },
   page: {
-    background: 'rgb(173, 181, 189)',
+    background: 'rgb(206, 212, 218)',
     width: '100%',
     // gives us 24 pixels padding - base theme is 8px
     padding: theme.spacing(3),
