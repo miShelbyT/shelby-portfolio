@@ -92,7 +92,7 @@ function Header({ aboutRef, projectsRef, contactRef, blogsRef }) {
               [classes.hide]: open,
             })}
           >
-            <MenuIcon fontSize='large'/>
+            <MenuIcon color='secondary' fontSize='large'/>
           </IconButton>
           <Link href="/">
             <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto', borderRadius: '100%'}}/>

@@ -49,7 +49,7 @@ function Blogs({ blogsRef }) {
     <div ref={blogsRef} className={classes.root}>
       <GridList cellHeight={310} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader className={classes.subheader} component="div">Published in Medium's{' '}
+          <ListSubheader className={classes.subheader} component="div">My Blogs are Published in Medium's{' '}
         <a href="https://levelup.gitconnected.com/">Level Up Coding</a>,{' '}
         <a href="https://blog.usejournal.com/">Noteworthy</a>,{' '}
         <a href="https://medium.com/an-idea">An Idea</a> and{' '}

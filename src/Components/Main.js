@@ -1,10 +1,7 @@
 import React from 'react'
-
 import { makeStyles } from '@material-ui/core'
-
 import Header from './Header'
 
-import computer from '../images/computer-image.jpg'
 
 const headerHeight = 115
 
@@ -12,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
+    marginLeft: 73
     
   },
   page: {
@@ -22,17 +20,18 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     margin: `${headerHeight}px auto -28px`,
-    width: '65vw'
+    width: '75vw'
+  },
+  quoteDiv: {
+    width: '100vw',
+    background: 'rgb(92, 77, 125)',
+    padding: 35,
+    margin: '75px 0'
   },
   quote: {
-    width: '100vw',
-    background: 'rgb(48, 47, 47)',
-    padding: 35,
-    margin: '75px 0',
     fontFamily: 'Roboto',
     fontWeight: 300,
-    fontStyle: 'italic',
-    color: 'antiquewhite',
+    color: 'rgb(221, 238, 238)'
   },
   toolbar: theme.mixins.toolbar
 }))
@@ -45,32 +44,11 @@ function Main({ children, aboutRef, projectsRef, contactRef, blogsRef }){
   return (
     <div className={classes.root}>
       <Header aboutRef={aboutRef} projectsRef={projectsRef} blogsRef={blogsRef} contactRef={contactRef}/>
-      <div>
-        <figure>
-          <img
-            src={computer}
-            alt="computer sitting on desk"
-            className={classes.image}
-          />
-          <small>
-            <figcaption>
-              Photo by{' '}
-              <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Christopher Gower
-              </a>{' '}
-              on{' '}
-              <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                {' '}
-                Unsplash
-              </a>
-            </figcaption>
-          </small>
-        </figure>
-      </div>
+      
 
-      <div className={classes.quote}>
-        <h4>
-          <span className={classes.quote}>
+      <div className={classes.quoteDiv}>
+        <h4 className={classes.quote}>
+          <span style={{fontStyle: 'italic'}}>
             "I am just a child who has never grown up. I still keep asking these
             'how' and 'why' questions. Occasionally, I find an answer."
           </span>

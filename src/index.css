@@ -30,5 +30,10 @@ body {
 a {
   text-decoration: none;
   font-weight: 500;
+  color: rgb(193, 202, 241);
+}
+
+figcaption {
+  font-weight: 500;
   color: rgb(221, 238, 238);
 }

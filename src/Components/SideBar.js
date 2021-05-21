@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '38px 17px',
   },
   drawerOpen: {
-    backgroundColor: '#F8EDEB',
+    backgroundColor: '#f9f9f9',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   drawerClose: {
-    backgroundColor: '#F8EDEB',
+    backgroundColor: '#f9f9f9',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -48,21 +48,21 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9) + 1,
     },
   },
-  avaTeal: {
-    color: '#000',
-    backgroundColor: 'rgb(216, 226, 220)',
+  avaPurple: {
+    color: '#fff',
+    backgroundColor: 'rgb(92, 77, 125)',
     margin: '15px 0',
   },
   avaBlue: {
-    color: '#000',
-    backgroundColor: 'rgb(255, 215, 186)',
+    color: '#fff',
+    backgroundColor: 'rgb(0, 145, 173)',
     margin: '15px 0',
   },
   list: {
     marginTop: `${headerHeight}px`
   },
   active: {
-    backgroundColor: 'rgb(255, 229, 217)'
+    backgroundColor: 'rgb(173, 181, 189)'
   }
 }))
 
@@ -75,24 +75,13 @@ function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, b
   const sideBarItems = [
     {
       id: 1,
-      text: 'About',
-      avatar: (
-        <Avatar className={classes.avaBlue} variant="rounded">
-          A
-        </Avatar>
-      ),
-      path: '/about',
-      ref: aboutRef
-    },
-    {
-      id: 2,
       text: 'Projects',
-      avatar: <Avatar className={classes.avaTeal}>P</Avatar>,
+      avatar: <Avatar className={classes.avaPurple}>P</Avatar>,
       path: '/projects',
       ref: projectsRef
     },
     {
-      id: 3,
+      id: 2,
       text: 'Blogs',
       avatar: (
         <Avatar className={classes.avaBlue} variant="rounded">
@@ -103,9 +92,20 @@ function SideBar({ handleDrawerClose, open, aboutRef, projectsRef, contactRef, b
       ref: blogsRef
     },
     {
+      id: 3,
+      text: 'About',
+      avatar: (
+        <Avatar className={classes.avaBlue} variant="rounded">
+          A
+        </Avatar>
+      ),
+      path: '/about',
+      ref: aboutRef
+    },
+    {
       id: 4,
       text: 'Contact',
-      avatar: <Avatar className={classes.avaTeal}>C</Avatar>,
+      avatar: <Avatar className={classes.avaPurple}>C</Avatar>,
       path: '/contact',
       ref: contactRef
     },

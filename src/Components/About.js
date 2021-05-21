@@ -1,35 +1,68 @@
 import React, { useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
+import grey from '@material-ui/core/colors/grey'
+
+import doWhatYouLove from '../images/do-what-you-love.jpg'
+
 
 const useStyles = makeStyles({
   root: {
-    width: '100%',
     marginTop: '15%',
-    color: 'rgb(48, 47, 47)',
-    background: 'antiquewhite',
     overflowY: 'hidden',
-  }
-
+  },
+  image: {
+    margin: 'auto auto -28px',
+    width: '75vw',
+  },
+  aboutMe: {
+    backgroundColor: 'rgb(92, 77, 125)',
+    color: grey[400],
+    fontFamily: 'Roboto',
+    fontWeight: 300,
+    padding: '30px 65px',
+    marginTop: 40
+  },
 })
 
 function About({ aboutRef }) {
-  
   const classes = useStyles()
 
   return (
-    <div ref={aboutRef}>
-      <h3>About Me:</h3>
-      <p>
-        My professional life began in the arts. I have had the immense privilege
-        of traveling around the US and overseas as a professional actor.
-        Eventually I realized I was ready to move on and do... something else.
-        It didn't take me long to find my next passion: web development/software
-        engineering have since become my nearest and dearest obsession. I
-        graduated from Flatiron School's immersive bootcamp program in January, 2021. When I'm not coding madly I can be found on a hiking trail somewhere in upstate New York with my husband and the sweetest rescue dog you'll ever meet.<br></br>
-      </p>
-      <span>🍷🧁🍷🧁🍷🧁🍷🧁</span>
-      
+    <div ref={aboutRef} className={classes.root}>
+      <div>
+
+<figure>
+  <img
+    src={doWhatYouLove}
+    alt="neon sign do what you love"
+    className={classes.image}
+  />
+  <small>
+    <figcaption>
+    Photo by <a href="https://unsplash.com/@millolin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Millo Lin</a> on <a href="https://unsplash.com/s/photos/millo-lin-neon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+
+    </figcaption>
+  </small>
+</figure>
+</div>
+
+      <div className={classes.aboutMe}>
+        <h3>About Me:</h3>
+        <p>
+          My professional life began in the arts. I have had the immense
+          privilege of traveling around the US and overseas as a professional
+          actor. Eventually I realized I was ready to move on and do...
+          something else. It didn't take me long to find my next passion: web
+          development/software engineering have since become my nearest and
+          dearest obsession. I graduated from Flatiron School's immersive
+          bootcamp program in January, 2021. When I'm not coding madly I can be
+          found on a hiking trail somewhere in upstate New York with my husband
+          and the sweetest rescue dog you'll ever meet.<br></br>
+        </p>
+        <span>🍷🧁🍷🧁🍷🧁🍷🧁</span>
+      </div>
     </div>
   )
 }
