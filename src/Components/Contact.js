@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { useForm } from 'react-hook-form'
 
 import * as emailjs from 'emailjs-com';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 import { makeStyles } from '@material-ui/core'
 import Typography from '@material-ui/core/Typography'
@@ -63,6 +66,17 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  formInput: {
+    height: '35px',
+    padding: '12px 20px',
+    boxSizing: 'border-box',
+    border: '2px solid #ccc',
+    borderRadius: '4px',
+    backgroundColor: '#f8f8f8'
+  },
+  // textArea: {
+  //   height: '225px',
+  // },
   error: {
     fontSize: '14px',
     color: '#FF0000',
@@ -76,35 +90,41 @@ const useStyles = makeStyles((theme) => ({
 function Contact() {
   const classes = useStyles()
 
-  // const [name, setName] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [subject, setSubject] = useState('')
-  // const [message, setMessage] = useState('')
+  const { register, handleSubmit, formState: { errors }, reset } = useForm()
 
-  const { register, handleSubmit, formState: { errors } } = useForm()
-  console.log(useForm())
+  const toastifySuccess = () => {
+    toast('Form sent!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,  
+      draggable: false,
+      className: 'submit-feedback success',
+      toastId: 'notifyToast'
+    });
+  };
 
   const onSubmit = async (data) => {
-    'Name: ', data.name,
-    'Email: ', data.email,
-    'Subject: ', data.subject,
-    'Message: ', data.message
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID',   
-    onSubmit, 'YOUR_USER_ID')
-        .then((result) => {
-            alert('email sent successfully');
-        }, (error) => {
-            alert('error sending email');
-        });
-        //clears the form after sending the email
-        e.target.reset();
-    
-    
-  }
+    try {
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message
+      };
+      await emailjs.send(
+        process.env.REACT_APP_serviceID,
+        process.env.REACT_APP_templateID,
+        templateParams,
+        process.env.REACT_APP_USERID
+      );
+      reset();
+      toastifySuccess()
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <div className={classes.root}>
@@ -137,7 +157,7 @@ function Contact() {
         >
           <label htmlFor="name">Name<sup>*</sup> </label>
           <input
-            className="classes.formInput"
+            className={classes.formInput}
             type="text"
             label="Name"
             name="name"
@@ -151,7 +171,7 @@ function Contact() {
 
           <label htmlFor="email">Email<sup>*</sup> </label>
           <input
-            className="classes.formInput"
+            className={classes.formInput}
             type="email"
             label="Email"
             name="email"
@@ -165,7 +185,7 @@ function Contact() {
 
           <label htmlFor="subject">Subject<sup>*</sup> </label>
           <input
-            className="classes.formInput"
+            className={classes.formInput}
             type="text"
             label="Subject"
             name="subject"
@@ -179,7 +199,7 @@ function Contact() {
 
           <label htmlFor="Message">Message<sup>*</sup> </label>
           <textarea
-            className="formInput"
+            className={`${classes.formInput} ${classes.textArea}`}
             label="Message"
             name="message"
             id="message"
@@ -200,6 +220,7 @@ function Contact() {
             Submit
           </Button>
         </form>
+        <ToastContainer />
       </div>
     </div>
   )
