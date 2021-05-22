@@ -12,7 +12,7 @@ import hello from '../images/hello.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '8%',
+    marginTop: '10%',
     [theme.breakpoints.down('xs')]: {
       marginTop: '24%'
     }
@@ -20,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
   image: {
     margin: 'auto auto -28px',
     width: '75vw',
+  },
+  feelFree: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '18px'
+    }
   },
   formDiv: {
     border: '2px solid grey',
@@ -40,13 +45,17 @@ const useStyles = makeStyles((theme) => ({
   form: {
     '& > *': {
       margin: theme.spacing(1),
-      width: '55ch',
+      width: '55%',
       [theme.breakpoints.down('xs')]: {
         marginRight: 'auto',
         marginLeft: 'auto',
         width: '100%'
+      },
+      [theme.breakpoints.up('sm')]: {
+        marginRight: 'auto',
+        marginLeft: 'auto',
+        width: '75%'
       }
-      
     },
   },
   button: {
@@ -102,7 +111,7 @@ function Contact() {
       </div>
 
       <div className={classes.formDiv}>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5" gutterBottom className={classes.feelFree}>
         Please Feel Free To Contact Me:
       </Typography>
       <form noValidate className={classes.form} onSubmit={handleSubmit}>

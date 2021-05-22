@@ -1,14 +1,17 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core'
 
+import youAreHere from '../images/you-are-here.jpg'
+
 const headerHeight = 115
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '8%',
-    display: 'flex',
-    flexDirection: 'column',
-    // marginLeft: 73
+    marginTop: '-1%',
+    overflowY: 'hidden',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '20%'
+    }
   },
   image: {
     margin: `${headerHeight}px auto -28px`,
@@ -36,7 +39,24 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
+<div>
 
+<figure>
+  <img
+    src={youAreHere}
+    alt="neon sign you are here"
+    className={classes.image}
+  />
+  <small>
+    <figcaption>
+    Photo by <a href="https://unsplash.com/@jlondonbaker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">John Baker</a> on <a href="https://unsplash.com/s/photos/you-are-here-sign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+
+
+    </figcaption>
+  </small>
+</figure>
+</div>
 
     <div className={classes.quoteDiv}>
         <h4 className={classes.quote}>
