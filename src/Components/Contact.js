@@ -16,14 +16,12 @@ import hello from '../images/hello.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '10%',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '24%',
-    },
+    marginTop: theme.spacing(12)
   },
   image: {
     margin: 'auto auto -28px',
-    width: '75vw',
+    maxHeight: '500px',
+    width: 'auto'
   },
   feelFree: {
     [theme.breakpoints.down('xs')]: {

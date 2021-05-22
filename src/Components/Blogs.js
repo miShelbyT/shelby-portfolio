@@ -9,14 +9,11 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '10%',
+    marginTop: theme.spacing(12),
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '20%'
-    },
+    overflow: 'hidden'
   },
   gridList: {
     width: '80%',
@@ -28,9 +25,13 @@ const useStyles = makeStyles((theme) => ({
   subheader: {
     backgroundColor: 'rgb(52, 58, 64)',
     color: 'rgb(345, 200, 200)',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       paddingTop: 10,
-      lineHeight: 2
+      lineHeight: 1.5
+    },
+    [theme.breakpoints.up('sm')]: {
+      paddingTop: 5,
+      lineHeight: 1.5
     },
   }
 }));

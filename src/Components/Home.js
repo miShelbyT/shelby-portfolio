@@ -7,15 +7,16 @@ const headerHeight = 115
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '-1%',
+    marginTop: theme.spacing(12),
     overflowY: 'hidden',
     [theme.breakpoints.down('xs')]: {
       marginTop: '20%'
     }
   },
   image: {
-    margin: `${headerHeight}px auto -28px`,
-    width: '75vw'
+    margin: 'auto auto -28px',
+    maxHeight: '500px',
+    width: 'auto'
   },
   quoteDiv: {
     width: '100vw',

@@ -12,15 +12,9 @@ const headerHeight = 115
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: headerHeight,
-    margin: theme.spacing(6),
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '28%'
-    }
+    marginTop: theme.spacing(14),
+    marginRight: theme.spacing(3),
+    marginLeft: theme.spacing(3),
   }
 }))
 
@@ -76,7 +70,7 @@ const classes = useStyles()
     <div ref={projectsRef} className={classes.root}>
       <Grid
         container
-        spacing={2}
+        spacing={5}
         direction="row"
         justify="center"
         alignItems="center"

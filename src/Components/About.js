@@ -8,15 +8,13 @@ import doWhatYouLove from '../images/do-what-you-love.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '8%',
-    overflowY: 'hidden',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '20%'
-    }
+    marginTop: theme.spacing(12),
+    overflowY: 'hidden'
   },
   image: {
     margin: 'auto auto -28px',
-    width: '75vw',
+    maxHeight: '500px',
+    width: 'auto'
   },
   aboutMe: {
     backgroundColor: '#dcf0f2',
