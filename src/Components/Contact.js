@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'
 
 import { makeStyles } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '10%',
     [theme.breakpoints.down('xs')]: {
-      marginTop: '24%'
-    }
+      marginTop: '24%',
+    },
   },
   image: {
     margin: 'auto auto -28px',
@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
   },
   feelFree: {
     [theme.breakpoints.down('xs')]: {
-      fontSize: '18px'
-    }
+      fontSize: '18px',
+    },
   },
   formDiv: {
     border: '2px solid grey',
@@ -40,58 +40,74 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     [theme.breakpoints.down('xs')]: {
       width: '75vw',
-    }
+    },
   },
   form: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    textAlign: 'left',
     '& > *': {
       margin: theme.spacing(1),
       width: '55%',
       [theme.breakpoints.down('xs')]: {
         marginRight: 'auto',
         marginLeft: 'auto',
-        width: '100%'
+        width: '100%',
       },
       [theme.breakpoints.up('sm')]: {
         marginRight: 'auto',
         marginLeft: 'auto',
-        width: '75%'
-      }
+        width: '75%',
+      },
     },
+  },
+  error: {
+    fontSize: '14px',
+    color: '#FF0000',
+    lineHeight: 1,
   },
   button: {
     width: 260,
-  }
+  },
 }))
 
 function Contact() {
   const classes = useStyles()
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
+  // const [name, setName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [subject, setSubject] = useState('')
+  // const [message, setMessage] = useState('')
 
-  
+  const { register, handleSubmit, formState: { errors } } = useForm()
+  console.log(useForm())
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    const newContact = {
-      name: name,
-      email: email,
-      subject: subject,
-      message: message,
-    }
-    console.log(newContact)
-    setName('')
-    setEmail('')
-    setSubject('')
-    setMessage('')
+  const onSubmit = async (data) => {
+    console.log('Name: ', data.name)
+    console.log('Email: ', data.email)
+    console.log('Subject: ', data.subject)
+    console.log('Message: ', data.message)
   }
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+
+  //   const newContact = {
+  //     name: name,
+  //     email: email,
+  //     subject: subject,
+  //     message: message,
+  //   }
+  //   console.log(newContact)
+  //   setName('')
+  //   setEmail('')
+  //   setSubject('')
+  //   setMessage('')
+  // }
 
   return (
     <div className={classes.root}>
-
       <div>
         <figure>
           <img src={hello} alt="neon sign hello" className={classes.image} />
@@ -111,52 +127,80 @@ function Contact() {
       </div>
 
       <div className={classes.formDiv}>
-      <Typography variant="h5" gutterBottom className={classes.feelFree}>
-        Please Feel Free To Contact Me:
-      </Typography>
-      <form noValidate className={classes.form} onSubmit={handleSubmit}>
-        <TextField
-        className='form-control formInput'
-          id="filled-basic"
-          label="Name"
-          variant="filled"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <TextField
-        className='form-control formInput'
-          id="filled-basic"
-          label="Email"
-          variant="filled"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <TextField
-        className='form-control formInput'
-          id="filled-basic"
-          label="Subject"
-          variant="filled"
-          onChange={(e) => setSubject(e.target.value)}
-        />
-        <TextField
-        className='form-control formInput'
-          id="filled-basic"
-          label="Message"
-          variant="filled"
-          multiline
-          rows={6}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          endIcon={<SendIcon />}
-          className={classes.button}
-          type="submit"
+        <Typography variant="h5" gutterBottom className={classes.feelFree}>
+          Please Feel Free To Contact Me:
+        </Typography>
+        <form
+          noValidate
+          className={classes.form}
+          onSubmit={handleSubmit(onSubmit)}
         >
-          Submit
-        </Button>
-      </form>
-      </div>
+          <label htmlFor="name">Name<sup>*</sup> </label>
+          <input
+            className="classes.formInput"
+            type="text"
+            label="Name"
+            name="name"
+            id="name"
+            {...register('name', { required: "Name is required 🤷🏻‍♀️" })}
+            // onChange={(e) => setName(e.target.value)}
+          />
+          {errors.name && (
+            <label className={classes.error}>{errors.name.message}</label>
+          )}
 
+          <label htmlFor="email">Email<sup>*</sup> </label>
+          <input
+            className="classes.formInput"
+            type="email"
+            label="Email"
+            name="email"
+            id="email"
+            {...register('email', { required: "Email is required 👋" })}
+            // onChange={(e) => setEmail(e.target.value)}
+          />
+          {errors.email && (
+            <label className={classes.error}>{errors.email.message}</label>
+          )}
+
+          <label htmlFor="subject">Subject<sup>*</sup> </label>
+          <input
+            className="classes.formInput"
+            type="text"
+            label="Subject"
+            name="subject"
+            id="subject"
+            {...register('subject', { required: "Subject is required 😉" })}
+            // onChange={(e) => setSubject(e.target.value)}
+          />
+          {errors.subject && (
+            <label className={classes.error}>{errors.subject.message}</label>
+          )}
+
+          <label htmlFor="Message">Message<sup>*</sup> </label>
+          <textarea
+            className="formInput"
+            label="Message"
+            name="message"
+            id="message"
+            {...register('message', { required: "Message is required 😎" })}
+            // onChange={(e) => setMessage(e.target.value)}
+          />
+          {errors.message && (
+            <label className={classes.error}>{errors.message.message}</label>
+          )}
+
+          <Button
+            variant="contained"
+            color="primary"
+            endIcon={<SendIcon />}
+            className={classes.button}
+            type="submit"
+          >
+            Submit
+          </Button>
+        </form>
+      </div>
     </div>
   )
 }
