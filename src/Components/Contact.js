@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     margin: 'auto auto -28px',
-    maxHeight: '500px',
+    maxHeight: '450px',
     width: 'auto'
   },
   feelFree: {
@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid grey',
     padding: 50,
     width: '80%',
+    height: '700px',
     margin: '65px auto',
     borderRadius: 4,
     backgroundColor: '#f9f9f9',
@@ -64,17 +65,6 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  formInput: {
-    height: '35px',
-    padding: '12px 20px',
-    boxSizing: 'border-box',
-    border: '2px solid #ccc',
-    borderRadius: '4px',
-    backgroundColor: '#f8f8f8'
-  },
-  // textArea: {
-  //   height: '225px',
-  // },
   error: {
     fontSize: '14px',
     color: '#FF0000',
@@ -82,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     width: 260,
+    marginTop: theme.spacing(3)
   },
 }))
 
@@ -155,7 +146,6 @@ function Contact() {
         >
           <label htmlFor="name">Name<sup>*</sup> </label>
           <input
-            className={classes.formInput}
             type="text"
             label="Name"
             name="name"
@@ -169,8 +159,7 @@ function Contact() {
 
           <label htmlFor="email">Email<sup>*</sup> </label>
           <input
-            className={classes.formInput}
-            type="email"
+            type="text"
             label="Email"
             name="email"
             id="email"
@@ -183,7 +172,6 @@ function Contact() {
 
           <label htmlFor="subject">Subject<sup>*</sup> </label>
           <input
-            className={classes.formInput}
             type="text"
             label="Subject"
             name="subject"
@@ -197,10 +185,10 @@ function Contact() {
 
           <label htmlFor="Message">Message<sup>*</sup> </label>
           <textarea
-            className={`${classes.formInput} ${classes.textArea}`}
             label="Message"
             name="message"
             id="message"
+            rows="6"
             {...register('message', { required: "Message is required 😎" })}
             // onChange={(e) => setMessage(e.target.value)}
           />
