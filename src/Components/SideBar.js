@@ -56,8 +56,8 @@ const useStyles = makeStyles((theme) => ({
     margin: '15px 0',
   },
   avaBlue: {
-    color: '#fff',
-    backgroundColor: 'rgb(0, 145, 173)',
+    color: '#000',
+    backgroundColor: '#5ec8e8',
     margin: '15px 0',
   },
   list: {
@@ -95,7 +95,7 @@ function SideBar({ handleDrawerClose, open }) {
       id: 3,
       text: 'About',
       avatar: (
-        <Avatar className={classes.avaBlue} variant="rounded">
+        <Avatar className={classes.avaPurple} variant="rounded">
           A
         </Avatar>
       ),
@@ -104,7 +104,7 @@ function SideBar({ handleDrawerClose, open }) {
     {
       id: 4,
       text: 'Contact',
-      avatar: <Avatar className={classes.avaPurple}>C</Avatar>,
+      avatar: <Avatar className={classes.avaBlue}>C</Avatar>,
       path: '/contact'
     },
   ]

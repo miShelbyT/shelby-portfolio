@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     background: 'rgb(206, 212, 218)',
     width: '100%',
     // gives us 24 pixels padding - base theme is 8px
-    padding: theme.spacing(3),
+    padding: theme.spacing(3)
   },
   image: {
     margin: `${headerHeight}px auto -28px`,

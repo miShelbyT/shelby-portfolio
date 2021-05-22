@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '8%',
     [theme.breakpoints.down('xs')]: {
-      marginTop: '20%'
+      marginTop: '24%'
     }
   },
   image: {
@@ -27,18 +27,27 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     margin: '65px auto',
     borderRadius: 4,
-    backgroundColor: '#f9f9f9'
-  },
-  form: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '55ch',
-    },
+    backgroundColor: '#f9f9f9',
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    [theme.breakpoints.down('xs')]: {
+      width: '75vw',
+    }
+  },
+  form: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: '55ch',
+      [theme.breakpoints.down('xs')]: {
+        marginRight: 'auto',
+        marginLeft: 'auto',
+        width: '100%'
+      }
+      
+    },
   },
   button: {
     width: 260,

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     [theme.breakpoints.down('xs')]: {
-      paddingTop: 10
+      marginTop: '20%'
     },
   },
   gridList: {

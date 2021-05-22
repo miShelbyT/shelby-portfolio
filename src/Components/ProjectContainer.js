@@ -7,17 +7,19 @@ import ProjectCard from './ProjectCard'
 import cupcakes from '../images/brelbys.png'
 import ttt from '../images/ttt.png'
 
+const headerHeight = 115
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '10%',
-    // marginLeft: '83px',
+    marginTop: headerHeight,
+    margin: theme.spacing(6),
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('xs')]: {
-      marginTop: '20%'
+      marginTop: '28%'
     }
   }
 }))

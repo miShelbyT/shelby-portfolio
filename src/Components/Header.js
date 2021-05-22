@@ -14,7 +14,7 @@ import Icon from '@material-ui/core/Icon'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
-import shelby from '../images/shelby-logo.png'
+import shelby from '../images/shelby.png'
 
 const drawerWidth = 190
 
@@ -25,6 +25,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: theme.spacing(1)
+  },
+  header: {
+    [theme.breakpoints.down('xs')]: {
+      padding: 0,
+      margin: 0
+    }
   },
   name: {
     flexGrow: 1,
@@ -48,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
-    }),
+    })
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -88,7 +94,7 @@ function Header() {
   }
 
   return (
-    <div>
+    <div className={classes.header}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -111,7 +117,7 @@ function Header() {
             <MenuIcon color='primary' fontSize='large'/>
           </IconButton>
           <Link href="/">
-            <img src={shelby} alt="circular named logo" style={{margin: 'auto', marginBottom: 'auto', height: 60, width: 'auto', borderRadius: '100%'}}/>
+            <img src={shelby} alt="named logo" style={{margin: 0, height: 80, width: 'auto'}}/>
           </Link>
             <Typography variant="h5" color="primary" noWrap className={classes.name}>
               SRT Full Stack Web Development
