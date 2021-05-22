@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 
 import { useForm } from 'react-hook-form'
 
+import * as emailjs from 'emailjs-com';
+
 import { makeStyles } from '@material-ui/core'
-import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import SendIcon from '@material-ui/icons/Send'
@@ -84,27 +85,26 @@ function Contact() {
   console.log(useForm())
 
   const onSubmit = async (data) => {
-    console.log('Name: ', data.name)
-    console.log('Email: ', data.email)
-    console.log('Subject: ', data.subject)
-    console.log('Message: ', data.message)
+    'Name: ', data.name,
+    'Email: ', data.email,
+    'Subject: ', data.subject,
+    'Message: ', data.message
   }
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-
-  //   const newContact = {
-  //     name: name,
-  //     email: email,
-  //     subject: subject,
-  //     message: message,
-  //   }
-  //   console.log(newContact)
-  //   setName('')
-  //   setEmail('')
-  //   setSubject('')
-  //   setMessage('')
-  // }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID',   
+    onSubmit, 'YOUR_USER_ID')
+        .then((result) => {
+            alert('email sent successfully');
+        }, (error) => {
+            alert('error sending email');
+        });
+        //clears the form after sending the email
+        e.target.reset();
+    
+    
+  }
 
   return (
     <div className={classes.root}>
