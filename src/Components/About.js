@@ -42,10 +42,10 @@ function About() {
   <img
     src={doWhatYouLove}
     alt="neon sign do what you love"
-    className={`${classes.image} fade-in-image`}
+    className={`${classes.image} fade-in`}
   />
   <small>
-    <figcaption>
+    <figcaption className={'fade-in'}>
     Photo by <a href="https://unsplash.com/@millolin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Millo Lin</a> on <a href="https://unsplash.com/s/photos/millo-lin-neon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 

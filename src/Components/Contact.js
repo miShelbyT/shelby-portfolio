@@ -132,9 +132,9 @@ function Contact() {
     <div className={classes.root}>
       <div>
         <figure>
-          <img src={hello} alt="neon sign hello" className={`${classes.image} fade-in-image`} />
+          <img src={hello} alt="neon sign hello" className={`${classes.image} fade-in`} />
           <small>
-            <figcaption>
+            <figcaption className={'fade-in'}>
               Photo by{' '}
               <a href="https://unsplash.com/@drew_beamer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
                 Drew Beamer

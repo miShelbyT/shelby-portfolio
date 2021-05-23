@@ -51,10 +51,10 @@ function Home(props) {
   <img
     src={youAreHere}
     alt="neon sign you are here"
-    className={`${classes.image} fade-in-image`}
+    className={`${classes.image} fade-in`}
   />
   <small>
-    <figcaption>
+    <figcaption className={'fade-in'}>
     Photo by <a href="https://unsplash.com/@jlondonbaker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">John Baker</a> on <a href="https://unsplash.com/s/photos/you-are-here-sign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
 
