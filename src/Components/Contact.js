@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid grey',
     padding: 50,
     width: '80%',
-    height: '700px',
+    height: '800px',
     margin: '65px auto',
     borderRadius: 4,
     backgroundColor: '#f9f9f9',
@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     [theme.breakpoints.down('xs')]: {
       width: '75vw',
+      height: '850px',
     },
     [theme.breakpoints.up('sm')]: {
       width: '80vw',

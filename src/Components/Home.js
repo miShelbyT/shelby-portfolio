@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
 
 import youAreHere from '../images/you-are-here.jpg'
 
@@ -12,18 +13,30 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(12),
     overflowY: 'hidden',
     [theme.breakpoints.down('xs')]: {
-      marginTop: '20%'
+      marginTop: '35%',
+      padding: '7%'
     }
   },
   image: {
     margin: 'auto auto -28px',
     maxHeight: '500px',
     width: 'auto',
+    display: 'inline',
     [theme.breakpoints.down('sm')]: {
       width: '95%'
     }
   },
-  
+  imgDiv: {
+    width: '75%',
+    height: '100%',
+    margin: 'auto',
+    paddingTop: 5,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      paddingTop: 0,
+      marginTop: theme.spacing(0)
+    }
+  },
   toolbar: theme.mixins.toolbar
 }))
 
@@ -33,8 +46,8 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-<div>
-
+  <Typography variant="h5" className={`{classes.greeting} greeting fadeOut`}>Hi, I'm Shelby, web developer - thanks for stopping by!</Typography>
+<div className={classes.imgDiv}>
 <figure>
   <img
     src={youAreHere}

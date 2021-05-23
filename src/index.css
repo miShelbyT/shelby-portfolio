@@ -17,14 +17,27 @@ body {
   margin: 0;
 }
 
-/* body::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(200,200,200,0.6);
-  z-index: -1;
-} */
+.greeting {
+  -webkit-animation-duration: 7s;animation-duration: 7s;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
 
 .fade-in {
   animation: fadeIn 5s;

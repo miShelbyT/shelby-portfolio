@@ -41,7 +41,7 @@ const classes = useStyles()
     id: 2,
     image: ttt,
     title: "Tic Tac Toe Game",
-    subheader: "Are you team Gem or Team Cupcake?",
+    subheader: "Are you Team Gem or Team Cupcake?",
     link: "https://gem-tictactoe.netlify.app/",
     buttonText: "Tic Tac Toe as deployed Via Netlify",
     moreText: "Riffed off of a React tutorial for a basic tic tac toe game, I've added features including scorekeeping, game control and window.alerts. Submitted to Mintbean as first ever hackathon, first game build, first deployment."
@@ -62,8 +62,8 @@ const classes = useStyles()
   { id: 5,
     youTubeSrc: "https://www.youtube.com/embed/uolpe_CaOec",
     title: "Pet Dates",
-    subheader: "A pet scheduling app",
-    moreText: "Because pets need friends too! This pet-date scheduler app is currently being used by dogs, cats, a gecko and a stuffed raccoon."
+    subheader: "A pet scheduling app. Because pets need friends too!",
+    moreText: "This pet-date scheduler is currently being used by dogs, cats, a gecko and a stuffed raccoon."
   }
 ]
 
