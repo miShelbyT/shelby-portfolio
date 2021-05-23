@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     backgroundColor: '#dcf0f2',
     [theme.breakpoints.down('xs')]: {
-      width: 235,
+      paddingTop: 5,
+      width: 265,
       minHeight: 395,
       marginLeft: 0
     },
