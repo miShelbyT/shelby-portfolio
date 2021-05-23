@@ -14,7 +14,11 @@ const useStyles = makeStyles((theme) => ({
   image: {
     margin: 'auto auto -28px',
     maxHeight: '500px',
-    width: 'auto'
+    width: 'auto',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 0 -28px',
+      width: '400px'
+    }
   },
   aboutMe: {
     backgroundColor: '#dcf0f2',

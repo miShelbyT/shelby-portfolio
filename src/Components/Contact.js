@@ -16,12 +16,19 @@ import hello from '../images/hello.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(12)
+    marginTop: theme.spacing(12),
+    [theme.breakpoints.up('md')]: {
+      width: '100vw',
+    },
   },
   image: {
     margin: 'auto auto -28px',
     maxHeight: '450px',
-    width: 'auto'
+    width: 'auto',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 0 -28px',
+      width: '432px'
+    }
   },
   feelFree: {
     [theme.breakpoints.down('xs')]: {
@@ -43,6 +50,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     [theme.breakpoints.down('xs')]: {
       width: '75vw',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '80vw',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '800px',
     },
   },
   form: {

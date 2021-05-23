@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme) => ({
   image: {
     margin: 'auto auto -28px',
     maxHeight: '500px',
-    width: 'auto'
+    width: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      width: '95%'
+    }
   },
   // quoteDiv: {
   //   width: '100vw',
