@@ -38,7 +38,7 @@ function About() {
   <img
     src={doWhatYouLove}
     alt="neon sign do what you love"
-    className={classes.image}
+    className={`${classes.image} fade-in-image`}
   />
   <small>
     <figcaption>

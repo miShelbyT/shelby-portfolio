@@ -7,6 +7,8 @@ const headerHeight = 115
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width: '100vw',
+    height: '100vh',
     marginTop: theme.spacing(12),
     overflowY: 'hidden',
     [theme.breakpoints.down('xs')]: {
@@ -18,19 +20,19 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '500px',
     width: 'auto'
   },
-  quoteDiv: {
-    width: '100vw',
-    background: 'rgb(92, 77, 125)',
-    padding: 35,
-    margin: '75px 0'
-  },
-  quote: {
-    marginRight: 50,
-    marginLeft: 50,
-    fontFamily: 'Roboto',
-    fontWeight: 300,
-    color: 'rgb(221, 238, 238)'
-  },
+  // quoteDiv: {
+  //   width: '100vw',
+  //   background: 'rgb(92, 77, 125)',
+  //   padding: 35,
+  //   margin: '75px 0'
+  // },
+  // quote: {
+  //   marginRight: 50,
+  //   marginLeft: 50,
+  //   fontFamily: 'Roboto',
+  //   fontWeight: 300,
+  //   color: 'rgb(221, 238, 238)'
+  // },
   toolbar: theme.mixins.toolbar
 }))
 
@@ -46,7 +48,7 @@ function Home(props) {
   <img
     src={youAreHere}
     alt="neon sign you are here"
-    className={classes.image}
+    className={`${classes.image} fade-in-image`}
   />
   <small>
     <figcaption>
@@ -59,7 +61,7 @@ function Home(props) {
 </figure>
 </div>
 
-    <div className={classes.quoteDiv}>
+    {/* <div className={classes.quoteDiv}>
         <h4 className={classes.quote}>
           <span style={{fontStyle: 'italic'}}>
             "I am just a child who has never grown up. I still keep asking these
@@ -68,7 +70,7 @@ function Home(props) {
           <br></br>
           Stephen Hawking
         </h4>
-      </div>
+      </div> */}
     </div>
   );
 }

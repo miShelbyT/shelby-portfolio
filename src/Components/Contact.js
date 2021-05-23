@@ -119,7 +119,7 @@ function Contact() {
     <div className={classes.root}>
       <div>
         <figure>
-          <img src={hello} alt="neon sign hello" className={classes.image} />
+          <img src={hello} alt="neon sign hello" className={`${classes.image} fade-in-image`} />
           <small>
             <figcaption>
               Photo by{' '}
