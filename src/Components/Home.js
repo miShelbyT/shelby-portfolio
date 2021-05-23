@@ -46,7 +46,7 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-  <Typography variant="h5" className={`{classes.greeting} greeting fadeOut`}>Hi, I'm Shelby, web developer - thanks for stopping by!</Typography>
+  <Typography variant="h5" className={`{classes.greeting} greeting fadeOut`}>Hi I'm Shelby, web developer - thanks for stopping by!</Typography>
 <div className={classes.imgDiv}>
 <figure>
   <img
