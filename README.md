@@ -10,4 +10,4 @@ Thanks to [Josh-Gotro for the blog on setting up a Medium RSS feed on a React ap
   
 [Stack overflow HERO with solution for scrolling to top of every page onClick](https://stackoverflow.com/questions/36904185/react-router-scroll-to-top-on-every-transition)
 
-  
+Too many ppl to thank for tips/tricks on text/image animation. Google is our friend!
