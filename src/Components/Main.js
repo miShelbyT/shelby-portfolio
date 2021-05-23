@@ -22,24 +22,12 @@ const useStyles = makeStyles((theme) => ({
     margin: `${headerHeight}px auto -28px`,
     width: '75vw'
   },
-  quoteDiv: {
-    width: '100vw',
-    background: 'rgb(92, 77, 125)',
-    padding: 35,
-    margin: '75px 0'
-  },
-  quote: {
-    fontFamily: 'Roboto',
-    fontWeight: 300,
-    color: 'rgb(221, 238, 238)'
-  },
+  
   toolbar: theme.mixins.toolbar
 }))
 
 function Main({ children }){
   const classes = useStyles()
-
-  
 
   return (
     <div className={classes.root}>

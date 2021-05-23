@@ -8,7 +8,7 @@ const headerHeight = 115
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100vw',
-    height: '100vh',
+    height: '80vh',
     marginTop: theme.spacing(12),
     overflowY: 'hidden',
     [theme.breakpoints.down('xs')]: {
@@ -23,19 +23,7 @@ const useStyles = makeStyles((theme) => ({
       width: '95%'
     }
   },
-  // quoteDiv: {
-  //   width: '100vw',
-  //   background: 'rgb(92, 77, 125)',
-  //   padding: 35,
-  //   margin: '75px 0'
-  // },
-  // quote: {
-  //   marginRight: 50,
-  //   marginLeft: 50,
-  //   fontFamily: 'Roboto',
-  //   fontWeight: 300,
-  //   color: 'rgb(221, 238, 238)'
-  // },
+  
   toolbar: theme.mixins.toolbar
 }))
 
@@ -63,17 +51,6 @@ function Home(props) {
   </small>
 </figure>
 </div>
-
-    {/* <div className={classes.quoteDiv}>
-        <h4 className={classes.quote}>
-          <span style={{fontStyle: 'italic'}}>
-            "I am just a child who has never grown up. I still keep asking these
-            'how' and 'why' questions. Occasionally, I find an answer."
-          </span>
-          <br></br>
-          Stephen Hawking
-        </h4>
-      </div> */}
     </div>
   );
 }

@@ -108,6 +108,13 @@ function SideBar({ handleDrawerClose, open }) {
       path: '/contact'
     },
   ]
+
+  // function scrollToTop() {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth"
+  //   });
+  // }
   
 
   return (

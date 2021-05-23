@@ -8,6 +8,6 @@ BIG thanks to [Bitfumes](https://www.youtube.com/watch?v=KJE4LtAxLEw) for help w
 
 Thanks to [Josh-Gotro for the blog on setting up a Medium RSS feed on a React app](https://javascript.plainenglish.io/how-to-stream-a-medium-blog-to-your-react-js-portfolio-9d62de41916e)
   
-
+[Stack overflow HERO with solution for scrolling to top of every page onClick](https://stackoverflow.com/questions/36904185/react-router-scroll-to-top-on-every-transition)
 
   
