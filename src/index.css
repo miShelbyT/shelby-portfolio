@@ -29,8 +29,8 @@ body {
 
 @media (max-width: 600px) {
   h5 {
-    color: var(--ava-blue);
-    font-size: 0.75rem;
+    color: var(--ava-purple);
+    font-size: 1.15rem;
   }
 }
 
