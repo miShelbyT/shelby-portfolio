@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9) + 1,
     },
     [theme.breakpoints.down('xs')]: {
-      width: theme.spacing(0)
+      width: 0
     }
   },
   avaPurple: {

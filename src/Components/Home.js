@@ -22,17 +22,19 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '800px',
     display: 'inline',
     [theme.breakpoints.down('sm')]: {
-      width: '90vw'
+      width: '100vw',
+      
     }
   },
   imgDiv: {
     width: '100vw',
-    height: '100%',
+    // height: '100%',
     // margin: 'auto',
     // paddingTop: 5,
     [theme.breakpoints.down('xs')]: {
-      padding: theme.spacing(0),
-      margin: theme.spacing(0)
+      paddingLeft: 0,
+      marginLeft: -30,
+      width: '100vw',
     }
   },
   toolbar: theme.mixins.toolbar
@@ -44,7 +46,7 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-  <h5 className={"greeting fadeOut"}>Hi I'm Shelby, web developer - thanks for stopping by!</h5>
+  <h2 className={"greeting fadeOut"}>Hi I'm Shelby, web developer - thanks for stopping by!</h2>
 <div className={classes.imgDiv}>
 <figure>
   <img
