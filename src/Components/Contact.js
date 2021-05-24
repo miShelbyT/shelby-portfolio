@@ -17,17 +17,19 @@ import hello from '../images/hello.jpg'
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
-    [theme.breakpoints.up('md')]: {
-      width: '100vw',
-    },
+    width: '100vw',
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   image: {
-    margin: 'auto auto -28px',
+    margin: 'auto 0 -28px',
     maxHeight: '450px',
     width: 'auto',
     [theme.breakpoints.down('xs')]: {
       margin: '0 0 -28px',
-      width: '432px'
+      width: '95vw',
     }
   },
   feelFree: {
@@ -38,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
   formDiv: {
     border: '2px solid grey',
     padding: 50,
-    width: '80%',
+    width: '80vw',
     height: '800px',
-    margin: '65px auto',
+    margin: '65px 0',
     borderRadius: 4,
     backgroundColor: '#f9f9f9',
     display: 'flex',
@@ -49,8 +51,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     [theme.breakpoints.down('xs')]: {
-      width: '75vw',
+      width: '95vw',
       height: '850px',
+      // padding: '0 3%'
     },
     [theme.breakpoints.up('sm')]: {
       width: '80vw',

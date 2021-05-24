@@ -9,12 +9,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 73
+    marginLeft: 73,
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: 0
+    }
     
   },
   page: {
     background: 'rgb(206, 212, 218)',
-    width: '100%',
+    width: '100vw',
+    overflowY: 'hidden',
     // gives us 24 pixels padding - base theme is 8px
     padding: theme.spacing(3)
   },

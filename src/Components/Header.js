@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import shelby from '../images/shelby.png'
 
 const drawerWidth = 190
+const smDrawerWidth = 65
 
 const useStyles = makeStyles((theme) => ({
   
@@ -24,14 +25,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: theme.spacing(1)
+    padding: theme.spacing(1),
+    width: '100vw'
   },
-  header: {
-    [theme.breakpoints.down('xs')]: {
-      padding: 0,
-      margin: 0
-    }
-  },
+  // header: {
+  //   [theme.breakpoints.down('xs')]: {
+  //     padding: 0,
+  //     margin: 0
+  //   }
+  // },
   name: {
     flexGrow: 1,
     fontStyle: 'italic',
@@ -59,13 +61,18 @@ const useStyles = makeStyles((theme) => ({
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
+    
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    // to be used for small breakpoint
+    [theme.breakpoints.down('xs')]: {
+      width: `calc(100% - ${smDrawerWidth}px)`,
+    }
   },
   menuButton: {
-    marginRight: 36
+    marginRight: '3%'
   },
   hide: {
     display: 'none',
@@ -77,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(0, 0)
+    }
   }
 }))
 

@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   gridList: {
     width: '80%',
     height: 1000,
+    [theme.breakpoints.down('sm')]: {
+      width: '95vw',
+    },
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',

@@ -34,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    [theme.breakpoints.down('xs')]: {
+      width: theme.spacing(8) + 1
+    }
   },
   drawerClose: {
     backgroundColor: 'rgb(233, 236, 239)',
@@ -47,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9) + 1,
     },
     [theme.breakpoints.down('xs')]: {
-      width: theme.spacing(9) + 1
+      width: theme.spacing(1) + 1
     }
   },
   avaPurple: {

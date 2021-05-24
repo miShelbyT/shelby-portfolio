@@ -9,7 +9,11 @@ import doWhatYouLove from '../images/do-what-you-love.jpg'
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
-    overflowY: 'hidden'
+    width: '100vw',
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   image: {
     margin: 'auto auto -28px',
@@ -17,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: 'auto',
     [theme.breakpoints.down('xs')]: {
       margin: '0 0 -28px',
-      width: '400px'
+      width: '100vw'
     }
   },
   aboutMe: {
@@ -27,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     padding: '30px 65px',
     marginTop: 40,
-    width: '100%'
+    width: '100vw'
   },
 }))
 
@@ -62,7 +66,7 @@ function About() {
           actor. Eventually I realized I was ready to move on and do...
           something else. It didn't take me long to find my next passion: web development/software engineering have since become my nearest and
           dearest obsession. I graduated from Flatiron School's
-          bootcamp program in January, 2021. I am a fullstack developer however front end work is what excites me the most. Each and every day you can find me happily immersed in the expansion of my Javascript, React, Material UI and other front end skills.
+          bootcamp program in January, 2021. I am a fullstack developer however front end work is what excites me the most. Pretty much every day you can find me happily immersed in the expansion of my Javascript, React, Material UI and other front end skills.
           </p>
           <p>
           When I'm not coding madly I can be

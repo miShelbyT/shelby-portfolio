@@ -7,8 +7,6 @@ import ProjectCard from './ProjectCard'
 import cupcakes from '../images/brelbys.png'
 import ttt from '../images/ttt.png'
 
-const headerHeight = 115
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
