@@ -5,6 +5,11 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --ava-blue: #5ec8e8;
+  --ava-purple: rgb(92, 77, 125);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -20,6 +25,13 @@ body {
 .greeting {
   -webkit-animation-duration: 7s;animation-duration: 7s;
   -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+@media (max-width: 600px) {
+  h5 {
+    color: var(--ava-blue);
+    font-size: 0.75rem;
+  }
 }
 
 

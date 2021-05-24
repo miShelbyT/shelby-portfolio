@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 73,
+    marginLeft: 72,
     [theme.breakpoints.down('xs')]: {
       marginLeft: 0
     }
@@ -20,12 +20,16 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     overflowY: 'hidden',
     // gives us 24 pixels padding - base theme is 8px
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  image: {
-    margin: `${headerHeight}px auto -28px`,
-    width: '75vw'
-  },
+  // image: {
+  //   margin: `${headerHeight}px auto -28px`,
+  //   width: '85vw'
+  // },
   
   toolbar: theme.mixins.toolbar
 }))

@@ -1,10 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core'
-import Typography from '@material-ui/core/Typography'
 
 import youAreHere from '../images/you-are-here.jpg'
 
-const headerHeight = 115
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,27 +12,27 @@ const useStyles = makeStyles((theme) => ({
     overflowY: 'hidden',
     [theme.breakpoints.down('xs')]: {
       marginTop: '35%',
-      padding: '7%'
+      textAlign: 'center',
+      justifyContent: 'center',
+      alignItems: 'center'
     }
   },
   image: {
     margin: 'auto auto -28px',
-    maxHeight: '500px',
-    width: 'auto',
+    maxWidth: '800px',
     display: 'inline',
     [theme.breakpoints.down('sm')]: {
-      width: '95%'
+      width: '90vw'
     }
   },
   imgDiv: {
-    width: '75%',
+    width: '100vw',
     height: '100%',
-    margin: 'auto',
-    paddingTop: 5,
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-      paddingTop: 0,
-      marginTop: theme.spacing(0)
+    // margin: 'auto',
+    // paddingTop: 5,
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(0),
+      margin: theme.spacing(0)
     }
   },
   toolbar: theme.mixins.toolbar
@@ -46,7 +44,7 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-  <Typography variant="h5" className={`{classes.greeting} greeting fadeOut`}>Hi I'm Shelby, web developer - thanks for stopping by!</Typography>
+  <h5 className={"greeting fadeOut"}>Hi I'm Shelby, web developer - thanks for stopping by!</h5>
 <div className={classes.imgDiv}>
 <figure>
   <img
