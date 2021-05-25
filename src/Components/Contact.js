@@ -14,19 +14,21 @@ import SendIcon from '@material-ui/icons/Send'
 
 import hello from '../images/hello.jpg'
 
+// const initialDrawerWidth = 71
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
-    width: '100vw',
+    // width: `calc(100vw - ${initialDrawerWidth}px)`,
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center'
   },
   image: {
-    margin: 'auto 0 -28px',
-    maxHeight: '450px',
-    width: 'auto',
+    margin: '0 0 -28px',
+    // maxHeight: '350px',
+    width: '55vw',
     [theme.breakpoints.down('xs')]: {
       margin: '0 0 -28px',
       width: '95vw',

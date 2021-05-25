@@ -3,11 +3,13 @@ import { makeStyles } from '@material-ui/core'
 
 import youAreHere from '../images/you-are-here.jpg'
 
+const initialDrawerWidth = 73
+const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100vw',
-    height: '80vh',
+   width: `calc(100vw - ${initialDrawerWidth}px)`,
+    height: `calc(100vh - ${headerHeight}px)`,
     marginTop: theme.spacing(12),
     overflowY: 'hidden',
     [theme.breakpoints.down('xs')]: {

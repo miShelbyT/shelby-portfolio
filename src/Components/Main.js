@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core'
 import Header from './Header'
 
 
-const headerHeight = 115
+const initialDrawerWidth = 71
+const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,8 +18,6 @@ const useStyles = makeStyles((theme) => ({
   },
   page: {
     background: 'rgb(206, 212, 218)',
-    width: '100vw',
-    overflowY: 'hidden',
     // gives us 24 pixels padding - base theme is 8px
     padding: theme.spacing(3),
     display: 'flex',
@@ -26,10 +25,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  // image: {
-  //   margin: `${headerHeight}px auto -28px`,
-  //   width: '85vw'
-  // },
   
   toolbar: theme.mixins.toolbar
 }))

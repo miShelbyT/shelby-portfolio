@@ -5,11 +5,12 @@ import grey from '@material-ui/core/colors/grey'
 
 import doWhatYouLove from '../images/do-what-you-love.jpg'
 
+const initialDrawerWidth = 71
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
-    width: '100vw',
+    width: `calc(100vw - ${initialDrawerWidth}px)`,
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',

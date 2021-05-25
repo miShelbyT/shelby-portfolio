@@ -18,7 +18,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import Avatar from '@material-ui/core/Avatar'
 
 const drawerWidth = 190
-const headerHeight = 60
+const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
   },
   active: {
     backgroundColor: 'rgb(206, 212, 218)'
+  },
+  chevron: {
+    marginTop: `calc(${headerHeight} + 40px)`
   }
 }))
 
@@ -133,7 +136,7 @@ function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
             {theme.direction === 'rtl' ? (
               <ChevronRightIcon color="primary"/>
             ) : (
-              <ChevronLeftIcon color="primary"/>
+              <ChevronLeftIcon color="primary" className={classes.chevron}/>
             )}
           </IconButton>
         </div>

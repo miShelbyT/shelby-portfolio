@@ -25,24 +25,18 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: theme.spacing(1),
+    paddingRight: theme.spacing(3),
     width: '100vw'
   },
-  // header: {
-  //   [theme.breakpoints.down('xs')]: {
-  //     padding: 0,
-  //     margin: 0
-  //   }
-  // },
   name: {
     flexGrow: 1,
     fontStyle: 'italic',
     margin: theme.spacing(1),
     [theme.breakpoints.down('sm')]: {
-      fontSize: 16
+      fontSize: 22
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: 12
+      display: 'none'
     }
   },
   icon: {
@@ -129,7 +123,7 @@ function Header() {
           <Link href="/">
             <img src={shelby} alt="named logo" style={{margin: 0, height: 80, width: 'auto'}}/>
           </Link>
-            <Typography variant="h5" color="primary" noWrap className={classes.name}>
+            <Typography variant="h4" color="primary" noWrap className={classes.name}>
               Shelby Talbert - Full Stack Web Developer
             </Typography>
 
