@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function SideBar({ handleDrawerClose, open }) {
+function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
   const classes = useStyles()
   const theme = useTheme()
   const history = useHistory()
@@ -112,13 +112,6 @@ function SideBar({ handleDrawerClose, open }) {
     },
   ]
 
-  // function scrollToTop() {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth"
-  //   });
-  // }
-  
 
   return (
     <div>
@@ -154,7 +147,7 @@ function SideBar({ handleDrawerClose, open }) {
             onClick={()=> history.push(sideBarItem.path)}
             className={location.pathname === sideBarItem.path ? classes.active : null}
             >
-              <ListItemAvatar >
+              <ListItemAvatar onMouseOver={handleDrawerOpen} onMouseOut={handleDrawerClose}>
                 {sideBarItem.avatar}
               </ListItemAvatar>
               <ListItemText primary={sideBarItem.text} />
