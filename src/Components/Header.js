@@ -130,7 +130,7 @@ function Header() {
             <img src={shelby} alt="named logo" style={{margin: 0, height: 80, width: 'auto'}}/>
           </Link>
             <Typography variant="h5" color="primary" noWrap className={classes.name}>
-              SRT Full Stack Web Development
+              Shelby Talbert - Full Stack Web Developer
             </Typography>
 
           <Link href="https://github.com/miShelbyT">
