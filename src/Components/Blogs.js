@@ -52,7 +52,6 @@ function Blogs() {
       .then((r) => r.json())
       .then((blogs) => {
         setMyBlogs(blogs.items)
-        console.log(blogs.items)
       })
   }, [rss2json])
 

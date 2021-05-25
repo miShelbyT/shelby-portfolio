@@ -16,7 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 import shelby from '../images/shelby.png'
 
-const drawerWidth = 190
+const drawerWidth = 160
 const smDrawerWidth = 65
 
 const useStyles = makeStyles((theme) => ({
@@ -71,6 +71,11 @@ const useStyles = makeStyles((theme) => ({
   hide: {
     display: 'none',
   },
+  hideMenu: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
   toolbar: {
     display: 'flex',
     alignItems: 'center',
@@ -114,9 +119,9 @@ function Header() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={clsx(classes.menuButton, {
+            className={`${clsx(classes.menuButton, {
               [classes.hide]: open,
-            })}
+            })} ${classes.hideMenu}`}
           >
             <MenuIcon color='primary' fontSize='large'/>
           </IconButton>
