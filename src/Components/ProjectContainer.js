@@ -7,12 +7,13 @@ import ProjectCard from './ProjectCard'
 import cupcakes from '../images/brelbys.png'
 import ttt from '../images/ttt.png'
 
+const initialDrawerWidth = 71
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(14),
     marginRight: theme.spacing(3),
-    marginLeft: theme.spacing(3),
+    paddingLeft: `calc(${initialDrawerWidth}px + ${theme.spacing(0)}px)`,
     [theme.breakpoints.up('sm')]: {
       marginLeft: '75px'
     }
@@ -71,7 +72,7 @@ const classes = useStyles()
     <div ref={projectsRef} className={classes.root}>
       <Grid
         container
-        spacing={5}
+        spacing={4}
         direction="row"
         justify="center"
         alignItems="center"

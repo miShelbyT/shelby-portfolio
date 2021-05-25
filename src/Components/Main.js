@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 72,
+    // marginLeft: {initialDrawerWidth},
     [theme.breakpoints.down('xs')]: {
       marginLeft: 0
     }

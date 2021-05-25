@@ -10,14 +10,15 @@ const initialDrawerWidth = 71
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
-    width: `calc(100vw - ${initialDrawerWidth}px)`,
+    width: `calc(100% - ${initialDrawerWidth}px)`,
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center'
   },
   image: {
-    margin: 'auto auto -28px',
+    marginBottom: -28,
+    marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
     maxHeight: '500px',
     width: 'auto',
     [theme.breakpoints.down('xs')]: {
@@ -29,10 +30,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#dcf0f2',
     color: grey[800],
     fontFamily: 'Roboto',
+    fontSize: 18,
     fontWeight: 300,
-    padding: '30px 65px',
+    padding: '45px 70px',
     marginTop: 40,
-    width: '100vw'
+    marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
+    width: '90%'
   },
 }))
 
