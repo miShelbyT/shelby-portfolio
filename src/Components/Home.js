@@ -3,12 +3,12 @@ import { makeStyles } from '@material-ui/core'
 
 import youAreHere from '../images/you-are-here.jpg'
 
-const initialDrawerWidth = 71
+const initialDrawerWidth = 73
 const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
   root: {
-   width: `calc(100% - ${initialDrawerWidth}px)`,
+   width: `calc(100vw - ${initialDrawerWidth}px)`,
     height: `calc(100vh - ${headerHeight}px)`,
     marginTop: theme.spacing(12),
     overflowY: 'hidden',
@@ -24,16 +24,17 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '800px',
     display: 'inline',
     [theme.breakpoints.down('sm')]: {
-      width: '100vw',
-      
+      marginLeft: 0,
+      marginRight: 0,
+      width: '125%',
     }
   },
   imgDiv: {
     width: '100vw',
     [theme.breakpoints.down('xs')]: {
-      paddingLeft: 0,
-      marginLeft: -30,
-      width: '100vw',
+      marginLeft: 0,
+      marginRight: 0,
+      width: '100%',
     }
   },
   toolbar: theme.mixins.toolbar

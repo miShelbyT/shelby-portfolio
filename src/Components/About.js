@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '500px',
     width: 'auto',
     [theme.breakpoints.down('xs')]: {
-      margin: '0 0 -28px',
+      margin: '0px auto -28px',
       width: '100vw'
     }
   },
@@ -35,7 +35,11 @@ const useStyles = makeStyles((theme) => ({
     padding: '45px 70px',
     marginTop: 40,
     marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
-    width: '90%'
+    width: '90%',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0px auto -28px',
+      width: '100vw'
+    }
   },
 }))
 
