@@ -46,7 +46,7 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-  <h2 className={"greeting fadeOut"}>Hi I'm Shelby, web developer - thanks for stopping by!</h2>
+  <h2 className={"greeting fadeOut"}>Welcome and thanks for stopping by!</h2>
 <div className={classes.imgDiv}>
 <figure>
   <img

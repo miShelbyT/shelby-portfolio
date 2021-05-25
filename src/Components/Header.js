@@ -119,6 +119,7 @@ function Header() {
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
+            onMouseOver={handleDrawerOpen}
             edge="start"
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
