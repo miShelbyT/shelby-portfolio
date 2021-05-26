@@ -74,7 +74,7 @@ function About() {
           actor. Eventually I realized I was ready to move on and do...
           something else. It didn't take me long to find my next passion: web development/software engineering have since become my nearest and
           dearest obsession. I graduated from Flatiron School's
-          bootcamp program in January, 2021. I am a fullstack developer however front end work is what excites me the most. Pretty much every day you can find me happily immersed in the expansion of my Javascript, React, Material UI and other front end skills.
+          bootcamp program in January, 2021. I am a fullstack developer however front end work is what excites me the most. Pretty much every day you can find me happily immersed in the expansion of my Javascript, React, Redux, Semantic UI, Material UI, SASS and other front end skills.
           </p>
           <p>
           When I'm not coding madly I can be
