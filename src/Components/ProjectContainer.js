@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(14),
     marginRight: theme.spacing(3),
     paddingLeft: `calc(${initialDrawerWidth}px + ${theme.spacing(0)}px)`,
+    [theme.breakpoints.down('sm')]: {
+      marginTop: theme.spacing(7),
+    },
     [theme.breakpoints.up('sm')]: {
       marginLeft: '75px'
     }

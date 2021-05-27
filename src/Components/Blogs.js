@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: theme.spacing(6),
+    },
   },
   gridList: {
     width: '80%',
