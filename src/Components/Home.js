@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
 
 import youAreHere from '../images/you-are-here.jpg'
 
@@ -12,15 +13,21 @@ const useStyles = makeStyles((theme) => ({
     height: `calc(100vh - ${headerHeight}px)`,
     marginTop: theme.spacing(12),
     overflowY: 'hidden',
+    display: 'flex',
+    flexWrap: 'wrap',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
     [theme.breakpoints.down('xs')]: {
       marginTop: '35%',
-      textAlign: 'center',
-      justifyContent: 'center',
-      alignItems: 'center'
+    }
+  }, greeting: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 25,
     }
   },
   image: {
-    margin: `45px auto -28px ${initialDrawerWidth}px`,
+    margin: `0 auto -28px ${initialDrawerWidth}px`,
     maxWidth: '800px',
     display: 'inline',
     [theme.breakpoints.down('sm')]: {
@@ -46,7 +53,7 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-  <h2 className={"greeting fadeOut"}>Welcome and thanks for stopping by!</h2>
+  <Typography variant="h3" className={`greeting slideIn ${classes.greeting}`}>Welcome and thanks for stopping by!</Typography>
 <div className={classes.imgDiv}>
 <figure>
   <img
