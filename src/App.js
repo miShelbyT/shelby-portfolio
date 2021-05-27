@@ -26,7 +26,7 @@ function App() {
 
   
   return (
-    <div className="App">
+    <>
       <ThemeProvider theme={theme}>
         <Main >
           <Switch>
@@ -54,7 +54,7 @@ function App() {
           </Switch>
         </Main>
       </ThemeProvider>
-    </div>
+    </>
   )
 }
 
