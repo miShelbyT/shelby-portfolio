@@ -11,28 +11,23 @@ const useStyles = makeStyles((theme) => ({
   root: {
    width: `calc(100vw - ${initialDrawerWidth}px)`,
     height: `calc(100vh - ${headerHeight}px)`,
-    marginTop: theme.spacing(12),
-    overflowY: 'hidden',
+    margin: theme.spacing(2),
     display: 'flex',
     flexWrap: 'wrap',
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '35%',
-    }
   }, greeting: {
     [theme.breakpoints.down('sm')]: {
+      marginTop: 20,
       fontSize: 25,
     }
   },
   image: {
-    margin: `0 auto -28px ${initialDrawerWidth}px`,
+    // margin: "0 0 -28px 50px",
     maxWidth: '800px',
     display: 'inline',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: 0,
-      marginRight: 0,
       width: '125%',
     }
   },
