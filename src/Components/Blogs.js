@@ -10,6 +10,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
+    paddingLeft: '8%',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',

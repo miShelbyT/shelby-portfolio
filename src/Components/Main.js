@@ -3,23 +3,13 @@ import { makeStyles } from '@material-ui/core'
 import Header from './Header'
 
 
-const initialDrawerWidth = 71
-const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    // marginLeft: {initialDrawerWidth},
-    [theme.breakpoints.down('xs')]: {
-      marginLeft: 0
-    }
-    
-  },
   page: {
+    height: '100%',
     background: 'rgb(206, 212, 218)',
     // gives us 24 pixels padding - base theme is 8px
-    padding: theme.spacing(3),
+    // padding: theme.spacing(3),
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
