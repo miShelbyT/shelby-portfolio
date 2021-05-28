@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: theme.spacing(5)
   }, greeting: {
     [theme.breakpoints.down('sm')]: {
       marginTop: 20,
