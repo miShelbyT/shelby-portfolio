@@ -46,19 +46,9 @@ body {
   }
 }
 
-.imgDiv {
-  border: 2px solid green;
-  background: url('./images/you-are-here.jpg');
-  background-repeat: repeat;
-  background-size: contain;
-  height: 700px;
-  margin-left: 100px;
-  position: relative;
-}
-
 .caption {
   position: absolute;
-  bottom: 5%;
+  bottom: 2%;
   left: 45%;
 }
 
