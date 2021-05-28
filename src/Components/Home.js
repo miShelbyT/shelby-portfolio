@@ -23,20 +23,21 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 25,
     }
   },
-  image: {
-    // margin: "0 0 -28px 50px",
-    maxWidth: '800px',
-    display: 'inline',
-    [theme.breakpoints.down('sm')]: {
-      width: '125%',
-    }
-  },
+  // image: {
+  //   // margin: "0 0 -28px 50px",
+  //   maxWidth: '800px',
+  //   display: 'inline',
+  //   [theme.breakpoints.down('sm')]: {
+  //     width: '125%',
+  //   }
+  // },
   imgDiv: {
     width: '100vw',
     [theme.breakpoints.down('xs')]: {
       marginLeft: 0,
       marginRight: 0,
-      width: '100%',
+      height: '66%',
+      width: '96%'
     }
   },
   toolbar: theme.mixins.toolbar
@@ -49,15 +50,15 @@ function Home(props) {
   return (
     <div className={classes.root}>
   <Typography variant="h3" className={`greeting slideIn ${classes.greeting}`}>Welcome and thanks for stopping by!</Typography>
-<div className={classes.imgDiv}>
+<div className={`${classes.imgDiv} imgDiv`}>
 <figure>
-  <img
+  {/* <img
     src={youAreHere}
     alt="neon sign you are here"
     className={`${classes.image} fade-in`}
-  />
+  /> */}
   <small>
-    <figcaption className={'fade-in'}>
+    <figcaption className={'fade-in caption'}>
     Photo by <a href="https://unsplash.com/@jlondonbaker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">John Baker</a> on <a href="https://unsplash.com/s/photos/you-are-here-sign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
 

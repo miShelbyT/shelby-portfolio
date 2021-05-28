@@ -1,7 +1,8 @@
 import './App.css'
 
-import { Route, Switch } from 'react-router-dom'
-import {  } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import ScrollToTop from './Components/ScrollToTop'
+
 import Main from './Components/Main'
 import About from './Components/About'
 import Projects from './Components/ProjectContainer'
@@ -27,6 +28,8 @@ function App() {
   
   return (
     <>
+    <BrowserRouter>
+    <ScrollToTop>
       <ThemeProvider theme={theme}>
         <Main >
           <Switch>
@@ -54,6 +57,8 @@ function App() {
           </Switch>
         </Main>
       </ThemeProvider>
+      </ScrollToTop>
+      </BrowserRouter>
     </>
   )
 }

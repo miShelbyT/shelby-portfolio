@@ -24,6 +24,7 @@ body {
 }
 
 .greeting {
+  margin-top: 20px;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -43,6 +44,28 @@ body {
 @media (max-width: 1024px) {
   .greeting {
     color: var(--ava-purple);
+  }
+}
+
+.imgDiv {
+  border: 2px solid green;
+  background: url('./images/you-are-here.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  height: 700px;
+  margin-left: 100px;
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
+
+@media (max-width: 600px) {
+  .caption {
+    display: none;
   }
 }
 
