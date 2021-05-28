@@ -14,9 +14,10 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
     display: 'flex',
     flexWrap: 'wrap',
+    flexDirection: 'column',
     textAlign: 'center',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     paddingTop: theme.spacing(5)
   }, greeting: {
     [theme.breakpoints.down('sm')]: {
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       background: `url(${youAreHere})`,
       backgroundRepeat: 'repeat',
       backgroundSize: 'contain',
-      height: '700px',
+      height: '600px',
       width: '85%',
       marginLeft: '100px',
       position: 'relative',
