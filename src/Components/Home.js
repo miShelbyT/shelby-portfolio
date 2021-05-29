@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }, greeting: {
     [theme.breakpoints.down('sm')]: {
       marginTop: 20,
-      marginLeft: theme.spacing(5),
+      // marginLeft: theme.spacing(5),
       fontSize: 25,
     }
   },
