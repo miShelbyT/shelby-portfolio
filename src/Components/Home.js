@@ -13,11 +13,11 @@ const useStyles = makeStyles((theme) => ({
     height: `calc(100vh - ${headerHeight}px)`,
     margin: theme.spacing(2),
     display: 'flex',
-    // flexWrap: 'wrap',
     flexDirection: 'column',
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'space-around',
+    overflow: 'hidden',
     paddingTop: theme.spacing(5)
   }, greeting: {
     [theme.breakpoints.down('sm')]: {
