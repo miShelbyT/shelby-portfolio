@@ -29,12 +29,13 @@ const useStyles = makeStyles((theme) => ({
   aboutMe: {
     backgroundColor: '#dcf0f2',
     color: grey[800],
-    fontFamily: 'Roboto',
+    fontFamily: 'Poppins',
     fontSize: 18,
     fontWeight: 300,
     padding: '45px 70px',
     marginTop: 40,
     marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
+    textAlign: 'justify',
     width: '90%',
     [theme.breakpoints.down('xs')]: {
       margin: '0px auto -28px',

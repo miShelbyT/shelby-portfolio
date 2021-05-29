@@ -20,7 +20,9 @@ const theme = createMuiTheme({
     secondary: {
       main: 'rgb(233, 236, 239)',
     },
-  },
+  }, typography: {
+    fontFamily: 'Poppins'
+  }
 })
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
     <>
     <BrowserRouter>
     <ScrollToTop>
+      {/* with theme provider we can now provide theme props to entire app bc we've wrapped ThemeProvider around the rest of the app */}
       <ThemeProvider theme={theme}>
         <Main >
           <Switch>
