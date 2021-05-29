@@ -35,7 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     borderRadius: 5,
-    width: '95%',
+    // width: '95%',
+    width: "470px",
+    height: "510px",
     paddingTop: '56.25%', // 16:9
     [theme.breakpoints.down('xs')]: {
       width: '95%',

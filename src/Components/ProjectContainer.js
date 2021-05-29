@@ -4,8 +4,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 
 import ProjectCard from './ProjectCard'
-import cupcakes from '../images/brelbys.png'
-import ttt from '../images/ttt.png'
+// import cupcakes from '../images/brelbys.png'
+// import ttt from '../images/ttt.png'
+import brelbys from '../images/updated-brelbys.gif'
+import ttt from '../images/ttt.gif'
 
 const initialDrawerWidth = 71
 
@@ -32,7 +34,7 @@ const classes = useStyles()
   const projects = [{
     // no demo for these projects
     id: 1,
-    image: cupcakes,
+    image: brelbys,
     title: "Brelby's Wine & Cupcakes",
     subheader: "A wine and cupcakes app... you're welcome, world!",
     link: "https://mishelbyt.github.io/brelbys-sass/practice-project/dist/",
