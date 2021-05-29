@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     height: `calc(100vh - ${headerHeight}px)`,
     margin: theme.spacing(2),
     display: 'flex',
-    flexWrap: 'wrap',
+    // flexWrap: 'wrap',
     flexDirection: 'column',
     textAlign: 'center',
     alignItems: 'center',
@@ -50,7 +50,7 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-  <Typography variant="h3" className={`greeting slideIn ${classes.greeting}`}>Welcome and thanks for stopping by!</Typography>
+  <Typography variant="h3" className={`greeting ${classes.greeting}`}>Welcome and thanks for stopping by!</Typography>
 <div className={`${classes.imgDiv} imgDiv`}>
 
   <small className={'fade-in caption'}>
