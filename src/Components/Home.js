@@ -20,10 +20,11 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     paddingTop: theme.spacing(5)
   }, greeting: {
-    marginLeft: theme.spacing(4),
-    [theme.breakpoints.down('sm')]: {
+    marginLeft: theme.spacing(1),
+    [theme.breakpoints.down('md')]: {
       marginTop: 20,
-      // marginLeft: theme.spacing(5),
+      marginLeft: 'auto',
+      marginRight: 'auto',
       fontSize: 25,
     }
   },
