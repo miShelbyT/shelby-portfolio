@@ -60,6 +60,21 @@ h1.greeting {
   }
 }
 
+@-webkit-keyframes effect {
+  0% {
+    -webkit-animation: effect 2s linear infinite;
+    -webkit-background: linear-gradient(to right,
+              var(--ava-purple), #af6dc0);
+      /* -webkit-background-clip: text; */
+  }
+
+  100% {
+    -webkit-background: linear-gradient(to right,
+              var(--ava-blue), #000FFF);
+      /* -webkit-background-clip: text; */
+  }
+}
+
 .caption {
   position: absolute;
   bottom: 2%;
