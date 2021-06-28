@@ -57,9 +57,23 @@ h1.greeting {
   }
 }
 
+@-webkit-keyframes slidein {
+  from {
+    -webkit-margin-left: 100%;
+    -webkit-width: 300%;
+  }
+
+  to {
+    -webkit-margin-left: 1%;
+    -webkit-width: 100%;
+  }
+}
+
 @keyframes effect {
   0% {
       background: linear-gradient(to right,
+              var(--ava-purple), #af6dc0);
+      -webkit-background: linear-gradient(to right,
               var(--ava-purple), #af6dc0);
       -moz-background: linear-gradient(to right,
               var(--ava-purple), #af6dc0);
@@ -69,6 +83,8 @@ h1.greeting {
 
   100% {
       background: linear-gradient(to right,
+              var(--ava-blue), #000FFF);
+      -webkit-background: linear-gradient(to right,
               var(--ava-blue), #000FFF);
       -moz-background: linear-gradient(to right,
               var(--ava-blue), #000FFF);
@@ -82,13 +98,13 @@ h1.greeting {
     -webkit-animation: effect 2s linear infinite;
     -webkit-background: linear-gradient(to right,
               var(--ava-purple), #af6dc0);
-      /* -webkit-background-clip: text; */
+      -webkit-background-clip: text;
   }
 
   100% {
     -webkit-background: linear-gradient(to right,
               var(--ava-blue), #000FFF);
-      /* -webkit-background-clip: text; */
+      -webkit-background-clip: text;
   }
 }
 
