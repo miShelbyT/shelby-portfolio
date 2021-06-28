@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 25,
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: 15,
+      fontSize: 20,
     }
   },
   imgDiv: {
