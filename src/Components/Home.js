@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 'auto',
       marginRight: 'auto',
       fontSize: 25,
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 15,
     }
   },
   imgDiv: {
