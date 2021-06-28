@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core'
-import Typography from '@material-ui/core/Typography'
 
 import youAreHere from '../images/you-are-here.jpg'
 
@@ -52,7 +51,10 @@ function Home(props) {
 
   return (
     <div className={classes.root}>
-  <Typography variant="h3" className={`greeting ${classes.greeting}`}>Welcome and thanks for stopping by!</Typography>
+      <div className="slide-in-div">
+      <h1 className={`greeting ${classes.greeting}`}>Welcome and thanks for stopping by!</h1>
+      </div>
+  
 <div className={`${classes.imgDiv} imgDiv`}>
 
   <small className={'fade-in caption'}>
