@@ -37,13 +37,25 @@ body {
 }
 
 h1.greeting {
-  color: transparent;
-  -webkit-animation: effect 2s linear infinite;
-  -moz-animation: effect 2s linear infinite;
-  animation: effect 2s linear infinite;
+  -webkit-animation-name: effect;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: effect;
+  -moz-animation-duration: 1.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  animation-name: effect;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  
   -webkit-background-clip: text;
   background-clip: text;
-  
+  color: transparent;
   
 }
 
@@ -72,16 +84,14 @@ h1.greeting {
 }
 
 @keyframes effect {
-  0% {
-    background: -webkit-linear-gradient(135deg,var(--ava-purple), #af6dc0);
+  from {
     background: -moz-linear-gradient(to right, var(--ava-purple), #af6dc0);
     background: linear-gradient(to right, var(--ava-purple), #af6dc0);
     -webkit-background-clip: text;
     background-clip: text;
   }
 
-  100% {
-    background: -webkit-linear-gradient(135deg, var(--ava-blue), #000FFF);
+  to {
     background: -moz-linear-gradient(to right, var(--ava-blue), #000FFF);
     background: linear-gradient(to right, var(--ava-blue), #000FFF);
     -webkit-background-clip: text;
@@ -90,16 +100,14 @@ h1.greeting {
 }
 
 @-webkit-keyframes effect {
-  0% {
-    background: -webkit-linear-gradient(135deg, var(--ava-purple), #af6dc0);
-    /* -webkit-background-clip: text; */
-    /* background-clip: text; */
+from {
+    background: -webkit-linear-gradient(to right, var(--ava-purple), #af6dc0);
+    -webkit-background-clip: text;
   }
 
-  100% {
-    background: -webkit-linear-gradient(135deg, var(--ava-blue), #000FFF);
-    /* -webkit-background-clip: text; */
-    /* background-clip: text; */
+  to {
+    background: -webkit-linear-gradient(to right, var(--ava-blue), #000FFF);
+    -webkit-background-clip: text;
   }
 }
 
