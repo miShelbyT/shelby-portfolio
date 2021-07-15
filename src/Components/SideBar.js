@@ -121,7 +121,8 @@ function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
   return (
     <div>
       <Drawer
-      onMouseOver={handleDrawerOpen} onMouseOut={handleDrawerClose}
+      onMouseOver={handleDrawerOpen} 
+      // onMouseOut={handleDrawerClose}
         variant="permanent"
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
@@ -135,7 +136,9 @@ function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
         }}
       >
         <div className={`${classes.toolbar} ${classes.chevron}`}>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton 
+          // onClick={handleDrawerClose}
+          >
             {theme.direction === 'rtl' ? (
               <ChevronRightIcon color="primary"/>
             ) : (

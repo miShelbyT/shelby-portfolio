@@ -96,11 +96,14 @@ function Header() {
 
   const handleDrawerOpen = () => {
     setOpen(true);
+    setTimeout(() => {
+      setOpen(false)
+    }, 2000);
   }
 
-  const handleDrawerClose = () => {
-    setOpen(false)
-  }
+  // const handleDrawerClose = () => {
+  //   setOpen(false)
+  // }
 
   return (
     <div className={classes.header}>
@@ -110,7 +113,7 @@ function Header() {
         elevation={1}
         color='secondary'
         className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
+          // [classes.appBarShift]: open,
         })}
       >
         <Toolbar className={classes.root}>
@@ -157,7 +160,10 @@ function Header() {
           </Link>
         </Toolbar>
       </AppBar>
-      <SideBar handleDrawerClose={handleDrawerClose} open={open} handleDrawerOpen={handleDrawerOpen}/>
+      <SideBar 
+      // handleDrawerClose={handleDrawerClose} 
+      open={open} 
+      handleDrawerOpen={handleDrawerOpen}/>
     </div>
   )
 }
