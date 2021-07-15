@@ -41,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     margin: theme.spacing(1),
-    [theme.breakpoints.down('xs')]: {
-      fontSize: 20,
-    }
+    // [theme.breakpoints.down('xs')]: {
+    //   // fontSize: 30,
+    // }
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -95,7 +95,7 @@ function Header() {
   const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true)
+    setOpen(true);
   }
 
   const handleDrawerClose = () => {
@@ -134,6 +134,7 @@ function Header() {
 
           <Link href="https://github.com/miShelbyT">
             <Icon
+              fontSize='large'
               className={`fab fa-github ${classes.icon}`}
               color="primary"
             />
@@ -141,6 +142,7 @@ function Header() {
 
           <Link href="https://www.linkedin.com/in/shelby-talbert">
             <Icon
+            fontSize='large'
               className={`fab fa-linkedin ${classes.icon}`}
               color="primary"
             />
@@ -148,6 +150,7 @@ function Header() {
 
           <Link href="https://mi-shelbyrose.medium.com/">
             <Icon
+            fontSize='large'
               className={`fab fa-medium ${classes.icon}`}
               color="primary"
             />
