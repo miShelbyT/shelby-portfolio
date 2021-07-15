@@ -69,11 +69,11 @@ const useStyles = makeStyles((theme) => ({
   active: {
     backgroundColor: 'rgb(206, 212, 218)'
   },
-  chevron: {
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
-  }
+  // chevron: {
+  //   [theme.breakpoints.up('md')]: {
+  //     display: 'none',
+  //   },
+  // }
 }))
 
 function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
@@ -135,9 +135,9 @@ function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
           }),
         }}
       >
-        <div className={`${classes.toolbar} ${classes.chevron}`}>
+        {/* <div className={`${classes.toolbar} ${classes.chevron}`}>
           <IconButton 
-          // onClick={handleDrawerClose}
+          onClick={handleDrawerClose}
           >
             {theme.direction === 'rtl' ? (
               <ChevronRightIcon color="primary"/>
@@ -145,7 +145,7 @@ function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
               <ChevronLeftIcon color="primary" className={classes.chevron}/>
             )}
           </IconButton>
-        </div>
+        </div> */}
         <List className={classes.list}>
        
           {sideBarItems.map(sideBarItem => (

@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   name: {
     flexGrow: 1,
+    // marginLeft: 'auto',
     fontStyle: 'italic',
     margin: theme.spacing(1),
     [theme.breakpoints.down('sm')]: {
@@ -38,8 +39,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       display: 'none'
     }
-  },
-  icon: {
+  }, icon: {
     margin: theme.spacing(1),
     // [theme.breakpoints.down('xs')]: {
     //   // fontSize: 30,
