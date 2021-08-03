@@ -26,12 +26,18 @@ const useStyles = makeStyles((theme) => ({
       width: '95vw',
     },
   },
-  icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
+  blogBanner: {
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
   },
   subheader: {
     backgroundColor: 'rgb(52, 58, 64)',
     color: 'rgb(345, 200, 200)',
+    height: '75px',
+    padding: 'auto auto',
+    fontSize: '1.4em',
+    // position: 'fixed',
+    // top: '95px',
+    marginBotton: '15px',
     [theme.breakpoints.down('sm')]: {
       paddingTop: 10,
       lineHeight: 1.5
@@ -74,8 +80,9 @@ function Blogs() {
           <GridListTile key={blog.pubDate}>
             <img src={blog.thumbnail} alt={blog.title} />
             <GridListTileBar
+            className={classes.blogBanner}
               titlePosition="top"
-              title={<a href={blog.link}>{blog.title}</a>}
+              title={<a href={blog.link} style={{ fontSize: '1.5em' }}>{blog.title}</a>}
             />
           </GridListTile>
         ))}

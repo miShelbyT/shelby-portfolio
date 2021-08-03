@@ -10,10 +10,10 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import ListItemText from '@material-ui/core/ListItemText'
 
-import IconButton from '@material-ui/core/IconButton'
+// import IconButton from '@material-ui/core/IconButton'
 
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
 import Avatar from '@material-ui/core/Avatar'
 
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
 
 function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
   const classes = useStyles()
-  const theme = useTheme()
+  // const theme = useTheme()
   const history = useHistory()
   const location = useLocation()
 
