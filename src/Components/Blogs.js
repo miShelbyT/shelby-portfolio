@@ -82,7 +82,7 @@ function Blogs() {
             <GridListTileBar
             className={classes.blogBanner}
               titlePosition="top"
-              title={<a href={blog.link} style={{ fontSize: '1.5em' }}>{blog.title}</a>}
+              title={<a href={blog.link} style={{ fontSize: '1.2em' }}>{blog.title}</a>}
             />
           </GridListTile>
         ))}
