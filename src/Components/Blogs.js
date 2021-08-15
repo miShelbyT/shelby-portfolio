@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-
+import { makeStyles } from '@material-ui/core/styles'
+import GridList from '@material-ui/core/GridList'
+import GridListTile from '@material-ui/core/GridListTile'
+import GridListTileBar from '@material-ui/core/GridListTileBar'
+import ListSubheader from '@material-ui/core/ListSubheader'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
   blogBanner: {
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
   },
+  topTile: {
+    width: '100%',
+  },
   subheader: {
     backgroundColor: 'rgb(52, 58, 64)',
     color: 'rgb(345, 200, 200)',
@@ -40,14 +42,14 @@ const useStyles = makeStyles((theme) => ({
     marginBotton: '15px',
     [theme.breakpoints.down('sm')]: {
       paddingTop: 10,
-      lineHeight: 1.5
+      lineHeight: 1.5,
     },
     [theme.breakpoints.up('sm')]: {
       paddingTop: 5,
-      lineHeight: 1.5
+      lineHeight: 1.5,
     },
-  }
-}));
+  },
+}))
 
 function Blogs() {
   const classes = useStyles()
@@ -55,7 +57,6 @@ function Blogs() {
   const rss2json =
     'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmi-shelbyrose.medium.com%2Ffeed'
   const [myBlogs, setMyBlogs] = useState([])
-
 
   useEffect(() => {
     fetch(rss2json)
@@ -68,21 +69,35 @@ function Blogs() {
   return (
     <div className={classes.root}>
       <GridList cellHeight={310} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader className={classes.subheader} component="div">My Blogs are Published in Medium's{' '}
-        <a href="https://levelup.gitconnected.com/">Level Up Coding</a>,{' '}
-        <a href="https://blog.usejournal.com/">Noteworthy</a>,{' '}
-        <a href="https://medium.com/an-idea">An Idea</a> and{' '}
-        <a href="https://medium.com/nerd-for-tech">Nerd For Tech's</a>{' '}
-        publications.</ListSubheader>
+        <GridListTile
+          key="Subheader"
+          cols={2}
+          style={{ height: 'auto' }}
+          className={classes.topTile}
+        >
+          <ListSubheader className={classes.subheader} component="div">
+            My Blogs are Published in the following Medium publications:
+            <br></br>
+            <a href="https://medium.com/geekculture">
+              Start Up/Geek Culture
+            </a>,{' '}
+            <a href="https://levelup.gitconnected.com/">Level Up Coding</a>,{' '}
+            <a href="https://blog.usejournal.com/">Noteworthy</a>,{' '}
+            <a href="https://medium.com/an-idea">An Idea</a> and{' '}
+            <a href="https://medium.com/nerd-for-tech">Nerd For Tech's</a>{' '}
+          </ListSubheader>
         </GridListTile>
         {myBlogs.map((blog) => (
           <GridListTile key={blog.pubDate}>
             <img src={blog.thumbnail} alt={blog.title} />
             <GridListTileBar
-            className={classes.blogBanner}
+              className={classes.blogBanner}
               titlePosition="top"
-              title={<a href={blog.link} style={{ fontSize: '1.2em' }}>{blog.title}</a>}
+              title={
+                <a href={blog.link} style={{ fontSize: '1.2em' }}>
+                  {blog.title}
+                </a>
+              }
             />
           </GridListTile>
         ))}
