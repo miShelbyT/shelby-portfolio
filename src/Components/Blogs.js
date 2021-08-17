@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     height: '75px',
     padding: 'auto auto',
     fontSize: '1.4em',
+    height: 'auto',
     // position: 'fixed',
     // top: '95px',
     marginBotton: '15px',
