@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '500px',
     width: 'auto',
     [theme.breakpoints.down('sm')]: {
-      margin: '0px auto -28px calc(10px + ${initialDrawerWidth}px)',
+      margin: `0px auto -28px calc(10px + ${initialDrawerWidth}px)`,
       width: '100vw',
     },
   },
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 1042,
     textAlign: 'justify',
     [theme.breakpoints.down('sm')]: {
-      margin: '0px auto -28px calc(10px + ${initialDrawerWidth}px)',
+      margin: `0px auto -28px calc(10px + ${initialDrawerWidth}px)`,
       width: '100vw',
       display: 'flex',
       flexDirection: 'column',

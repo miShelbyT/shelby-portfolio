@@ -18,8 +18,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(8),
     },
   },
-  gridList: {
-    width: '85%',
+  blogList: {
+    width: '80%',
+    // maxWidth: 1000,
     height: 'auto',
     [theme.breakpoints.down('sm')]: {
       width: '95vw',
@@ -64,28 +65,10 @@ function Blogs() {
       })
   }, [rss2json])
 
-  function renderBlogs(blogs) {
-    for(let i = 0; i < 4; i++) {
-      let blog = blogs[i]
-      return (<GridListTile key={blogs[i].pubDate}>
-      <img src={blog.thumbnail} alt={blog.title} />
-      <ImageListItemBar
-        className={classes.blogBanner}
-        titlePosition="top"
-        title={
-          <a href={blog.link} style={{ fontSize: '1.2em' }}>
-            {blog.title}
-          </a>
-        }
-      />
-    </GridListTile>)
-    }
-  
-  }
 
   return (
     <div className={classes.root}>
-      <ImageList cellHeight={410} className={classes.gridList}>
+      <ImageList cellHeight={410} className={classes.blogList}>
         <ImageListItem
           key="Subheader"
           cols={2}
