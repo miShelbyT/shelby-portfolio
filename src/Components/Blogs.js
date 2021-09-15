@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     [theme.breakpoints.down('sm')]: {
-      marginTop: theme.spacing(19),
+      marginTop: theme.spacing(8),
     },
   },
   gridList: {
-    width: '80%',
-    height: 1000,
+    width: '85%',
+    height: 'auto',
     [theme.breakpoints.down('sm')]: {
       width: '95vw',
     },
@@ -29,9 +29,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
   },
   topTile: {
-    position: 'fixed',
-    top: '10%',
-    zIndex: '10',
+    // position: 'fixed',
+    width: '85%',
+    // top: '7%',
+    zIndex: '100',
   },
   subheader: {
     backgroundColor: 'rgb(52, 58, 64)',
@@ -63,14 +64,33 @@ function Blogs() {
       })
   }, [rss2json])
 
+  function renderBlogs(blogs) {
+    for(let i = 0; i < 4; i++) {
+      let blog = blogs[i]
+      return (<GridListTile key={blogs[i].pubDate}>
+      <img src={blog.thumbnail} alt={blog.title} />
+      <GridListTileBar
+        className={classes.blogBanner}
+        titlePosition="top"
+        title={
+          <a href={blog.link} style={{ fontSize: '1.2em' }}>
+            {blog.title}
+          </a>
+        }
+      />
+    </GridListTile>)
+    }
+  
+  }
+
   return (
     <div className={classes.root}>
-      <GridList cellHeight={310} className={classes.gridList}>
+      <GridList cellHeight={410} className={classes.gridList}>
         <GridListTile
           key="Subheader"
           cols={2}
           rows={0.5}
-          style={{ height: 'auto', width: 'auto' }}
+          style={{ height: 'auto' }}
           className={classes.topTile}
         >
           <ListSubheader className={classes.subheader} component="div">
@@ -86,13 +106,13 @@ function Blogs() {
           </ListSubheader>
         </GridListTile>
         {myBlogs.map((blog) => (
-          <GridListTile key={blog.pubDate}>
+          <GridListTile key={blog.pubDate} cols={2}>
             <img src={blog.thumbnail} alt={blog.title} />
             <GridListTileBar
               className={classes.blogBanner}
               titlePosition="top"
               title={
-                <a href={blog.link} style={{ fontSize: '1.2em' }}>
+                <a href={blog.link} style={{ fontSize: '1.3em' }}>
                   {blog.title}
                 </a>
               }

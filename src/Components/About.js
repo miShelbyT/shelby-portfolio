@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     width: 300,
     height: 300,
     [theme.breakpoints.down('sm')]: {
-      margin: 15,
+      margin: '15px auto',
       height: 225,
       width: 225,
     },
@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '45px 70px',
     marginTop: 30,
     marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
+    maxWidth: 1042,
     textAlign: 'justify',
     [theme.breakpoints.down('sm')]: {
       margin: '0px auto -28px calc(10px + ${initialDrawerWidth}px)',
