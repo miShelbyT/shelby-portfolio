@@ -180,3 +180,11 @@ input[type=text],[type=email], textarea {
 
 
 input:focus, textarea:focus {outline: none;}
+
+.about-me h3 {
+  margin: 30px 0 5px;
+}
+
+.about-me p {
+  margin-top: 0;
+}

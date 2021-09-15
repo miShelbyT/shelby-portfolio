@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     [theme.breakpoints.down('sm')]: {
-      marginTop: theme.spacing(6),
+      marginTop: theme.spacing(19),
     },
   },
   gridList: {
@@ -29,23 +29,19 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
   },
   topTile: {
-    width: '100%',
+    position: 'fixed',
+    top: '10%',
+    zIndex: '10',
   },
   subheader: {
     backgroundColor: 'rgb(52, 58, 64)',
     color: 'rgb(345, 200, 200)',
-    height: '75px',
-    padding: 'auto auto',
     fontSize: '1.4em',
-    height: 'auto',
-    // position: 'fixed',
-    // top: '95px',
-    marginBotton: '15px',
     [theme.breakpoints.down('sm')]: {
       paddingTop: 10,
       lineHeight: 1.5,
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       paddingTop: 5,
       lineHeight: 1.5,
     },
@@ -73,7 +69,8 @@ function Blogs() {
         <GridListTile
           key="Subheader"
           cols={2}
-          style={{ height: 'auto' }}
+          rows={0.5}
+          style={{ height: 'auto', width: 'auto' }}
           className={classes.topTile}
         >
           <ListSubheader className={classes.subheader} component="div">
