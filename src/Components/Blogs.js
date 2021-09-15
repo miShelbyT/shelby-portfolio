@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
-import GridList from '@material-ui/core/GridList'
-import GridListTile from '@material-ui/core/GridListTile'
-import GridListTileBar from '@material-ui/core/GridListTileBar'
+import ImageList from '@material-ui/core/ImageList'
+import ImageListItem from '@material-ui/core/ImageListItem'
+import ImageListItemBar from '@material-ui/core/ImageListItemBar'
 import ListSubheader from '@material-ui/core/ListSubheader'
 
 const useStyles = makeStyles((theme) => ({
@@ -69,7 +69,7 @@ function Blogs() {
       let blog = blogs[i]
       return (<GridListTile key={blogs[i].pubDate}>
       <img src={blog.thumbnail} alt={blog.title} />
-      <GridListTileBar
+      <ImageListItemBar
         className={classes.blogBanner}
         titlePosition="top"
         title={
@@ -85,8 +85,8 @@ function Blogs() {
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={410} className={classes.gridList}>
-        <GridListTile
+      <ImageList cellHeight={410} className={classes.gridList}>
+        <ImageListItem
           key="Subheader"
           cols={2}
           rows={0.5}
@@ -104,11 +104,11 @@ function Blogs() {
             <a href="https://medium.com/an-idea">An Idea</a> and{' '}
             <a href="https://medium.com/nerd-for-tech">Nerd For Tech</a>{' '}
           </ListSubheader>
-        </GridListTile>
+        </ImageListItem>
         {myBlogs.map((blog) => (
-          <GridListTile key={blog.pubDate} cols={2}>
+          <ImageListItem key={blog.pubDate} cols={2}>
             <img src={blog.thumbnail} alt={blog.title} />
-            <GridListTileBar
+            <ImageListItemBar
               className={classes.blogBanner}
               titlePosition="top"
               title={
@@ -117,9 +117,9 @@ function Blogs() {
                 </a>
               }
             />
-          </GridListTile>
+          </ImageListItem>
         ))}
-      </GridList>
+      </ImageList>
     </div>
   )
 }
