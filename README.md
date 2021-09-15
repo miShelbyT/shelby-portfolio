@@ -1,4 +1,4 @@
-# About This Project
+# Portfolio Created Using React and Material UI
 
 This app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
