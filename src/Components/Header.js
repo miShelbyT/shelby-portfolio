@@ -101,10 +101,6 @@ function Header() {
     }, 2000);
   }
 
-  // const handleDrawerClose = () => {
-  //   setOpen(false)
-  // }
-
   return (
     <div className={classes.header}>
       <CssBaseline />
@@ -161,7 +157,6 @@ function Header() {
         </Toolbar>
       </AppBar>
       <SideBar 
-      // handleDrawerClose={handleDrawerClose} 
       open={open} 
       handleDrawerOpen={handleDrawerOpen}/>
     </div>

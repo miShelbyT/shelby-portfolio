@@ -10,9 +10,9 @@ import Blogs from './Components/Blogs'
 import Contact from './Components/Contact'
 import Home from './Components/Home'
 
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: 'rgb(160, 26, 88)',

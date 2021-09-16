@@ -188,3 +188,11 @@ input:focus, textarea:focus {outline: none;}
 .about-me p {
   margin-top: 0;
 }
+
+.subheader {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 86px;
+}

@@ -6,6 +6,9 @@ import ImageListItem from '@material-ui/core/ImageListItem'
 import ImageListItemBar from '@material-ui/core/ImageListItemBar'
 import ListSubheader from '@material-ui/core/ListSubheader'
 
+
+const headerHeight = 86
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
@@ -20,33 +23,21 @@ const useStyles = makeStyles((theme) => ({
   },
   blogList: {
     width: '80%',
-    // maxWidth: 1000,
     height: 'auto',
     [theme.breakpoints.down('sm')]: {
-      width: '95vw',
+      marginLeft: theme.spacing(3),
+      width: '88%',
     },
   },
   blogBanner: {
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
   },
-  topTile: {
-    // position: 'fixed',
-    width: '85%',
-    // top: '7%',
-    zIndex: '100',
-  },
   subheader: {
-    backgroundColor: 'rgb(52, 58, 64)',
+    top: headerHeight,
+    lineHeight: 1.5,
+    background: 'rgb(92, 77, 125)',
     color: 'rgb(345, 200, 200)',
-    fontSize: '1.4em',
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: 10,
-      lineHeight: 1.5,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 5,
-      lineHeight: 1.5,
-    },
+    fontSize: '1.5em',
   },
 }))
 
@@ -68,17 +59,17 @@ function Blogs() {
 
   return (
     <div className={classes.root}>
-      <ImageList cellHeight={410} className={classes.blogList}>
+
+      <ImageList rowHeight={410} className={classes.blogList}>
         <ImageListItem
           key="Subheader"
+          width="100%"
           cols={2}
-          rows={0.5}
-          style={{ height: 'auto' }}
-          className={classes.topTile}
+          style={{ height: 'auto'}}
         >
-          <ListSubheader className={classes.subheader} component="div">
-            My Blogs are Published in the following Medium publications:
-            <br></br>
+          <ListSubheader className={`${classes.subheader} subheader`} component="div">
+          My Blogs are Published in the following Medium publications:
+          <br></br>
             <a href="https://medium.com/geekculture">
               Start Up/Geek Culture
             </a>,{' '}
@@ -93,7 +84,7 @@ function Blogs() {
             <img src={blog.thumbnail} alt={blog.title} />
             <ImageListItemBar
               className={classes.blogBanner}
-              titlePosition="top"
+              position="top"
               title={
                 <a href={blog.link} style={{ fontSize: '1.3em' }}>
                   {blog.title}

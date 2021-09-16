@@ -79,7 +79,7 @@ const classes = useStyles()
         container
         spacing={4}
         direction="row"
-        justify="center"
+        justifyContent="center"
         alignItems="center"
       >
         {projects.map(project => (

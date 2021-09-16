@@ -10,11 +10,6 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import ListItemText from '@material-ui/core/ListItemText'
 
-// import IconButton from '@material-ui/core/IconButton'
-
-// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-// import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-
 import Avatar from '@material-ui/core/Avatar'
 
 const drawerWidth = 160
@@ -68,17 +63,11 @@ const useStyles = makeStyles((theme) => ({
   },
   active: {
     backgroundColor: 'rgb(206, 212, 218)'
-  },
-  // chevron: {
-  //   [theme.breakpoints.up('md')]: {
-  //     display: 'none',
-  //   },
-  // }
+  }
 }))
 
-function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
+function SideBar({ open, handleDrawerOpen }) {
   const classes = useStyles()
-  // const theme = useTheme()
   const history = useHistory()
   const location = useLocation()
 
@@ -121,8 +110,7 @@ function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
   return (
     <div>
       <Drawer
-      onMouseOver={handleDrawerOpen} 
-      // onMouseOut={handleDrawerClose}
+        onMouseOver={handleDrawerOpen} 
         variant="permanent"
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
@@ -135,17 +123,7 @@ function SideBar({ handleDrawerClose, open, handleDrawerOpen }) {
           }),
         }}
       >
-        {/* <div className={`${classes.toolbar} ${classes.chevron}`}>
-          <IconButton 
-          onClick={handleDrawerClose}
-          >
-            {theme.direction === 'rtl' ? (
-              <ChevronRightIcon color="primary"/>
-            ) : (
-              <ChevronLeftIcon color="primary" className={classes.chevron}/>
-            )}
-          </IconButton>
-        </div> */}
+
         <List className={classes.list}>
        
           {sideBarItems.map(sideBarItem => (

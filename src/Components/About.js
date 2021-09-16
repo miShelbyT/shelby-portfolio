@@ -8,6 +8,7 @@ import shelbyPic from '../images/shelby-pic.png'
 
 const initialDrawerWidth = 71
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
