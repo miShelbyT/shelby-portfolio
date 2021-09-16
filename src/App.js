@@ -9,6 +9,7 @@ import Projects from './Components/ProjectContainer'
 import Blogs from './Components/Blogs'
 import Contact from './Components/Contact'
 import Home from './Components/Home'
+// import { StyledEngineProvider } from '@mui/material/styles';
 
 import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 
@@ -30,6 +31,7 @@ function App() {
   
   return (
     <>
+    {/* <StyledEngineProvider injectFirst> */}
     <BrowserRouter>
     <ScrollToTop>
       {/* with theme provider we can now provide theme props to entire app bc we've wrapped ThemeProvider around the rest of the app */}
@@ -62,6 +64,7 @@ function App() {
       </ThemeProvider>
       </ScrollToTop>
       </BrowserRouter>
+      {/* </StyledEngineProvider> */}
     </>
   )
 }

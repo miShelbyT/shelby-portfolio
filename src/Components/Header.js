@@ -131,7 +131,8 @@ function Header() {
               Shelby Talbert - Full Stack Web Developer
             </Typography>
 
-          <Link href="https://github.com/miShelbyT">
+          <Link href="https://github.com/miShelbyT"
+          >
             <Icon
               fontSize='large'
               className={`fab fa-github ${classes.icon}`}
