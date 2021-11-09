@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     height: 'auto',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: '88%',
+      // marginLeft: theme.spacing(3),
+      width: '55%',
     },
   },
   blogBanner: {
