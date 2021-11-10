@@ -17,26 +17,42 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 500,
+    width: 450,
     paddingTop: 10,
     // minHeight: 470,
-    marginLeft: '10%',
+    // marginLeft: '10%',
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    textAlign: 'center',
     backgroundColor: '#dcf0f2',
+    // [theme.breakpoints.down('md')]: {
+    //   marginRight: 100,
+    // },
     [theme.breakpoints.down('xs')]: {
-      paddingTop: 5,
+      paddingTop: 15,
       width: 265,
-      minHeight: 395,
-      marginLeft: 0
+      minHeight: 395
     },
+  },
+  header: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    // padding: '10px 20px 10px 0px',
+    [theme.breakpoints.down('md')]: {
+      color: theme.palette.primary.main,
+    },
+
   },
   media: {
     borderRadius: 5,
-    width: '90%',
+    width: '95%',
     // width: "500px",
     height: "410px",
     paddingTop: '56.25%', // 16:9
@@ -73,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(6),
     paddingTop: theme.spacing(0),
     [theme.breakpoints.down('xs')]: {
-      fontSize: 14,
+      fontSize: 12,
       margin: theme.spacing(0)
     }
   },
@@ -116,6 +132,7 @@ function ProjectCard({ project }) {
             />)}
 
             <CardHeader
+              className={classes.header}
               title={project.title}
               subheader={project.subheader}
             />

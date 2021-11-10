@@ -68,7 +68,7 @@ const classes = useStyles()
   { id: 5,
     image: petDates,
     title: "Pet Dates",
-    subheader: "A pet scheduling app. Because pets need friends too!",
+    subheader: "Because pets need friends too!",
     link: "https://www.youtube.com/watch?v=uolpe_CaOec&t=1s",
     buttonText: "Pet Dates Demo",
     moreText: "This pet-date scheduler is currently being used by dogs, cats, a gecko and a stuffed raccoon."

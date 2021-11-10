@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '38px 17px',
   },
   drawerOpen: {
-    backgroundColor: 'rgb(233, 236, 239)',
+    backgroundColor: theme.palette.secondary.main,
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   drawerClose: {
-    backgroundColor: 'rgb(233, 236, 239)',
+    backgroundColor: theme.palette.secondary.main,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
