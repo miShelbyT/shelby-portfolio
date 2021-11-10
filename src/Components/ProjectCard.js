@@ -94,6 +94,9 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   btn: {
+    [theme.breakpoints.down('md')]: {
+      backgroundColor: 'black',
+    },
     [theme.breakpoints.down('xs')]: {
       fontSize: 9,
       width: 150
