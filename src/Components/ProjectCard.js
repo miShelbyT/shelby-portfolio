@@ -17,8 +17,9 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 570,
-    minHeight: 470,
+    width: 500,
+    paddingTop: 10,
+    // minHeight: 470,
     marginLeft: '10%',
     display: 'flex',
     flexWrap: 'wrap',
@@ -35,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     borderRadius: 5,
-    // width: '95%',
-    width: "570px",
-    height: "510px",
+    width: '90%',
+    // width: "500px",
+    height: "410px",
     paddingTop: '56.25%', // 16:9
     [theme.breakpoints.down('xs')]: {
       width: '95%',
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   iframe: {
-    width: "570px",
+    width: "470px",
     height: "315px",
     [theme.breakpoints.down('sm')]: {
       width: "520px",
