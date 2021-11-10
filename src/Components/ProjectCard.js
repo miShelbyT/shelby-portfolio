@@ -28,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     textAlign: 'center',
     backgroundColor: '#dcf0f2',
-    // [theme.breakpoints.down('md')]: {
-    //   marginRight: 100,
-    // },
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: 0
+    },
     [theme.breakpoints.down('xs')]: {
       paddingTop: 15,
       width: 265,
@@ -114,7 +114,7 @@ function ProjectCard({ project }) {
   return (
     <Grid item 
         key={project.id}
-        sm={12} lg={6}>
+        sm={12} md={6} xl={4}>
           <Card className={classes.root}>
             {project.youTubeSrc ? ( <div>
               <iframe
