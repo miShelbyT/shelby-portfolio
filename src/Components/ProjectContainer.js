@@ -4,11 +4,11 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 
 import ProjectCard from './ProjectCard'
-// import cupcakes from '../images/brelbys.png'
-// import ttt from '../images/ttt.png'
 import brelbys from '../images/updated-brelbys.gif'
 import ttt from '../images/ttt.gif'
 import petDates from '../images/pet-dates.gif'
+import tarot from '../images/3-eye-t.gif'
+import takeCare from '../images/take-care.gif'
 
 const initialDrawerWidth = 71
 
@@ -34,7 +34,7 @@ const classes = useStyles()
 
   const projects = [{
     id: 1,
-      youTubeSrc: "https://www.youtube.com/embed/Fhb1zT1z-WQ",
+      image: takeCare,
       title: "Take Care",
       subheader: "A journaling app that focuses on self-care/mental health",
       link: "https://youtu.be/Fhb1zT1z-WQ",
@@ -42,7 +42,7 @@ const classes = useStyles()
       moreText: "Take Care is a self-care journaling app that allows the user to sign up/log in, create a profile, peruse a list of self-care activities, save, update and delete journal entries pertaining to those activities as well as create original activities. Also uses an external API to generate daily affirmations via a \"roulette\" affirmation button."
     }, 
     { id: 2,
-      youTubeSrc: "https://www.youtube.com/embed/U-3CXBiqes4",
+      image: tarot,
       title: "Third Eye Tarot",
       subheader: "A tarot card app that invites playfulness and introspection",
       link: "https://youtu.be/U-3CXBiqes4",

@@ -18,7 +18,7 @@ import Button from '@material-ui/core/Button'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 450,
-    paddingTop: 10,
+    paddingTop: 10,    
     // minHeight: 470,
     // marginLeft: '10%',
     display: 'flex',
@@ -119,20 +119,11 @@ function ProjectCard({ project }) {
         key={project.id}
         sm={12} md={6} xl={4}>
           <Card className={classes.root}>
-            {project.youTubeSrc ? ( <div>
-              <iframe
-                className={classes.iframe}
-                src={project.youTubeSrc}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>) : (<CardMedia
+            <CardMedia
               className={classes.media}
               image={project.image}
               title={project.title}
-            />)}
+            />
 
             <CardHeader
               className={classes.header}
