@@ -22,7 +22,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: theme.spacing(10),
+    },
   },
   image: {
     margin: '0 0 -28px',

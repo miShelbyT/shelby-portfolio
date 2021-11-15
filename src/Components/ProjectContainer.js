@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(7),
     },
     [theme.breakpoints.up('sm')]: {
-      marginLeft: '75px'
+      marginLeft: '55px'
     }
   }
 }))

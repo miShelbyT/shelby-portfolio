@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     background: 'rgb(206, 212, 218)',
     // gives us 24 pixels padding - base theme is 8px
-    padding: theme.spacing(6),
+    paddingTop: theme.spacing(6),
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',

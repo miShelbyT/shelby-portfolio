@@ -80,7 +80,7 @@ function Blogs() {
           </ListSubheader>
         </ImageListItem>
         {myBlogs.map((blog) => (
-          <ImageListItem key={blog.pubDate} cols={2}>
+          <ImageListItem key={blog.pubDate} cols={1}>
             <img src={blog.thumbnail} alt={blog.title} />
             <ImageListItemBar
               className={classes.blogBanner}
