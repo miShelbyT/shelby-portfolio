@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     margin: '0 0 -28px',
-    width: '55vw',
+    width: '80vw',
+    maxWidth: 760,
     [theme.breakpoints.down('xs')]: {
       margin: '0 0 -28px',
       width: '95vw',

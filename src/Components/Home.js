@@ -8,7 +8,7 @@ const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
   root: {
-   width: `calc(100vw - ${initialDrawerWidth}px)`,
+   width: '100vw',
     height: `calc(100vh - ${headerHeight}px)`,
     margin: theme.spacing(2),
     display: 'flex',
