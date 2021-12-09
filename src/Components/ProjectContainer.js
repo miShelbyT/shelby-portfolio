@@ -40,7 +40,7 @@ const classes = useStyles()
       subheader: "A journaling app that focuses on self-care/mental health",
       link: "https://youtu.be/Fhb1zT1z-WQ",
       buttonText: "Take Care Demo",
-      moreText: "React capstoneproject: Take Care is a self-care journaling app that allows the user to sign up/log in, create a profile, peruse a list of self-care activities, save, update and delete journal entries pertaining to those activities as well as create original activities. Also uses an external API to generate daily affirmations via a \"roulette\" affirmation button."
+      moreText: "React capstone project: Take Care is a self-care journaling app that allows the user to sign up/log in, create a profile, peruse a list of self-care activities, save, update and delete journal entries pertaining to those activities as well as create original activities. Also uses an external API to generate daily affirmations via a \"roulette\" affirmation button."
     }, 
     { id: 2,
       image: tarot,
