@@ -11,14 +11,15 @@ const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(12),
+    marginTop: theme.spacing(10),
     paddingLeft: '8%',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden',
+    overflowX: 'hidden',
     [theme.breakpoints.down('sm')]: {
-      marginTop: theme.spacing(8),
+      marginTop: theme.spacing(6),
+      width: '100%'
     },
   },
   blogList: {
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto',
     [theme.breakpoints.down('sm')]: {
       // marginLeft: theme.spacing(3),
-      width: '55%',
+      width: '56%',
     },
   },
   blogBanner: {
