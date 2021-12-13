@@ -11,6 +11,7 @@
   --dark-blue: #0D3B66;
   --dark-red: #a01a58;
   --hot-pink: #c92684;
+  --card-bg: #efe9ec;
 }
 
 body {
@@ -314,12 +315,12 @@ We have added the border property to demonstrate that the flip itself goes out o
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: rgb(233, 236, 239);
+  background-color: var(--card-bg);
   /* color: black; */
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: rgb(233, 236, 239);
+  background-color: var(--card-bg);
   transform: rotateY(180deg);
 }
