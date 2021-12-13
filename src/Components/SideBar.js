@@ -48,15 +48,17 @@ const useStyles = makeStyles((theme) => ({
       width: 0
     }
   },
-  avaPurple: {
+  avaRed: {
     color: '#fff',
-    backgroundColor: 'rgb(92, 77, 125)',
+    backgroundColor: '#128bb0',
     margin: '15px 0',
+    '&:hover': {
+      backgroundColor: '#333232',
+    }
   },
-  avaBlue: {
-    color: '#000',
-    backgroundColor: '#5ec8e8',
-    margin: '15px 0',
+  avaBlue:{
+    backgroundColor: '#0D3B66',
+    color: '#fff',
   },
   list: {
     marginTop: `${headerHeight}px`
@@ -75,14 +77,14 @@ function SideBar({ open, handleDrawerOpen }) {
     {
       id: 1,
       text: 'Projects',
-      avatar: <Avatar className={classes.avaPurple}>P</Avatar>,
+      avatar: <Avatar className={classes.avaRed}>P</Avatar>,
       path: '/projects'
     },
     {
       id: 2,
       text: 'Blogs',
       avatar: (
-        <Avatar className={classes.avaBlue} variant="rounded">
+        <Avatar className={`${classes.avaRed} ${classes.avaBlue}`} variant="rounded">
           B
         </Avatar>
       ),
@@ -92,7 +94,7 @@ function SideBar({ open, handleDrawerOpen }) {
       id: 3,
       text: 'About',
       avatar: (
-        <Avatar className={classes.avaPurple} variant="rounded">
+        <Avatar className={classes.avaRed}>
           A
         </Avatar>
       ),
@@ -101,7 +103,7 @@ function SideBar({ open, handleDrawerOpen }) {
     {
       id: 4,
       text: 'Contact',
-      avatar: <Avatar className={classes.avaBlue}>C</Avatar>,
+      avatar: <Avatar className={`${classes.avaRed} ${classes.avaBlue}`} variant="rounded">C</Avatar>,
       path: '/contact'
     },
   ]

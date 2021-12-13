@@ -17,11 +17,11 @@ const theme = createTheme({
   palette: {
     primary: {
       //dark red
-      main: 'rgb(160, 26, 88)',
+      main: '#a01a58',
     },
     secondary: {
       //light grey
-      main: 'rgb(233, 236, 239)',
+      main: '#efe9ec',
     },
   }, typography: {
     fontFamily: 'Poppins',

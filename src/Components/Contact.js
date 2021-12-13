@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     height: '800px',
     margin: '65px 0',
     borderRadius: 4,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#FFF',
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'column',
@@ -92,7 +92,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     width: 260,
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(3),
+    backgroundColor: '#000',
+    color: '#f3e8d5',
+    '&:hover': {
+      backgroundColor: '#c92684',
+      color: '#000',
+  }
   },
 }))
 
@@ -203,7 +209,7 @@ function Contact() {
             <label className={classes.error}>{errors.subject.message}</label>
           )}
 
-          <label htmlFor="Message">Message<sup>*</sup> </label>
+          <label htmlFor="message">Message<sup>*</sup> </label>
           <textarea
             label="Message"
             name="message"
@@ -218,7 +224,6 @@ function Contact() {
 
           <Button
             variant="contained"
-            color="primary"
             endIcon={<SendIcon />}
             className={classes.button}
             type="submit"

@@ -19,15 +19,13 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
     [theme.breakpoints.down('sm')]: {
       marginTop: theme.spacing(6),
-      width: '100%'
     },
   },
   blogList: {
     width: '80%',
     height: 'auto',
     [theme.breakpoints.down('sm')]: {
-      // marginLeft: theme.spacing(3),
-      width: '56%',
+      width: '85%',
     },
   },
   blogBanner: {
@@ -36,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
   subheader: {
     top: headerHeight,
     lineHeight: 1.5,
-    background: 'rgb(92, 77, 125)',
-    color: 'rgb(345, 200, 200)',
+    background: 'rgba(51, 50, 50, 0.8)',
+    color: '#e9ecef',
     fontSize: '1.5em',
   },
 }))

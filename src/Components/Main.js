@@ -6,8 +6,9 @@ import Header from './Header'
 
 const useStyles = makeStyles((theme) => ({
   page: {
-    height: '100%',
-    background: 'rgb(206, 212, 218)',
+    height: '175%',
+    width: '100vw',
+    background: '#8f888b',
     // gives us 24 pixels padding - base theme is 8px
     paddingTop: theme.spacing(6),
     display: 'flex',

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 
 import youAreHere from '../images/you-are-here.jpg'
 
-const initialDrawerWidth = 73
+// const initialDrawerWidth = 73
 const headerHeight = 86
 
 const useStyles = makeStyles((theme) => ({
