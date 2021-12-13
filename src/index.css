@@ -9,7 +9,6 @@
   --ava-blue: #5ec8e8;
   --ava-purple: #614051;
   --dark-blue: #0D3B66;
-  --card-bg: #dcf0f2;
   --dark-red: #a01a58;
   --hot-pink: #c92684;
 }
@@ -286,7 +285,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 
 .flip-card-back p {
   color: #000;
-  /* font-size: 17px; */
+  font-size: 14px;
 }
 
 /* This container is needed to position the front and back side */
