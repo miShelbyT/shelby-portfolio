@@ -6,8 +6,9 @@
 }
 
 :root {
-  --ava-blue: #5ec8e8;
-  --ava-purple: #614051;
+  --shelby-blue: #5ec8e8;
+  --other-blue: #128bb0;
+  --purple: #614051;
   --dark-blue: #0D3B66;
   --dark-red: #a01a58;
   --hot-pink: #c92684;
@@ -90,15 +91,15 @@ h1.greeting {
 
 @keyframes effect {
   from {
-    background: -moz-linear-gradient(to right, var(--ava-purple), var(--hot-pink));
-    background: linear-gradient(to right, var(--ava-purple), var(--hot-pink));
+    background: -moz-linear-gradient(to right, var(--purple), var(--hot-pink));
+    background: linear-gradient(to right, var(--purple), var(--hot-pink));
     -webkit-background-clip: text;
     background-clip: text;
   }
 
   to {
-    background: -moz-linear-gradient(to right, var(--ava-blue), #000FFF);
-    background: linear-gradient(to right, var(--ava-blue), #000FFF);
+    background: -moz-linear-gradient(to right, var(--shelby-blue), #000FFF);
+    background: linear-gradient(to right, var(--shelby-blue), #000FFF);
     -webkit-background-clip: text;
     background-clip: text;
   }
@@ -106,12 +107,12 @@ h1.greeting {
 
 @-webkit-keyframes effect {
 from {
-    background: -webkit-linear-gradient(to right, var(--ava-purple), var(--hot-pink));
+    background: -webkit-linear-gradient(to right, var(--purple), var(--hot-pink));
     -webkit-background-clip: text;
   }
 
   to {
-    background: -webkit-linear-gradient(to right, var(--ava-blue), #000FFF);
+    background: -webkit-linear-gradient(to right, var(--shelby-blue), #000FFF);
     -webkit-background-clip: text;
   }
 }
@@ -253,7 +254,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 }
 
 .flip-card-back button {
-  background-color: var(--hot-pink);
+  background-color: var(--other-blue);
   color: #FFF;
   padding: 10px;
   border-radius: 7px;
@@ -276,7 +277,11 @@ We have added the border property to demonstrate that the flip itself goes out o
   display: block;
   font-size: 1.2rem;
   opacity: 0.75;
-  color: var(--dark-blue);
+  color: var(--dark-red);
+}
+
+.flip-card-back h2 strong:hover {
+  color: var(--hot-pink);
 }
 
 .flip-card-back h2 {

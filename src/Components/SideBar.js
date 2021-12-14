@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
       width: 0
     }
   },
-  avaRed: {
+  avaLightBlue: {
     color: '#fff',
     backgroundColor: '#128bb0',
     margin: '15px 0',
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#333232',
     }
   },
-  avaBlue:{
+  avaDarkBlue:{
     backgroundColor: '#0D3B66',
     color: '#fff',
   },
@@ -77,14 +77,14 @@ function SideBar({ open, handleDrawerOpen }) {
     {
       id: 1,
       text: 'Projects',
-      avatar: <Avatar className={classes.avaRed}>P</Avatar>,
+      avatar: <Avatar className={classes.avaLightBlue}>P</Avatar>,
       path: '/projects'
     },
     {
       id: 2,
       text: 'Blogs',
       avatar: (
-        <Avatar className={`${classes.avaRed} ${classes.avaBlue}`} variant="rounded">
+        <Avatar className={`${classes.avaLightBlue} ${classes.avaDarkBlue}`} variant="rounded">
           B
         </Avatar>
       ),
@@ -94,7 +94,7 @@ function SideBar({ open, handleDrawerOpen }) {
       id: 3,
       text: 'About',
       avatar: (
-        <Avatar className={classes.avaRed}>
+        <Avatar className={classes.avaLightBlue}>
           A
         </Avatar>
       ),
@@ -103,7 +103,7 @@ function SideBar({ open, handleDrawerOpen }) {
     {
       id: 4,
       text: 'Contact',
-      avatar: <Avatar className={`${classes.avaRed} ${classes.avaBlue}`} variant="rounded">C</Avatar>,
+      avatar: <Avatar className={`${classes.avaLightBlue} ${classes.avaDarkBlue}`} variant="rounded">C</Avatar>,
       path: '/contact'
     },
   ]

@@ -98,7 +98,7 @@ function Header() {
     setOpen(true);
     setTimeout(() => {
       setOpen(false)
-    }, 2000);
+    }, 4000);
   }
 
   return (
