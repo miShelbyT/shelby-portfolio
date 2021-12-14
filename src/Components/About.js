@@ -21,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
   image: {
     marginBottom: -28,
     marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
-    maxHeight: '500px',
-    width: 'auto',
+    maxWidth: 1042,
     [theme.breakpoints.down('sm')]: {
-      margin: `0px auto -28px calc(10px + ${initialDrawerWidth}px)`,
-      width: '100vw',
+      margin: `0px auto -18px calc(10px + ${initialDrawerWidth}px)`,
+      width: '75vw',
     },
   },
   shelbyImg: {
@@ -50,13 +49,13 @@ const useStyles = makeStyles((theme) => ({
     padding: '45px 70px',
     marginTop: 30,
     marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
+    marginBottom: 40,
     maxWidth: 1042,
     textAlign: 'justify',
     [theme.breakpoints.down('sm')]: {
-      margin: `0px auto -28px calc(10px + ${initialDrawerWidth}px)`,
       width: '100vw',
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'column'
     },
   },
 }))
@@ -108,7 +107,7 @@ function About() {
           in upstate New York with my husband and the sweetest rescue dog you'll
           ever meet.<br></br>
         </p>
-        <span>🍷🧁🍷🧁🍷🧁🍷🧁</span>
+        <div style={{textAlign: 'center'}}>🍷🧁🍷🧁🍷🧁🍷🧁</div>
       </div>
     </div>
   )
