@@ -266,11 +266,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 
 .flip-card-back button:hover {
   background-color: var(--dark-blue);
-}
-
-
-.flip-card-back img:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .flip-card-back h2 strong {
@@ -281,7 +277,8 @@ We have added the border property to demonstrate that the flip itself goes out o
 }
 
 .flip-card-back h2 strong:hover {
-  color: var(--hot-pink);
+  color: var(--dark-blue);
+  font-size: 1.3rem;
 }
 
 .flip-card-back h2 {
