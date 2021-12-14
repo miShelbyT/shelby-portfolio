@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   },
   blogBanner: {
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    '&:hover': {
+      transform: 'scale(1.1)'
+    },
   },
   subheader: {
     top: headerHeight,
