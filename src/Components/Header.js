@@ -41,6 +41,11 @@ const useStyles = makeStyles((theme) => ({
     }
   }, icon: {
     margin: theme.spacing(1),
+    height: 'auto',
+    '&:hover': {
+      color: '#333232',
+      transform: 'scale(1.2)'
+    }
     // [theme.breakpoints.down('xs')]: {
     //   // fontSize: 30,
     // }
