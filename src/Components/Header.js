@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
       display: 'none'
     }
   }, icon: {
-    margin: theme.spacing(1),
-    height: '100%',
+    margin: '0 8px',
+    // height: '100%',
     '&:hover': {
       color: '#333232',
       transform: 'scale(1.2)'
