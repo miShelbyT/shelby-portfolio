@@ -58,7 +58,7 @@ function Blogs() {
   const classes = useStyles()
 
   const rss2json =
-    'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmi-shelbyrose.medium.com%2Ffeed'
+    'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40mi-shelbyrose'
   const [myBlogs, setMyBlogs] = useState([])
 
   useEffect(() => {
@@ -79,7 +79,7 @@ function Blogs() {
           style={{ height: 'auto' }}
         >
           {myBlogs ? <ListSubheader
-            className={`${classes.altsubheader} subheader`}
+            className={`${classes.subheader} subheader`}
             component="div"
           >
             My Blogs are Published in the following Medium publications:
@@ -92,7 +92,7 @@ function Blogs() {
             <a href="https://medium.com/an-idea">An Idea</a> and{' '}
             <a href="https://medium.com/nerd-for-tech">Nerd For Tech</a>{' '}
           </ListSubheader> : <ListSubheader
-          className={`${classes.subheader} subheader`}
+          className={`${classes.altsubheader} subheader`}
           component="div"
           >We are currently experiencing difficulties. To view blogs, please select the{' '}
               <Icon
