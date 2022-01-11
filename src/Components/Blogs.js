@@ -5,7 +5,7 @@ import ImageList from '@material-ui/core/ImageList'
 import ImageListItem from '@material-ui/core/ImageListItem'
 import ImageListItemBar from '@material-ui/core/ImageListItemBar'
 import ListSubheader from '@material-ui/core/ListSubheader'
-
+import Icon from '@material-ui/core/Icon'
 
 const headerHeight = 86
 
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   blogBanner: {
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     '&:hover': {
-      transform: 'scale(1.1)'
+      transform: 'scale(1.1)',
     },
   },
   subheader: {
@@ -40,7 +40,18 @@ const useStyles = makeStyles((theme) => ({
     background: 'rgba(51, 50, 50, 0.8)',
     color: '#e9ecef',
     fontSize: '1.5em',
+    
   },
+  altsubheader:{
+    width: '100vw',
+    textAlign: 'center',
+  },
+  icon: {
+    marginTop: '20px',
+  },
+  problems: {
+    width: '150%'
+  }
 }))
 
 function Blogs() {
@@ -58,20 +69,21 @@ function Blogs() {
       })
   }, [rss2json])
 
-
   return (
     <div className={classes.root}>
-
       <ImageList rowHeight={410} className={classes.blogList}>
         <ImageListItem
           key="Subheader"
           width="100%"
           cols={2}
-          style={{ height: 'auto'}}
+          style={{ height: 'auto' }}
         >
-          <ListSubheader className={`${classes.subheader} subheader`} component="div">
-          My Blogs are Published in the following Medium publications:
-          <br></br>
+          {myBlogs ? <ListSubheader
+            className={`${classes.altsubheader} subheader`}
+            component="div"
+          >
+            My Blogs are Published in the following Medium publications:
+            <br></br>
             <a href="https://medium.com/geekculture">
               Start Up/Geek Culture
             </a>,{' '}
@@ -79,22 +91,33 @@ function Blogs() {
             <a href="https://blog.usejournal.com/">Noteworthy</a>,{' '}
             <a href="https://medium.com/an-idea">An Idea</a> and{' '}
             <a href="https://medium.com/nerd-for-tech">Nerd For Tech</a>{' '}
-          </ListSubheader>
+          </ListSubheader> : <ListSubheader
+          className={`${classes.subheader} subheader`}
+          component="div"
+          >We are currently experiencing difficulties. To view blogs, please select the{' '}
+              <Icon
+                fontSize="large"
+                className={`fab fa-medium ${classes.icon}`}
+                color="primary"
+              />{' '}
+              icon at the top of the page, or try again later.{' '}</ListSubheader>}
         </ImageListItem>
-        {myBlogs.map((blog) => (
-          <ImageListItem key={blog.pubDate} cols={1}>
-            <img src={blog.thumbnail} alt={blog.title} />
-            <ImageListItemBar
-              className={classes.blogBanner}
-              position="top"
-              title={
-                <a href={blog.link} style={{ fontSize: '1.3em' }}>
-                  {blog.title}
-                </a>
-              }
-            />
-          </ImageListItem>
-        ))}
+        {myBlogs ? (
+          myBlogs.map((blog) => (
+            <ImageListItem key={blog.pubDate} cols={1}>
+              <img src={blog.thumbnail} alt={blog.title} />
+              <ImageListItemBar
+                className={classes.blogBanner}
+                position="top"
+                title={
+                  <a href={blog.link} style={{ fontSize: '1.3em' }}>
+                    {blog.title}
+                  </a>
+                }
+              />
+            </ImageListItem>
+          ))
+        ) : null}
       </ImageList>
     </div>
   )
