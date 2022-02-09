@@ -29,6 +29,17 @@ body {
   padding: 0;
 }
 
+.shelby-logo {
+  margin: 0px;
+  height: 80px;
+  width: auto;
+}
+
+.shelby-logo:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
 .slide-in-div {
   -webkit-animation-name: slidein;
   -webkit-animation-duration: 3s;

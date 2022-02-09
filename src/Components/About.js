@@ -104,7 +104,7 @@ function About() {
         </p>
         <p>
           When I'm not coding madly I can be found on a hiking trail somewhere
-          in upstate New York with my husband and the sweetest rescue dog you'll
+          in upstate New York with my woooonderful husband and the sweetest rescue dog you'll
           ever meet.<br></br>
         </p>
         <div style={{textAlign: 'center'}}>🍷🧁🍷🧁🍷🧁🍷🧁</div>
