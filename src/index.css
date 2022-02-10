@@ -247,7 +247,12 @@ We have added the border property to demonstrate that the flip itself goes out o
   align-items: center;
   justify-content: center;
   padding: 10px 45px;
+  box-shadow: 0 8px 8px -4px var(--dark-blue);
   /* line-height: 150%; */
+}
+
+.flip-card-front {
+  box-shadow: 0 8px 8px -4px var(--dark-blue);
 }
 
 .flip-card-front img {
@@ -266,6 +271,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 
 .flip-card-back button {
   background-color: var(--other-blue);
+  box-shadow: 0 8px 8px -4px rgba(0,0,0,0.6);
   color: #FFF;
   padding: 10px;
   border-radius: 7px;
