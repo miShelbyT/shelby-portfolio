@@ -99,8 +99,8 @@ function About() {
           dearest obsession. I graduated from Flatiron School's bootcamp program
           in January, 2021. I am a fullstack developer however front end work is
           what excites me the most. Pretty much every day you can find me
-          happily immersed in the expansion of my Javascript, React, Redux,
-          Semantic UI, Material UI, SASS and other front end skills.
+          happily immersed in the expansion of my Javascript, React, Redux, 
+          Material UI, SASS and other front end skills.
         </p>
         <p>
           When I'm not coding madly I can be found on a hiking trail somewhere

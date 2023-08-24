@@ -43,13 +43,13 @@ body {
 .slide-in-div {
   -webkit-animation-name: slidein;
   -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
+  /* -webkit-animation-iteration-count: 1; */
   -moz-animation-name: slidein;
   -moz-animation-duration: 3s;
-  -moz-animation-iteration-count: 1;
+  /* -moz-animation-iteration-count: 1; */
   animation-name: slidein;
   animation-duration: 3s;
-  animation-iteration-count: 1;
+  /* animation-iteration-count: 1; */
   
 }
 
@@ -233,7 +233,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 .flip-card {
   background-color: transparent;
   width: 450px;
-  height: 400px;
+  height: 450px;
   /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   margin: 25px;
@@ -256,34 +256,27 @@ We have added the border property to demonstrate that the flip itself goes out o
 }
 
 .flip-card-front img {
-  height: 95%;
+  height: 85%;
   width: 95%;
   border-radius: 5px;
   margin-top: 8px;
 }
 
-.flip-card-back img {
-  height: 60%;
-  width: 75%;
-  margin-top: 25px;
-  transition: transform .2s;
-}
-
-.flip-card-back button {
+.flip-card-front button {
   background-color: var(--other-blue);
-  box-shadow: 0 8px 8px -4px rgba(0,0,0,0.6);
+  box-shadow: 4px 6px 8px -4px rgba(0,0,0,0.6);
   color: #FFF;
   padding: 10px;
   border-radius: 7px;
   border: none;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
-  margin: 15px;
+  margin: 5px;
 }
 
-.flip-card-back button:hover {
-  background-color: var(--dark-blue);
-  transform: scale(1.05);
+.flip-card-front button:hover {
+  background-color: #333232;
+  transform: scale(.95);
 }
 
 .flip-card-back h2 strong {
@@ -320,7 +313,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flip-card:active .flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -336,7 +329,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: var(--card-bg);
-  /* color: black; */
+  color: black;
 }
 
 /* Style the back side */

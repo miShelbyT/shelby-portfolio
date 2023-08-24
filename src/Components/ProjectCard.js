@@ -6,6 +6,9 @@ function ProjectCard({ project }) {
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <img src={project.image} alt="shelby project gif" />
+          <a href={project.link} target="_blank" rel="noreferrer">
+            <button>Click To View {project.buttonText}</button>
+          </a>
         </div>
 
         <div className="flip-card-back">
@@ -14,9 +17,6 @@ function ProjectCard({ project }) {
             {project.subheader}
           </h2>
           <p>{project.moreText}</p>
-          <a href={project.link} target="_blank" rel="noreferrer">
-            <button>Click To View {project.buttonText}</button>
-          </a>
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
-import SideBar from './SideBar'
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -41,14 +40,10 @@ const useStyles = makeStyles((theme) => ({
     }
   }, icon: {
     margin: '0 8px',
-    // height: '100%',
     '&:hover': {
       color: '#333232',
       transform: 'scale(1.2)'
     }
-    // [theme.breakpoints.down('xs')]: {
-    //   // fontSize: 30,
-    // }
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -94,17 +89,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function Header() {
+function Header({handleDrawerOpen, open}) {
   const classes = useStyles()
-
-  const [open, setOpen] = React.useState(false)
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-    setTimeout(() => {
-      setOpen(false)
-    }, 4000);
-  }
 
   return (
     <div className={classes.header}>
@@ -162,9 +148,7 @@ function Header() {
           </Link>
         </Toolbar>
       </AppBar>
-      <SideBar 
-      open={open} 
-      handleDrawerOpen={handleDrawerOpen}/>
+      
     </div>
   )
 }

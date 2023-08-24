@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import Header from './Header'
+import SideBar from './SideBar'
 
 
 
@@ -23,9 +24,22 @@ const useStyles = makeStyles((theme) => ({
 function Main({ children }){
   const classes = useStyles()
 
+  const [open, setOpen] = React.useState(false)
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+    setTimeout(() => {
+      setOpen(false)
+    }, 4000);
+  }
+
   return (
     <>
-      <Header/>
+      <Header handleDrawerOpen={handleDrawerOpen} open={open}/>
+
+      <SideBar 
+      open={open} 
+      handleDrawerOpen={handleDrawerOpen}/>
 
       <div className={`${classes.page} ${classes.toolbar}`}>
         {/* gives us all the child components as wrapped in App.js */}
