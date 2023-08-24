@@ -19,43 +19,32 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   image: {
-    marginBottom: -28,
-    marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
-    maxWidth: 1020,
-    [theme.breakpoints.down('sm')]: {
-      margin: `0px auto -18px calc(10px + ${initialDrawerWidth}px)`,
-      width: '75vw',
-    },
+    width: '100%',
   },
   shelbyImg: {
     borderRadius: '50%',
     float: 'left',
     margin: '50px 45px 25px 0',
     shapeOutside: 'circle(50%)',
-    width: 300,
-    height: 300,
     [theme.breakpoints.down('sm')]: {
-      margin: '15px auto',
-      height: 225,
-      width: 225,
-    },
+      width: '50%',
+      borderRadius: '15%',
+      margin: 0
+    }
   },
   aboutMe: {
-    backgroundColor: '#dcf0f2',
     color: grey[800],
     fontFamily: 'Poppins',
     fontSize: 18,
     fontWeight: 300,
     padding: '45px 70px',
-    marginTop: 30,
-    marginLeft: `calc(10px + ${initialDrawerWidth}px)`,
-    marginBottom: 40,
-    maxWidth: 1042,
     textAlign: 'justify',
     [theme.breakpoints.down('sm')]: {
-      width: '100vw',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      alignItems: 'center',
+      fontSize: 16,
+      padding: 40
     },
   },
 }))
@@ -65,7 +54,7 @@ function About() {
 
   return (
     <div className={classes.root}>
-      <div>
+      <div className="about-div">
         <figure>
           <img
             src={doWhatYouLove}
@@ -87,9 +76,8 @@ function About() {
         </figure>
       </div>
 
-      <div className={`${classes.aboutMe} about-me`}>
-        <img src={shelbyPic} alt="shelby pic" className={classes.shelbyImg} />
-        <h3>About Me:</h3>
+      <div className={`${classes.aboutMe} about-div`}>
+        <img src={shelbyPic} alt="shelby headshot" className={classes.shelbyImg} />
         <p>
           My professional life began in the arts. I have had the immense
           privilege of traveling around the US and overseas as a professional

@@ -210,12 +210,39 @@ input[type=text],[type=email], textarea {
 
 input:focus, textarea:focus {outline: none;}
 
-.about-me h3 {
-  margin: 30px 0 5px;
+.about-div {
+  width: 85%;
+  margin: 0;
+  padding: 1.2em 0;
+  background: #dcf0f2;
 }
 
-.about-me p {
-  margin-top: 0;
+.about-div p {
+  line-height: 1.6;
+}
+
+.about-div figure {
+  position: relative;
+}
+
+.about-div figure small {
+  position: absolute;
+  bottom: 5%;
+  left: 37%;
+}
+
+.about-div figure figcaption {
+  font-size: 10px;
+}
+
+@media all and (max-width:960px) {
+  .about-div {
+    margin-left: 15%;
+  }
+
+  .about-div figure small {
+    left: 5%;
+  }
 }
 
 .subheader {
