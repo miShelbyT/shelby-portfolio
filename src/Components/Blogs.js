@@ -59,6 +59,7 @@ function Blogs() {
 
   const rss2json =
     'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40mi-shelbyrose'
+  const regex = /src=\\*"(https.*jpg|https.*jpeg|https.*png)/
   const [myBlogs, setMyBlogs] = useState([])
 
   useEffect(() => {
@@ -103,8 +104,9 @@ function Blogs() {
         </ImageListItem>
         {myBlogs ? (
           myBlogs.map((blog) => (
+            
             <ImageListItem key={blog.pubDate} cols={1}>
-              <img src={blog.thumbnail} alt={blog.title} />
+              <img src={blog.description.match(regex)[1]} alt={blog.title} />
               <ImageListItemBar
                 className={classes.blogBanner}
                 position="top"
