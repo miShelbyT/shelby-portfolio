@@ -82,13 +82,10 @@ function About() {
           My professional life began in the arts. I have had the immense
           privilege of traveling around the US and overseas as a professional
           actor. Eventually I realized I was ready to move on and do...
-          something else. It didn't take me long to find my next passion: web
+          something else. It didn't take me terribly long to find my next passion: web
           development/software engineering have since become my nearest and
           dearest obsession. I graduated from Flatiron School's bootcamp program
-          in January, 2021. I am a fullstack developer however front end work is
-          what excites me the most. Pretty much every day you can find me
-          happily immersed in the expansion of my Javascript, React, Redux, 
-          Material UI, SASS and other front end skills.
+          in January, 2021 and then was hired on to teach Flatiron's curriculum to cohorts at the State College of FL from March 2022 - April 2023. I am currently working through a Software Engineering Degree at Western Governor's University because apparently I Cannot. Stop. Learning. 😉
         </p>
         <p>
           When I'm not coding madly I can be found on a hiking trail somewhere
