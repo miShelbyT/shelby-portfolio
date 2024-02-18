@@ -19,7 +19,7 @@ function Projects() {
       link: 'https://new-york-state.netlify.app/new_york_city',
       buttonText: 'Deployed Site',
       moreText:
-        'Simple multi-page static application that  displays information for several cities in New York State.',
+        'Simple multi-page static application that displays information for several cities in New York State.',
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ function Projects() {
       link: 'https://youtu.be/Fhb1zT1z-WQ',
       buttonText: 'Take Care Demo (YouTube video)',
       moreText:
-        'React capstone project: Take Care is a self-care journaling app that allows the user to sign up/log in, create a profile, peruse a list of self-care activities, save, update and delete journal entries pertaining to those activities as well as create original activities. Also uses an external API to generate daily affirmations via a "roulette" affirmation button.',
+        'Flatiron School capstone project (uses React and Rails): Take Care is a self-care journaling app that allows the user to sign up/log in, create a profile, peruse a list of self-care activities, save, update and delete journal entries pertaining to those activities as well as create original activities. Also uses an external API to generate daily affirmations via a "roulette" affirmation button.',
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ function Projects() {
       link: 'https://youtu.be/uolpe_CaOec',
       buttonText: 'Pet Dates Demo (YouTube video)',
       moreText:
-        'Vanilla JS project: Recently refactored to all OOP with loads of new functionality added. This pet-date scheduler is currently being used by dogs, cats, a gecko and a stuffed raccoon.',
+        'Full stack project (uses Vanilla JS and Rails): Recently refactored to all OOP with loads of new functionality added. This pet-date scheduler is currently being used by dogs, cats, a gecko and a stuffed raccoon.',
     },
 
     {
