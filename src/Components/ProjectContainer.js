@@ -16,7 +16,7 @@ function Projects() {
       image: welcome,
       title: 'Welcome to New York',
       subheader: 'WGU Web Dev School Project - Easy Breezy!',
-      link: 'https://new-york-state.netlify.app/new_york_city',
+      link: 'https://new-york-state.netlify.app/',
       buttonText: 'Deployed Site',
       moreText:
         'Simple multi-page static application that displays information for several cities in New York State.',
