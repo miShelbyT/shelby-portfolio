@@ -8,7 +8,6 @@ import shelbyPic from '../images/shelby-pic.png'
 
 const initialDrawerWidth = 71
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(12),
@@ -29,8 +28,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '50%',
       borderRadius: '15%',
-      margin: 0
-    }
+      margin: 0,
+    },
   },
   aboutMe: {
     color: grey[800],
@@ -44,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       alignItems: 'center',
       fontSize: 16,
-      padding: 40
+      padding: 40,
     },
   },
 }))
@@ -77,22 +76,30 @@ function About() {
       </div>
 
       <div className={`${classes.aboutMe} about-div`}>
-        <img src={shelbyPic} alt="shelby headshot" className={classes.shelbyImg} />
+        <img
+          src={shelbyPic}
+          alt="shelby headshot"
+          className={classes.shelbyImg}
+        />
         <p>
           My professional life began in the arts. I have had the immense
           privilege of traveling around the US and overseas as a professional
           actor. Eventually I realized I was ready to move on and do...
-          something else. It didn't take me terribly long to find my next passion: web
-          development/software engineering have since become my nearest and
-          dearest obsession. I graduated from Flatiron School's bootcamp program
-          in January, 2021 and then was hired on to teach Flatiron's curriculum to cohorts at the State College of FL from March 2022 - April 2023. I am currently working through a Software Engineering Degree at Western Governor's University because apparently I Cannot. Stop. Learning. 😉
+          something else. It didn't take me terribly long to find my next
+          passion: web development/software engineering have since become my
+          nearest and dearest obsession. I graduated from Flatiron School's
+          bootcamp program in January, 2021 and was hired on to teach Flatiron's
+          curriculum to cohorts at the State College of FL from March 2022 -
+          April 2023. I am currently working through a Software Engineering
+          Degree at Western Governor's University because apparently I Cannot.
+          Stop. Learning. 🤓
         </p>
         <p>
-          When I'm not coding madly I can be found on a hiking trail somewhere
-          in upstate New York with my woooonderful husband and the sweetest rescue dog you'll
-          ever meet.<br></br>
+          When I'm not studying or coding madly I can be found on a hiking trail
+          with my wonderful husband and the sweetest rescue dog you'll ever
+          meet.<br></br>
         </p>
-        <div style={{textAlign: 'center'}}>🍷🧁🍷🧁🍷🧁🍷🧁</div>
+        <div style={{ textAlign: 'center' }}>🍷🧁🍷🧁🍷🧁🍷🧁</div>
       </div>
     </div>
   )
