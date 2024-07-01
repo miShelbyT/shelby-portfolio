@@ -289,7 +289,7 @@ We have added the border property to demonstrate that the flip itself goes out o
 
 .flip-card-front img {
   height: 85%;
-  width: 95%;
+  width: 90%;
   border-radius: 5px;
   margin-top: 8px;
 }
