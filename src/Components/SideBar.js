@@ -129,18 +129,18 @@ function SideBar({ open, handleDrawerOpen }) {
 
         <List className={classes.list}>
        
-          {sideBarItems.map(sideBarItem => (
+          {sideBarItems.map(item => (
             <>
             <ListItem 
-            key={sideBarItem.id}
+            key={item.id}
             button
-            onClick={()=> history.push(sideBarItem.path)}
-            className={location.pathname === sideBarItem.path ? classes.active : null}
+            onClick={()=> history.push(item.path)}
+            className={location.pathname === item.path ? classes.active : null}
             >
               <ListItemAvatar>
-                {sideBarItem.avatar}
+                {item.avatar}
               </ListItemAvatar>
-              <ListItemText primary={sideBarItem.text} />
+              <ListItemText primary={item.text} />
             </ListItem>
            
               </>
