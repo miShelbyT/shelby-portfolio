@@ -122,8 +122,7 @@ function Header({handleDrawerOpen, open}) {
               Shelby Talbert - Full Stack Web Developer
             </Typography>
 
-          <Link href="https://github.com/miShelbyT"
-          >
+          <Link href="https://github.com/miShelbyT" alt="link to Github">
             <Icon
               fontSize='large'
               className={`fab fa-github ${classes.icon}`}
@@ -131,7 +130,7 @@ function Header({handleDrawerOpen, open}) {
             />
           </Link>
 
-          <Link href="https://www.linkedin.com/in/shelby-talbert">
+          <Link href="https://www.linkedin.com/in/shelby-talbert" alt="link to LinkedIn">
             <Icon
             fontSize='large'
               className={`fab fa-linkedin ${classes.icon}`}
@@ -139,7 +138,7 @@ function Header({handleDrawerOpen, open}) {
             />
           </Link>
 
-          <Link href="https://mi-shelbyrose.medium.com/">
+          <Link href="https://mi-shelbyrose.medium.com/" alt="link to Medium">
             <Icon
             fontSize='large'
               className={`fab fa-medium ${classes.icon}`}
