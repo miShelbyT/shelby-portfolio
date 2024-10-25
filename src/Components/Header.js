@@ -122,28 +122,31 @@ function Header({handleDrawerOpen, open}) {
               Shelby Talbert - Full Stack Web Developer
             </Typography>
 
-          <Link href="https://github.com/miShelbyT" alt="link to Github">
+          <Link href="https://github.com/miShelbyT">
             <Icon
               fontSize='large'
               className={`fab fa-github ${classes.icon}`}
               color="primary"
             />
+            <span class="off-screen" aria-hidden="true">Github</span>
           </Link>
 
-          <Link href="https://www.linkedin.com/in/shelby-talbert" alt="link to LinkedIn">
+          <Link href="https://www.linkedin.com/in/shelby-talbert">
             <Icon
             fontSize='large'
               className={`fab fa-linkedin ${classes.icon}`}
               color="primary"
             />
+            <span class="off-screen" aria-hidden="true">LinkedIn</span>
           </Link>
 
-          <Link href="https://mi-shelbyrose.medium.com/" alt="link to Medium">
+          <Link href="https://mi-shelbyrose.medium.com/">
             <Icon
             fontSize='large'
               className={`fab fa-medium ${classes.icon}`}
               color="primary"
             />
+            <span class="off-screen" aria-hidden="true">Medium</span>
           </Link>
         </Toolbar>
       </AppBar>

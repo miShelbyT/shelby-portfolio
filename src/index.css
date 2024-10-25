@@ -40,6 +40,12 @@ body {
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
+/* adding spans for accessibility of icon links in header and hiding them from page */
+.off-screen {
+  position: absolute;
+  left: -99999rem;
+}
+
 .slide-in-div {
   -webkit-animation-name: slidein;
   -webkit-animation-duration: 3s;
