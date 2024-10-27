@@ -19,7 +19,7 @@ const theme = createTheme({
     },
     secondary: {
       //light grey
-      main: '#efe9ec',
+      main: '#faf7f9',
     },
   }, typography: {
     fontFamily: 'Poppins',
