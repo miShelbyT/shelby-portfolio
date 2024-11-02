@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
   error: {
     fontSize: '14px',
-    color: '#FF0000',
+    color: '#c92684',
     lineHeight: 1,
   },
   button: {
