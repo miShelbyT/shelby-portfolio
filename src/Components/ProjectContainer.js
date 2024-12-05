@@ -9,11 +9,22 @@ import takeCare from '../images/take-care.gif'
 import welcome from '../images/welcome-to-nyc.png'
 import kitties from '../images/just-the-cat-facts.png'
 import world from '../images/world.png'
+import travelSite from '../images/travel-site.png'
 
 function Projects() {
   const projects = [
     {
       id: 1,
+      image: travelSite,
+      title: 'Visit Taniti',
+      subheader: 'WGU UX Design School Project: Prototype',
+      link: 'https://mishelbyt.github.io/visit_taniti/index.html',
+      buttonText: 'Deployed Site',
+      moreText:
+        'Multi-page prototype/website for the fictional island of Taniti. Main goals, along with creating an engaging/attractive design, are positional awareness and usability.',
+    },
+    {
+      id: 2,
       image: world,
       title: 'The Whole World',
       subheader: 'WGU Angular School Project',
@@ -23,7 +34,7 @@ function Projects() {
         'Angular application that displays an svg world map and provides information (as pulled from the WorldBank API) for each country on hover.',
     },
     {
-      id: 2,
+      id: 3,
       image: welcome,
       title: 'Welcome to New York',
       subheader: 'WGU Web Dev School Project - Easy Breezy!',
@@ -33,7 +44,7 @@ function Projects() {
         'Simple multi-page static application that displays information for several cities in New York State.',
     },
     {
-      id: 3,
+      id: 4,
       image: kitties,
       title: 'Just The Cat Facts',
       subheader: 'A cute little application to lift your mood via cats.',
@@ -43,7 +54,7 @@ function Projects() {
         'I created this to inspire my students/show what they could do with code in as little as an hour or two! Application uses two APIs to display cat facts and images.',
     },
     {
-      id: 4,
+      id: 5,
       image: takeCare,
       title: 'Take Care',
       subheader: 'A journaling app that focuses on self-care/mental health',
@@ -53,7 +64,7 @@ function Projects() {
         'Flatiron School capstone project (uses React and Rails): Take Care is a self-care journaling app that allows the user to sign up/log in, create a profile, peruse a list of self-care activities, save, update and delete journal entries pertaining to those activities as well as create original activities. Also uses an external API to generate daily affirmations via a "roulette" affirmation button.',
     },
     {
-      id: 5,
+      id: 6,
       image: petDates2,
       title: 'Pet Dates',
       subheader: 'Because pets need friends too!',
@@ -64,7 +75,7 @@ function Projects() {
     },
 
     {
-      id: 6,
+      id: 7,
       image: brelbys,
       title: "Brelby's Wine & Cupcakes",
       subheader: "A wine and cupcakes app... you're welcome, world!",
@@ -74,7 +85,7 @@ function Projects() {
         "Vanilla JS with SASS (riffed off of a SASS tutorial from CodeStackr). This app is lovingly adapted from a Flatiron School project created with my wonderful friend Bryn Knowles. Brelby's lives!",
     },
     {
-      id: 7,
+      id: 8,
       image: ttt,
       title: 'Tic Tac Toe Game',
       subheader: 'Are you Team Gem or Team Cupcake?',

@@ -5,7 +5,7 @@ function ProjectCard({ project }) {
     <div className="flip-card">
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <img src={project.image} alt="shelby project" />
+          <img src={project.image} alt={`screenshot of ${project.title}`} />
           <a href={project.link} target="_blank" rel="noreferrer">
             <button>Click To View {project.buttonText}</button>
           </a>
