@@ -90,9 +90,9 @@ function About() {
           nearest and dearest obsession. I graduated from Flatiron School's
           bootcamp program in January, 2021 and was hired on to teach Flatiron's
           curriculum to cohorts at the State College of FL from March 2022 -
-          April 2023. I am currently working through a Software Engineering
-          Degree at Western Governor's University because apparently I Cannot.
-          Stop. Learning. 🤓
+          April 2023. This May I earned a BS in Software Engineering at
+          Western Governor's University because apparently I Cannot. Stop.
+          Learning. 🤓
         </p>
         <p>
           When I'm not studying or coding madly I can be found on a hiking trail
