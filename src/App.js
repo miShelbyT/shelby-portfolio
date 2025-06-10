@@ -3,6 +3,7 @@ import ScrollToTop from './Components/ScrollToTop'
 
 import Main from './Components/Main'
 import About from './Components/About'
+import Resume from './Components/Resume'
 import Projects from './Components/ProjectContainer'
 import Blogs from './Components/Blogs'
 import Contact from './Components/Contact'
@@ -46,6 +47,10 @@ function App() {
 
             <Route path="/about">
               <About/>
+            </Route>
+
+            <Route path="/resume">
+              <Resume />
             </Route>
 
             <Route path="/projects">

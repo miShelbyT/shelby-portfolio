@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 
-import youAreHere from '../images/you-are-here.jpg'
+import youAreHere from '../resources/you-are-here.jpg'
 
 // const initialDrawerWidth = 73
 const headerHeight = 86

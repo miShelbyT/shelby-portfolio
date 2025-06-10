@@ -13,7 +13,7 @@ import Icon from '@material-ui/core/Icon'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
-import shelby from '../images/shelby.png'
+import shelby from '../resources/shelby.png'
 
 const drawerWidth = 160
 const smDrawerWidth = 65

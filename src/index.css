@@ -241,6 +241,11 @@ input:focus, textarea:focus {outline: none;}
   font-size: 10px;
 }
 
+.resume-link {
+  color: var(--dark-blue);
+  font-style: italic;
+}
+
 @media all and (max-width:960px) {
   .about-div {
     margin-left: 15%;

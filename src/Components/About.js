@@ -1,10 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 
 import grey from '@material-ui/core/colors/grey'
 
-import doWhatYouLove from '../images/do-what-you-love.jpg'
-import shelbyPic from '../images/shelby-pic.png'
+import doWhatYouLove from '../resources/do-what-you-love.jpg'
+import shelbyPic from '../resources/shelby-pic.png'
 
 const initialDrawerWidth = 71
 
@@ -98,6 +99,9 @@ function About() {
           When I'm not studying or coding madly I can be found on a hiking trail
           with my wonderful husband and the sweetest rescue dog you'll ever
           meet.<br></br>
+        </p>
+        <p>
+          To view and/or print my resume, go <NavLink to="/resume" className="resume-link">here</NavLink>.
         </p>
         <div style={{ textAlign: 'center' }}>🍷🧁🍷🧁🍷🧁🍷🧁</div>
       </div>
