@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import ScrollToTop from './Components/ScrollToTop'
 
 import Main from './Components/Main'
