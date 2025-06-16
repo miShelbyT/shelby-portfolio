@@ -64,6 +64,8 @@ function App() {
             <Route path="/contact">
               <Contact/>
             </Route>
+
+            <Route path="*" element={<Navigate to="/" replace />} />
             
           </Switch>
         </Main>
