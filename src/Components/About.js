@@ -101,7 +101,7 @@ function About() {
           meet.<br></br>
         </p>
         <p>
-          To view and/or print my resume, go <NavLink to="/resume" className="resume-link">here</NavLink>.
+          To view/print my resume, go <NavLink to="/resume" className="resume-link">here</NavLink>.
         </p>
         <div style={{ textAlign: 'center' }}>🍷🧁🍷🧁🍷🧁🍷🧁</div>
       </div>

@@ -16,7 +16,7 @@ function ProjectCard({ project }) {
             <strong>{project.title}</strong>
             {project.subheader}
           </h2>
-          <p>{project.moreText}</p>
+          {project.moreText.map(sentence => <p>{sentence}</p>)}
         </div>
       </div>
     </div>
