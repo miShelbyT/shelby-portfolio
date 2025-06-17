@@ -119,7 +119,7 @@ function Header({handleDrawerOpen, open}) {
             <img src={shelby} alt="logo: shelby t, hello world!" className="shelby-logo"/>
           </Link>
             <Typography variant="h4" component="h1" color="primary" noWrap className={classes.name}>
-              Shelby Talbert: Software Engineer / Full-Stack Web Dev
+              Shelby Talbert: SWE / Full-Stack Web Dev
             </Typography>
 
           <Link href="https://github.com/miShelbyT">
