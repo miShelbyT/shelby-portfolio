@@ -51,14 +51,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#128bb0',
     margin: '15px 0',
     '&:hover': {
-      backgroundColor: '#333232'
+      backgroundColor: theme.palette.primary.main
     }
   },
   avaDarkBlue:{
     backgroundColor: '#0D3B66',
     color: '#fff',
     '&:hover': {
-      backgroundColor: '#333232',
+      backgroundColor: theme.palette.primary.main,
     }
   },
   list: {
